@@ -16,7 +16,8 @@ def main():
         G - Gravar
         L - Ler
     ''')
-    
-
+    n = int(input("Numero de pecas em linha necessarias para a vitoria"))
+    x = round(n*1.5)
+    y = round(n*1.25)
 
 main()
