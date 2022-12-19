@@ -2,6 +2,7 @@
 def colocar_peca(n,x,y):
     for n in range(1,x):
         for n in range(1,y):
+<<<<<<< Updated upstream
             if 
 =======
 # def colocar_peca(n,x):
@@ -10,3 +11,6 @@ def colocar_peca(n,x,y):
 >>>>>>> Stashed changes
             
 
+=======
+            if
+>>>>>>> Stashed changes
