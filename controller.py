@@ -8,8 +8,17 @@ def colocar_peca(n,x,y):
 #         for n in range(1,y):
 #            if  
 #              a.append()
+def adicionar_jogador(lista, jogador):
+    if jogador not in lista:
+        lista.append(jogador)
+        return True
 
-def remover(x,y):
-    x.remove(y)
-def adicionar(x,y):
-    x.append(y)
+def eliminar_jogador(lista, jogador):
+    if jogador in lista:
+        lista.remove(jogador)
+        return True
+
+#def remover(x,y):
+#    x.remove(y)
+#def adicionar(x,y):
+#    x.append(y)
