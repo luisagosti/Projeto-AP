@@ -46,11 +46,6 @@ def main():
             ''')
 
         elif menu == 'IJ':
-            # n = int(input("Numero de pecas em linha necessarias para a vitoria"))
-            # x = round(n*1.5)
-            # y = round(n*1.25)
-            # a = {}
-            # p = 
             pass
 
         elif menu == 'DJ':
