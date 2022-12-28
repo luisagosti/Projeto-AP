@@ -18,7 +18,3 @@ def eliminar_jogador(lista, jogador):
         lista.remove(jogador)
         return True
 
-#def remover(x,y):
-#    x.remove(y)
-#def adicionar(x,y):
-#    x.append(y)
