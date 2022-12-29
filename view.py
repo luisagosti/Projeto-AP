@@ -38,22 +38,30 @@ def main():
                 print('Jogador não existente.')
 
         elif menu == 'LJ':
-            jogador_1 = [lista[z-1]]
-            jogador_2 = [lista[z]]
-            print(f'''
-                jogador 1 é {jogador_1}
-                jogador 2 é {jogador_2}
-            ''')
-
+            #os.system('cls')
+                        # def LJ(lista):
+                        # jogador_1 = [lista[z-1]]
+                        # jogador_2 = [lista[z]]                    DENTRO DO IJ
+                        # x = (f'''                                                         
+                        #     jogador 1 é {jogador_1}
+                        #     jogador 2 é {jogador_2}
+                        # ''')
+                        # return x
+            #LJ(lista)
+            pass
         elif menu == 'IJ':
+            print()
             pass
 
         elif menu == 'DJ':
-            os.system('cls')
-            #print(f'''Para vencer é necessario o {jogador_1} ou o {jodador_2} 
-            # numa tabela de {comprimento_Grelha}comprimento e {altura_Grelha}altura 
-            # colocar {n}peças em linha horizontal,vertical ou obliqua
-            #  ''')
+            #os.system('cls')
+                            # def detalhes_jogo(jogador_1,jogador_2,comprimento_Grelha,altura_Grelha,n):
+                            #     x  =(f'''Para vencer é necessario o {jogador_1} ou o {jogador_2} 
+                            #         numa tabela de {comprimento_Grelha}comprimento e {altura_Grelha}altura         DENTRO E FORA DO IJ MAS ESTE É O DE DENTRO          
+                            #         colocar {n}peças em linha horizontal,vertical ou obliqua
+                            #         ''')
+                          #     return x
+            #detalhes_jogo(jogador_1,jogador_2,comprimento_Grelha,altura_Grelha,n)     
             pass
         elif menu == 'D':
             pass

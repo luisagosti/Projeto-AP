@@ -163,11 +163,7 @@ def main():
         # DJ - Detalhes do jogo
         elif op1 == "DJ":
             os.system('cls')
-            #print(f'''Para vencer é necessario o {jogador_1} ou o {jodador_2} 
-            # numa tabela de {comprimento_Grelha}comprimento e {altura_Grelha}altura 
-            # colocar {n}peças em linha horizontal,vertical ou obliqua
-            #  ''')
-        
+            #codigo principal
         # D - Desistir             Adicionar no Ij
         elif op1 == "D": 
             os.system('cls')
