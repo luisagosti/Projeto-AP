@@ -29,7 +29,19 @@ def main():
 
 
     os.system('cls')
-    print("RJ - Registar jogador\nEJ - Remover jogador\nLJ - Listar jogadores\nIJ - Iniciar jogo\nDJ - Detalhes do jogo\nD - Desistir\nCP - Colocar peça\nV - Visualizar resultado\nG - Gravar\nL - Ler\nX - Sair")
+    print('''
+        RJ - Registar jogador
+        EJ - Remover jogador
+        LJ - Listar jogadores
+        IJ - Iniciar jogo
+        DJ - Detalhes do jogo
+        D - Desistir
+        CP - Colocar peça
+        V - Visualizar resultado
+        G - Gravar
+        L - Ler
+        X - Sair
+        ''')
     op1 = input("Digite uma opção: ")   # Opção 1
     
     # Enquanto a "Opção 1" não igualar nenhuma das opções do array, o programa irá continuar a perguntar por uma opção.
@@ -37,8 +49,20 @@ def main():
     while op1 not in ["RJ", "EJ", "LJ", "IJ", "DJ", "D", "CP", "V", "G", "L", "X"]:
         os.system('cls')
         print("Instrução inválida.")
-        print("RJ - Registar jogador\nEJ - Remover jogador\nLJ - Listar jogadores\nIJ - Iniciar jogo\nDJ - Detalhes do jogo\nD - Desistir\nCP - Colocar peça\nV - Visualizar resultado\nG - Gravar\nL - Ler\nX - Sair")
-        op1 = input("Digite uma opção: ")   # Opção 1
+        print('''
+            RJ - Registar jogador
+            EJ - Remover jogador
+            LJ - Listar jogadores
+            IJ - Iniciar jogo
+            DJ - Detalhes do jogo
+            D - Desistir
+            CP - Colocar peça
+            V - Visualizar resultado
+            G - Gravar
+            L - Ler
+            X - Sair
+            ''')
+    op1 = input("Digite uma opção: ")   # Opção 1
 
     # Enquanto a "Opção 1" for diferente de X
     while op1 != "X":
@@ -52,7 +76,19 @@ def main():
                 os.system('cls')
                 print(registar_Jogadores(nome_Jogador, lista_Jogadores))
 
-            print("RJ - Registar jogador\nEJ - Remover jogador\nLJ - Listar jogadores\nIJ - Iniciar jogo\nDJ - Detalhes do jogo\nD - Desistir\nCP - Colocar peça\nV - Visualizar resultado\nG - Gravar\nL - Ler\nX - Sair")
+            print('''
+                RJ - Registar jogador
+                EJ - Remover jogador
+                LJ - Listar jogadores
+                IJ - Iniciar  jogo
+                DJ - Detalhes do jogo
+                D - Desistir
+                CP - Colocar peça
+                V - Visualizar resultado
+                G - Gravar
+                L - Ler
+                X - Sair
+                ''')
             op1 = input("Digite uma opção: ")   # Opção 1
         
         # EJ - Remover jogador
@@ -132,16 +168,16 @@ def main():
             # colocar {n}peças em linha horizontal,vertical ou obliqua
             #  ''')
         
-        # D - Desistir
+        # D - Desistir             Adicionar no Ij
         elif op1 == "D": 
             os.system('cls')
         
 
-        # CP - Colocar peça
+        # CP - Colocar peça             Adicionar no Ij
         elif op1 == "CP":
             os.system('cls')
         
-        # V - Visualizar resultado
+        # V - Visualizar resultado      Adicionar no Ij
         elif op1 == "V":
             os.system('cls')
 
@@ -149,7 +185,7 @@ def main():
         elif op1 == "G":
             os.system('cls')
 
-        # L - Ler
+        # L - Ler                        Ler ficheiro
         elif op1 == "L":
             os.system('cls')
 
