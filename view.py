@@ -17,7 +17,7 @@ def main():
             V - Visualizar resultado
             G - Gravar
             L - Ler
-            S - Sair
+            X - Sair
         ''')
         z = len(lista)
         menu = input().upper()
@@ -61,7 +61,7 @@ def main():
         elif menu == 'L':
             pass
         
-        elif menu == 'S':
+        elif menu == 'X':
             break
         
         else:
