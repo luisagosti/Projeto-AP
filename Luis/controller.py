@@ -1,18 +1,23 @@
 def registar_Jogadores(nome_Jogador, lista_Jogadores):
     if nome_Jogador in lista_Jogadores:
-        return "Jogador existente."
+        x = ("Jogador existente.")
+        return x
     else:
         lista_Jogadores.append(nome_Jogador)
-        return "Jogador registado com sucesso."
+        x = ("Jogador registado com sucesso.")
+        return x
 
 def remover_Jogadores(lista_Jogadores, nome_apagarJogador, decorrer_Jogo):
     if nome_apagarJogador in lista_Jogadores:
         lista_Jogadores.remove(nome_apagarJogador)
-        return "Jogador removido com sucesso."
+        x = ("Jogador removido com sucesso.")
+        return x
     elif decorrer_Jogo == 1 and nome_apagarJogador in lista_Jogadores:
-        return "Jogador participa no jogo em curso."
+        x = ("Jogador participa no jogo em curso.")
+        return x
     else:
-        return "Jogador não existente."
+        x = ("Jogador não existente.")
+        return x
 
 def movimento_Jogada(jogada, coluna, tabuleiro):
     coluna -= 1
@@ -20,7 +25,8 @@ def movimento_Jogada(jogada, coluna, tabuleiro):
         if tabuleiro[i][coluna] == ' ':
             tabuleiro[i][coluna] = jogada
             return
-    return "A coluna encontra-se completa, escolhe outra coluna."
+    x = ("A coluna encontra-se completa, escolhe outra coluna.")        
+    return x
 
 def verificar_Vitoria(jogada, tabuleiro, coluna):
     # Verifica vitória horizontal
