@@ -68,6 +68,12 @@ def verificar_Vitoria(jogada, tabuleiro, coluna):
     return False
 
 def LJ(lista,z):
-    for lista in range(0,z):
+    for i in range(0,z):
         return lista
+def detalhes_jogo(jogador_1,jogador_2,comprimento_Grelha,altura_Grelha,tamanho_Sequencia):
+    x  =(f'''Para vencer é necessario o {jogador_1} ou o {jogador_2} 
+        numa tabela de {comprimento_Grelha}comprimento e {altura_Grelha}altura         DENTRO E FORA DO IJ MAS ESTE É O DE DENTRO          
+        colocar {tamanho_Sequencia}peças em linha horizontal,vertical ou diagonal
+        ''')
+    return x        
         
