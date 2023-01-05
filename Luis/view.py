@@ -16,13 +16,10 @@ def main():
     tamanho_PecasEspeciais = []
 
     # Lista jogadores
-    lista_Jogadores = []
+    lista_Jogadores = ["Pedro", "João"]
 
     # Verificação de jogo em curso
     decorrer_Jogo = 0
-
-    # Tabuleiro
-    tabuleiro = [[' ' for _ in range(comprimento_Grelha)] for _ in range(altura_Grelha)]
 
     # Variável com valores temporários
     temp_var = ''
@@ -62,7 +59,7 @@ def main():
             L - Ler
             X - Sair
             ''')
-    op1 = input("Digite uma opção: ")   # Opção 1
+        op1 = input("Digite uma opção: ")   # Opção 1
 
     # Enquanto a "Opção 1" for diferente de X
     while op1 != "X":
@@ -137,26 +134,33 @@ def main():
                 # Exibir o tabuleiro
                 for i in range(comprimento_Grelha):
                     temp_var = temp_var + str(str(i + 1) + ' ')
-                print(temp_var)
 
-                for linha in tabuleiro:
-                    print('|'.join(linha))
+                jogada = 'X'
+                jogador_Atual = nome_Jogador1
 
-                jogada = nome_Jogador1
+                while True:
 
-                coluna = int(input(f"{jogada}, escolhe uma coluna: "))
-                movimento_Jogada(jogada, coluna, tabuleiro)
-                if verificar_Vitoria(jogada, tabuleiro, coluna):
-                    for i in len(comprimento_Grelha):
-                        temp_var.append(str(i + ' '))
                     print(temp_var)
 
-                    for linha in tabuleiro:
-                        print('|'.join(linha))
-                    print(f"{jogada} Venceu!")
-                    break
+                    # Tabuleiro
+                    tabuleiro = [[' ' for _ in range(comprimento_Grelha)] for _ in range(altura_Grelha)]
 
-                jogada = nome_Jogador2 if jogada == nome_Jogador1 else nome_Jogador1
+                    for row in tabuleiro:
+                        print('|'.join(row))
+
+                    coluna = int(input(f"{jogador_Atual}, escolhe uma coluna: "))
+                    movimento_Jogada(jogada, coluna, tabuleiro, altura_Grelha)
+                    if verificar_Vitoria(jogada, tabuleiro, coluna, comprimento_Grelha):
+
+                        print(temp_var)
+                        for row in tabuleiro:
+                            print('|'.join(row))
+
+                        print(f"{jogador_Atual} Venceu!")
+                        break
+
+                    jogada = 'O' if jogada == 'X' else 'X'
+                    jogador_Atual = nome_Jogador2 if jogador_Atual == nome_Jogador1 else nome_Jogador1
             
 
 

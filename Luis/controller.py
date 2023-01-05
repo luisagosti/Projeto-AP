@@ -19,22 +19,22 @@ def remover_Jogadores(lista_Jogadores, nome_apagarJogador, decorrer_Jogo):
         x = ("Jogador não existente.")
         return x
 
-def movimento_Jogada(jogada, coluna, tabuleiro):
+def movimento_Jogada(jogada, coluna, tabuleiro, altura_Grelha):
     coluna -= 1
-    for i in range(5, -1, -1):
+    for i in range(altura_Grelha - 1 , -1, -1):
         if tabuleiro[i][coluna] == ' ':
             tabuleiro[i][coluna] = jogada
-            return
+            return tabuleiro
     x = ("A coluna encontra-se completa, escolhe outra coluna.")        
     return x
 
-def verificar_Vitoria(jogada, tabuleiro, coluna):
+def verificar_Vitoria(jogada, tabuleiro, coluna, comprimento_Grelha):
     # Verifica vitória horizontal
     for linha in tabuleiro:
         if linha.count(jogada) == 4:
             return True
     # Verifica vitória vertical
-    for coluna in range(7):
+    for coluna in range(comprimento_Grelha):
         if tabuleiro[0][coluna] == jogada and tabuleiro[1][coluna] == jogada and tabuleiro[2][coluna] == jogada and tabuleiro[3][coluna] == jogada:
             return True
     # Verifica vitória diagonal
