@@ -71,7 +71,11 @@ def main():
             for i in range(num_Jogadores):
                 nome_Jogador = input("Digite o nome do " + str(i + 1) + "º jogador: ")
                 os.system('cls')
-                print(registar_Jogadores(nome_Jogador, lista_Jogadores))
+                registar_Jogadores(nome_Jogador, lista_Jogadores)
+                if registar_Jogadores == True:
+                    print("Jogador adicionado com sucesso")
+                else: 
+                    print("Jogador existente.")    
 
             print('''
                 RJ - Registar jogador
@@ -97,8 +101,13 @@ def main():
                 for i in range(len(lista_Jogadores)):
                     print(lista_Jogadores[i])
                 nome_apagarJogador = input("Digite o nome do utilizador que pretende apagar")
-                print(remover_Jogadores(lista_Jogadores, nome_apagarJogador, decorrer_Jogo))
-
+                remover_Jogadores(lista_Jogadores, nome_apagarJogador, decorrer_Jogo))
+                if registar_Jogadores == True:
+                    print("Jogador removido com sucesso")
+                elif remover_Jogadores == 1: 
+                    print("Jogador participa no jogo em curso.")    
+                else: 
+                    print("Jogador nao existente.")
 
         # LJ - Listar jogadores
         elif op1 == "LJ":
@@ -150,6 +159,8 @@ def main():
 
                     coluna = int(input(f"{jogador_Atual}, escolhe uma coluna: "))
                     movimento_Jogada(jogada, coluna, tabuleiro, altura_Grelha)
+                    if movimento_Jogada == True:
+                        print("A coluna encontra-se completa, escolhe outra coluna.")
                     if verificar_Vitoria(jogada, tabuleiro, coluna, comprimento_Grelha):
 
                         print(temp_var)
@@ -167,7 +178,11 @@ def main():
         # DJ - Detalhes do jogo
         elif op1 == "DJ":
             os.system('cls')
-            detalhes_jogo(nome_Jogador1,nome_Jogador2,comprimento_Grelha,altura_Grelha,tamanho_Sequencia)
+            print(f'''Para vencer é necessario o {jogador_1} ou o {jogador_2} 
+        numa tabela de {comprimento_Grelha}comprimento e {altura_Grelha}altura         DENTRO E FORA DO IJ MAS ESTE É O DE DENTRO          
+        colocar {tamanho_Sequencia}peças em linha horizontal,vertical ou diagonal
+        ''')
+
         # D - Desistir             Adicionar no Ij
         elif op1 == "D": 
             os.system('cls')

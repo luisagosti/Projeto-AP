@@ -19,33 +19,28 @@ def eliminar_jogador(lista, jogador):
 
 def registar_Jogadores(nome_Jogador, lista_Jogadores):
     if nome_Jogador in lista_Jogadores:
-        x = ("Jogador existente.")
-        return x
+        return False
     else:
         lista_Jogadores.append(nome_Jogador)
-        x = ("Jogador registado com sucesso.")
-        return x
+        return True
 
 def remover_Jogadores(lista_Jogadores, nome_apagarJogador, decorrer_Jogo):
     if nome_apagarJogador in lista_Jogadores:
         lista_Jogadores.remove(nome_apagarJogador)
-        x = ("Jogador removido com sucesso.")
-        return x
+        return True
     elif decorrer_Jogo == 1 and nome_apagarJogador in lista_Jogadores:
-        x = ("Jogador participa no jogo em curso.")
+        x = 1
         return x
     else:
-        x = ("Jogador não existente.")
-        return x
+        return False
 
 def movimento_Jogada(jogada, coluna, tabuleiro):
     coluna -= 1
     for i in range(5, -1, -1):
         if tabuleiro[i][coluna] == ' ':
             tabuleiro[i][coluna] = jogada
-            return
-    x = ("A coluna encontra-se completa, escolhe outra coluna.")        
-    return x
+            return       
+    return True
 
 def verificar_Vitoria(jogada, tabuleiro, coluna):
     # Verifica vitória horizontal
@@ -70,10 +65,5 @@ def verificar_Vitoria(jogada, tabuleiro, coluna):
 def LJ(lista,z):
     for i in range(0,z):
         return lista
-def detalhes_jogo(jogador_1,jogador_2,comprimento_Grelha,altura_Grelha,tamanho_Sequencia):
-    x  =(f'''Para vencer é necessario o {jogador_1} ou o {jogador_2} 
-        numa tabela de {comprimento_Grelha}comprimento e {altura_Grelha}altura         DENTRO E FORA DO IJ MAS ESTE É O DE DENTRO          
-        colocar {tamanho_Sequencia}peças em linha horizontal,vertical ou diagonal
-        ''')
-    return x        
+     
         
