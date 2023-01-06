@@ -17,7 +17,7 @@ def main():
 
     # Lista jogadores
     lista_Jogadores = ["Pedro", "João"]
-
+    z = len(lista_Jogadores)
     # Verificação de jogo em curso
     decorrer_Jogo = 0
 
@@ -101,7 +101,7 @@ def main():
                 for i in range(len(lista_Jogadores)):
                     print(lista_Jogadores[i])
                 nome_apagarJogador = input("Digite o nome do utilizador que pretende apagar")
-                remover_Jogadores(lista_Jogadores, nome_apagarJogador, decorrer_Jogo))
+                remover_Jogadores(lista_Jogadores, nome_apagarJogador, decorrer_Jogo)
                 if registar_Jogadores == True:
                     print("Jogador removido com sucesso")
                 elif remover_Jogadores == 1: 
@@ -178,7 +178,7 @@ def main():
         # DJ - Detalhes do jogo
         elif op1 == "DJ":
             os.system('cls')
-            print(f'''Para vencer é necessario o {jogador_1} ou o {jogador_2} 
+            print(f'''Para vencer é necessario o {nome_Jogador1} ou o {nome_Jogador2}
         numa tabela de {comprimento_Grelha}comprimento e {altura_Grelha}altura         DENTRO E FORA DO IJ MAS ESTE É O DE DENTRO          
         colocar {tamanho_Sequencia}peças em linha horizontal,vertical ou diagonal
         ''')
