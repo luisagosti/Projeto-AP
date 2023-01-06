@@ -2,39 +2,24 @@ def colocar_peca(n,x,y):
     for n in range(1,x):
         for n in range(1,y):
             pass
-# def colocar_peca(n,x,y,a,p):
-#     for n in range(1,x):
-#         for n in range(1,y):
-#            if  
-#              a.append()
-def adicionar_jogador(lista, jogador):
-    if jogador not in lista:
-        lista.append(jogador)
-        return True
 
-def eliminar_jogador(lista, jogador):
-    if jogador in lista:
-        lista.remove(jogador)
-        return True
-
-def registar_Jogadores(nome_Jogador, lista_Jogadores):
-    if nome_Jogador in lista_Jogadores:
+def registar_jogadores(nome_jogador, lista_jogadores):
+    if nome_jogador in lista_jogadores:
         return False
     else:
-        lista_Jogadores.append(nome_Jogador)
+        lista_jogadores.append(nome_jogador)
         return True
 
-def remover_Jogadores(lista_Jogadores, nome_apagarJogador, decorrer_Jogo):
-    if nome_apagarJogador in lista_Jogadores:
-        lista_Jogadores.remove(nome_apagarJogador)
+def remover_jogadores(lista_jogadores, nome_apagar_jogador, decorrer_jogo):
+    if nome_apagar_jogador in lista_jogadores:
+        lista_jogadores.remove(nome_apagar_jogador)
         return True
-    elif decorrer_Jogo == 1 and nome_apagarJogador in lista_Jogadores:
-        x = 1
-        return x
-    else:
+    elif decorrer_jogo == 1 and nome_apagar_jogador in lista_jogadores:
         return False
+    else:
+        return
 
-def movimento_Jogada(jogada, coluna, tabuleiro):
+def movimento_jogada(jogada, coluna, tabuleiro):
     coluna -= 1
     for i in range(5, -1, -1):
         if tabuleiro[i][coluna] == ' ':
@@ -42,7 +27,7 @@ def movimento_Jogada(jogada, coluna, tabuleiro):
             return       
     return True
 
-def verificar_Vitoria(jogada, tabuleiro, coluna):
+def verificar_vitoria(jogada, tabuleiro, coluna):
     # Verifica vitória horizontal
     for linha in tabuleiro:
         if linha.count(jogada) == 4:
@@ -62,7 +47,7 @@ def verificar_Vitoria(jogada, tabuleiro, coluna):
                 return True
     return False
 
-def LJ(lista,z):
+def listar_jogadores(lista,z):
     for i in range(0,z):
         return lista
      
