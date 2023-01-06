@@ -186,8 +186,8 @@ def main():
         # D - Desistir             Adicionar no Ij
         elif op1 == "D": 
             os.system('cls')
-            print(f'''Apos desistencia do {nome_Jogador1}
-                        O {nome_Jogador2} vence
+            print(f'''Apos desistencia do {nome_jogador1}
+                        O {nome_jogador2} vence
                         ''')
         # CP - Colocar peça             Adicionar no Ij
         elif op1 == "CP":
