@@ -187,7 +187,7 @@ def main():
         elif op1 == "D": 
             os.system('cls')
             print(f'''Apos desistencia do {nome_Jogador1}
-                        O {nome_Jogador2} vence                             #Apenas exemplo do que será feito, o objetivo será o programa verificar de quem era a vez de jogar e atribuir a vitoria ao outro
+                        O {nome_Jogador2} vence                             
                         ''')
         # CP - Colocar peça             Adicionar no Ij
         elif op1 == "CP":
