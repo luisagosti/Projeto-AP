@@ -17,12 +17,12 @@ def eliminar_jogador(lista, jogador):
         lista.remove(jogador)
         return True
 
-def registar_Jogadores(nome_Jogador, lista_Jogadores):
-    if nome_Jogador in lista_Jogadores:
+def registar_Jogadores(nome_jogador, lista_jogadores):
+    if nome_jogador in lista_jogadores:
         x = ("Jogador existente.")
         return x
     else:
-        lista_Jogadores.append(nome_Jogador)
+        lista_jogadores.append(nome_jogador)
         x = ("Jogador registado com sucesso.")
         return x
 
@@ -72,8 +72,8 @@ def LJ(lista,z):
         return lista
 def detalhes_jogo(jogador_1,jogador_2,comprimento_Grelha,altura_Grelha,tamanho_Sequencia):
     x  =(f'''Para vencer é necessario o {jogador_1} ou o {jogador_2} 
-        numa tabela de {comprimento_Grelha}comprimento e {altura_Grelha}altura         DENTRO E FORA DO IJ MAS ESTE É O DE DENTRO          
-        colocar {tamanho_Sequencia}peças em linha horizontal,vertical ou diagonal
+        numa tabela de {comprimento_Grelha} comprimento e {altura_Grelha} altura         DENTRO E FORA DO IJ MAS ESTE É O DE DENTRO          
+        colocar {tamanho_Sequencia} peças em linha horizontal,vertical ou diagonal.
         ''')
     return x        
         
