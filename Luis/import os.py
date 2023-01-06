@@ -2,6 +2,8 @@ import os
 
 if __name__ == '__main__':
     print("RJ")
+    y = input("Escolha uma opcao")
     os.system('cls')
-    x = input("RJ")
-    print(x)
+    if y == ("RJ"):
+        x = input("RJ")
+        print(x)
