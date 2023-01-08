@@ -137,7 +137,7 @@ def main():
 
                 while altura_grelha < comprimento_grelha/2 and altura_grelha > comprimento_grelha:
                     os.system('cls')
-                    print("Dimensões de grelha invalidas.")
+                    print("Dimensões de grelha inválidas.")
                     comprimento_grelha = input("Indique o comprimento da grelha: ")
                     altura_grelha = input("Indique a altura da grelha: ")
 
@@ -158,10 +158,10 @@ def main():
                     for row in tabuleiro:
                         print('|'.join(row))
 
-                    coluna = int(input(f"{jogador_atual}, escolhe uma coluna: "))
+                    coluna = int(input(f"{jogador_atual}, escolha uma coluna: "))
                     movimento_jogada(jogada, coluna, tabuleiro, altura_grelha)
                     if movimento_jogada == True:
-                        print("A coluna encontra-se completa, escolhe outra coluna.")
+                        print("A coluna encontra-se completa, escolha outra coluna.")
                     if verificar_vitoria(jogada, tabuleiro, coluna, comprimento_grelha):
 
                         print(temp_var)
@@ -179,16 +179,16 @@ def main():
         # DJ - Detalhes do jogo
         elif op1 == "DJ":
             os.system('cls')
-            print(f'''Para vencer é necessario o {nome_jogador1} ou o {nome_jogador2}
-        numa tabela de {comprimento_grelha}comprimento e {altura_grelha}altura         DENTRO E FORA DO IJ MAS ESTE É O DE DENTRO          
-        colocar {tamanho_sequencia}peças em linha horizontal,vertical ou diagonal
+            print(f'''Para vencer é necessario o {nome_jogador1} ou o {nome_jogador2},
+        numa tabela de {comprimento_grelha} comprimento e {altura_grelha} altura         DENTRO E FORA DO IJ MAS ESTE É O DE DENTRO          
+        colocar {tamanho_sequencia} peças em linha horizontal,vertical ou diagonal.
         ''')
 
         # D - Desistir             
         elif op1 == "D": 
             os.system('cls')
-            print(f'''Apos desistencia do {nome_jogador1}
-                        O {nome_jogador2} vence
+            print(f'''Após desistencia do {nome_jogador1}
+                        o {nome_jogador2} vence.
                         ''')
         # CP - Colocar peça            
         elif op1 == "CP":
