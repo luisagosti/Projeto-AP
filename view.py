@@ -18,6 +18,7 @@ def main():
     # Lista jogadores
     lista_jogadores = ["Pedro", "João"]
     z = len(lista_jogadores)
+
     # Verificação de jogo em curso
     decorrer_jogo = 0
 
@@ -27,39 +28,39 @@ def main():
 
     os.system('cls')
     print('''
-        RJ - Registar jogador
-        EJ - Remover jogador
-        LJ - Listar jogadores
-        IJ - Iniciar jogo
-        DJ - Detalhes do jogo
-        D - Desistir
-        CP - Colocar peça
-        V - Visualizar resultado
-        G - Gravar
-        L - Ler
-        X - Sair
+              RJ + Nome - Registar jogador
+              EJ + Nome - Remover jogador
+                     LJ - Listar jogadores
+           IJ + 2 Nomes - Iniciar jogo
+                     DJ - Detalhes do jogo
+          D + 1/2 Nomes - Desistir
+                     CP - Colocar peça
+                      V - Visualizar resultado
+                      G - Gravar
+                      L - Ler
+                      X - Sair
         ''')
     op1 = input("Digite uma opção: ")   # Opção 1
-    
+
     # Enquanto a "Opção 1" não igualar nenhuma das opções do array, o programa irá continuar a perguntar por uma opção.
     # Ele passa quando a "Opção 1" for equivalente a alguma das opções dentro do array
-    while op1 not in ["RJ", "EJ", "LJ", "IJ", "DJ", "D", "CP", "V", "G", "L", "X"]:
+    while op1[:2].upper() not in ["RJ", "EJ", "LJ", "IJ", "DJ", "D", "CP", "V", "G", "L", "X"] and op1[2] != ' ':
         os.system('cls')
         print("Instrução inválida.")
         print('''
-            RJ - Registar jogador
-            EJ - Remover jogador
-            LJ - Listar jogadores
-            IJ - Iniciar jogo
-            DJ - Detalhes do jogo
-            D - Desistir
-            CP - Colocar peça
-            V - Visualizar resultado
-            G - Gravar
-            L - Ler
-            X - Sair
-            ''')
-        op1 = input("Digite uma opção: ")   # Opção 1
+              RJ + Nome - Registar jogador
+              EJ + Nome - Remover jogador
+                     LJ - Listar jogadores
+           IJ + 2 Nomes - Iniciar jogo
+                     DJ - Detalhes do jogo
+          D + 1/2 Nomes - Desistir
+                     CP - Colocar peça
+                      V - Visualizar resultado
+                      G - Gravar
+                      L - Ler
+                      X - Sair
+        ''')
+        op1 = input("Digite uma opcão: ")   # Opção 1
 
     # Enquanto a "Opção 1" for diferente de X
     while op1 != "X":
@@ -78,18 +79,18 @@ def main():
                     print("Jogador existente.")    
 
             print('''
-                RJ - Registar jogador
-                EJ - Remover jogador
-                LJ - Listar jogadores
-                IJ - Iniciar  jogo
-                DJ - Detalhes do jogo
-                D - Desistir
-                CP - Colocar peça
-                V - Visualizar resultado
-                G - Gravar
-                L - Ler
-                X - Sair
-                ''')
+              RJ + Nome - Registar jogador
+              EJ + Nome - Remover jogador
+                     LJ - Listar jogadores
+           IJ + 2 Nomes - Iniciar jogo
+                     DJ - Detalhes do jogo
+          D + 1/2 Nomes - Desistir
+                     CP - Colocar peça
+                      V - Visualizar resultado
+                      G - Gravar
+                      L - Ler
+                      X - Sair
+        ''')
             op1 = input("Digite uma opção: ")   # Opção 1
         
         # EJ - Remover jogador
@@ -104,10 +105,10 @@ def main():
                 remover_jogadores(lista_jogadores, nome_apagar_jogador, decorrer_jogo)
                 if registar_jogadores == True:
                     print("Jogador removido com sucesso")
-                elif remover_jogadores == 1: 
-                    print("Jogador participa no jogo em curso.")    
+                elif remover_jogadores == False: 
+                    print("Jogador participa no jogo em curso..")    
                 else: 
-                    print("Jogador nao existente.")
+                    print("Jogador não existente.")
 
         # LJ - Listar jogadores
         elif op1 == "LJ":
@@ -122,14 +123,14 @@ def main():
                 print("Existe um jogo em curso.")
             else:
                 nome_jogador1 = input("Indique o nome do 1º jogador: ")
-                while nome_jogador1 not in lista_jogadores:
+                while nome_jogador1.upper() not in lista_jogadores:
                     print("Jogador não registado.")
                     nome_jogador1 = input("Indique o nome do 1º jogador: ")
 
                 nome_jogador2 = input("Indique o nome do 2º jogador: ")
-                while nome_jogador2 not in lista_jogadores:
+                while nome_jogador2.upper() not in lista_jogadores:
                     print("Jogador não registado.")
-                    nome_jogador2 = input("Indique o nome do 1º jogador: ")
+                    nome_jogador2 = input("Indique o nome do 2º jogador: ")
 
                 comprimento_grelha = eval(input("Indique o comprimento da grelha: "))
                 altura_grelha = eval(input("Indique a altura da grelha: "))
@@ -183,25 +184,33 @@ def main():
         colocar {tamanho_sequencia}peças em linha horizontal,vertical ou diagonal
         ''')
 
-        # D - Desistir             Adicionar no Ij
+        # D - Desistir             
         elif op1 == "D": 
             os.system('cls')
             print(f'''Apos desistencia do {nome_jogador1}
                         O {nome_jogador2} vence
                         ''')
-        # CP - Colocar peça             Adicionar no Ij
+        # CP - Colocar peça            
         elif op1 == "CP":
             os.system('cls')
         
-        # V - Visualizar resultado      Adicionar no Ij
+        # V - Visualizar resultado      
         elif op1 == "V":
             os.system('cls')
 
         # G - Gravar
         elif op1 == "G":
-            os.system('cls')
+            gravar_jogo(lista_jogadores, decorrer_jogo, tabuleiro, temp_var)
+            if gravar_jogo == True:
+                os.system('cls')
+                print("Jogo gravado.")
+            
+            else:
+                os.system('cls')
+                print("Ocorreu um erro na gravação.")
+            
 
-        # L - Ler                        Ler ficheiro
+        # L - Ler                        
         elif op1 == "L":
             os.system('cls')
 
