@@ -123,57 +123,38 @@ def main():
                 print("Existe um jogo em curso.")
             else:
                 nome_jogador1 = input("Indique o nome do 1º jogador: ")
-                while nome_jogador1.upper() not in lista_jogadores:
+                while nome_jogador1 not in lista_jogadores:
                     print("Jogador não registado.")
                     nome_jogador1 = input("Indique o nome do 1º jogador: ")
 
                 nome_jogador2 = input("Indique o nome do 2º jogador: ")
-                while nome_jogador2.upper() not in lista_jogadores:
+                while nome_jogador2 not in lista_jogadores:
                     print("Jogador não registado.")
                     nome_jogador2 = input("Indique o nome do 2º jogador: ")
 
-                comprimento_grelha = eval(input("Indique o comprimento da grelha: "))
-                altura_grelha = eval(input("Indique a altura da grelha: "))
+                # Get board width and height from user
+                width = int(input("Enter the width of the board: "))
+                height = int(input("Enter the height of the board: "))
 
-                while altura_grelha < comprimento_grelha/2 and altura_grelha > comprimento_grelha:
-                    os.system('cls')
-                    print("Dimensões de grelha invalidas.")
-                    comprimento_grelha = input("Indique o comprimento da grelha: ")
-                    altura_grelha = input("Indique a altura da grelha: ")
+                # Get the number of sequenced pieces needed to win
+                sequenced_pieces = int(input("Enter the number of sequenced pieces needed to win: ")) # FAZER VERIFICAÇÃO
 
-                # Exibir o tabuleiro
-                for i in range(comprimento_grelha):
-                    temp_var = temp_var + str(str(i + 1) + ' ')
+                # Generate board with the specified width and height
+                board = [[' ' for _ in range(width)] for _ in range(height)]
 
-                jogada = 'X'
+                player = 'X'
                 jogador_atual = nome_jogador1
 
                 while True:
-
-                    print(temp_var)
-
-                    # Tabuleiro
-                    tabuleiro = [[' ' for _ in range(comprimento_grelha)] for _ in range(altura_grelha)]
-
-                    for row in tabuleiro:
-                        print('|'.join(row))
-
-                    coluna = int(input(f"{jogador_atual}, escolhe uma coluna: "))
-                    movimento_jogada(jogada, coluna, tabuleiro, altura_grelha)
-                    if movimento_jogada == True:
-                        print("A coluna encontra-se completa, escolhe outra coluna.")
-                    if verificar_vitoria(jogada, tabuleiro, coluna, comprimento_grelha):
-
-                        print(temp_var)
-                        for row in tabuleiro:
-                            print('|'.join(row))
-
-                        print(f"{jogador_atual} Venceu!")
+                    print_board(width, board)
+                    column = int(input(f"{jogador_atual} ({player}), escolhe uma coluna: "))
+                    make_move(player, column, height, board)
+                    if has_won(player, board, width, height, sequenced_pieces):
+                        print_board(width, board)
+                        print(f"{player} Venceu!")
                         break
-
-                    jogada = 'O' if jogada == 'X' else 'X'
-                    jogador_atual = nome_jogador2 if jogador_atual == nome_jogador1 else nome_jogador1
-            
+                    player = 'O' if player == 'X' else 'X'
+                    jogador_atual = nome_jogador2 if jogador_atual == nome_jogador1 else nome_jogador1          
 
 
         # DJ - Detalhes do jogo
@@ -200,7 +181,7 @@ def main():
 
         # G - Gravar
         elif op1 == "G":
-            gravar_jogo(lista_jogadores, decorrer_jogo, tabuleiro, temp_var)
+            gravar_jogo(lista_jogadores, decorrer_jogo, board, temp_var)
             if gravar_jogo == True:
                 os.system('cls')
                 print("Jogo gravado.")
