@@ -16,3 +16,9 @@ Adições:
 Quando feitas, colocar `x` entre as `[]` 
     Ex:. `[x]` - Feito
     Ex:. `[]` - Não feito
+
+
+Split nos inputs
+Peças especiais
+Registar/Eliminar jogadores
+prints no controller

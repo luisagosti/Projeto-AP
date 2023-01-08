@@ -70,52 +70,52 @@ def gravar_jogo(lista_jogadores, decorrer_jogo, board, temp_var):
 
 ################ Testes ###################
 
-def print_board(width, board):
-    # Print the column numbers
-    print(' '.join([str(i+1) for i in range(width)]))
-    for row in board:
+def print_tabuleiro(comprimento_grelha, tabuleiro):
+    # Printar o numero de colunas
+    print(' '.join([str(i+1) for i in range(comprimento_grelha)]))
+    for row in tabuleiro:
         print('|'.join(row))
 
-def make_move(player, column, height, board):
-    column -= 1
-    for i in range(height-1, -1, -1):
-        if board[i][column] == ' ':
-            board[i][column] = player
+def jogada(jogador, coluna, altura_grelha, tabuleiro):
+    coluna -= 1
+    for i in range(altura_grelha-1, -1, -1):
+        if tabuleiro[i][coluna] == ' ':
+            tabuleiro[i][coluna] = jogador
             return
     print("A coluna encontra-se completa, escolhe outra coluna.")
 
-def has_won(player, board, width, height, sequenced_pieces):
-    # Check for horizontal win
-    for row in board:
-        for i in range(width - sequenced_pieces + 1):
-            if all(row[i+j] == player for j in range(sequenced_pieces)):
+def ganhar(jogador, tabuleiro, comprimento_grelha, altura_grelha, tamanho_sequencia):
+    # Verificar vitória na horizontal
+    for row in tabuleiro:
+        for i in range(comprimento_grelha - tamanho_sequencia + 1):
+            if all(row[i+j] == jogador for j in range(tamanho_sequencia)):
                 return True
     
-    # Check for vertical win
-    for col in range(width):
-        if all(board[row][col] == player for row in range(height)):
+    # Verificar vitória na vertical
+    for col in range(comprimento_grelha):
+        if all(tabuleiro[row][col] == jogador for row in range(altura_grelha)):
             return True
     
-    # Check for diagonal win (top-left to bottom-right)
-    for row in range(height - sequenced_pieces + 1):
-        for col in range(width - sequenced_pieces + 1):
-            if all(board[row+i][col+i] == player for i in range(sequenced_pieces)):
+    # Verificar vitória na diagonal (do topo esquerdo para o fundo direito)
+    for row in range(altura_grelha - tamanho_sequencia + 1):
+        for col in range(comprimento_grelha - tamanho_sequencia + 1):
+            if all(tabuleiro[row+i][col+i] == jogador for i in range(tamanho_sequencia)):
                 return True
     
-    # Check for diagonal win (top-right to bottom-left)
-    for row in range(height - sequenced_pieces + 1):
-        for col in range(width - 1, sequenced_pieces - 2, -1):
-            if all(board[row+i][col-i] == player for i in range(sequenced_pieces)):
+    # Verificar vitória na diagonal (do topo direito para o fundo esquerdo)
+    for row in range(altura_grelha - tamanho_sequencia + 1):
+        for col in range(comprimento_grelha - 1, tamanho_sequencia - 2, -1):
+            if all(tabuleiro[row+i][col-i] == jogador for i in range(tamanho_sequencia)):
                 return True
     
-    # Check for win in all other directions
-    for row in range(height - sequenced_pieces + 1):
-        for col in range(width):
-            # Check for win in top-bottom direction
-            if all(board[row+i][col] == player for i in range(sequenced_pieces)):
+    # Verificar vitória em todas as direções
+    for row in range(altura_grelha - tamanho_sequencia + 1):
+        for col in range(comprimento_grelha):
+            # Verificar vitória na direção topo-fundo
+            if all(tabuleiro[row+i][col] == jogador for i in range(tamanho_sequencia)):
                 return True
-            # Check for win in left-right direction
-            if all(board[row][col+i] == player for i in range(sequenced_pieces)):
+            # Verificar vitória na direção esquerda-direita
+            if all(tabuleiro[row][col+i] == jogador for i in range(tamanho_sequencia)):
                 return True
     return False
 

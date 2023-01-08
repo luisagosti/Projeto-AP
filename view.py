@@ -132,28 +132,28 @@ def main():
                     print("Jogador não registado.")
                     nome_jogador2 = input("Indique o nome do 2º jogador: ")
 
-                # Get board width and height from user
-                width = int(input("Enter the width of the board: "))
-                height = int(input("Enter the height of the board: "))
+                # Perguntar altura e comprimento do tabuleiro ao usuário
+                comprimento_grelha = int(input("Insira o comprimento do tabuleiro: "))
+                altura_grelha = int(input("Insira a altura do tabuleiro: "))
 
-                # Get the number of sequenced pieces needed to win
-                sequenced_pieces = int(input("Enter the number of sequenced pieces needed to win: ")) # FAZER VERIFICAÇÃO
+                # Perguntar número de peças para a sequência vencedora
+                tamanho_sequencia = int(input("Insira o número de peças seguidas para vencer: ")) # FAZER VERIFICAÇÃO
                 
-                # Generate board with the specified width and height
-                board = [[' ' for _ in range(width)] for _ in range(height)]
+                # Gerar tabuleiro com as especificações inseridas
+                tabuleiro = [[' ' for _ in range(comprimento_grelha)] for _ in range(altura_grelha)]
 
-                player = 'X'
+                jogador = 'X'
                 jogador_atual = nome_jogador1
 
                 while True:
-                    print_board(width, board)
-                    column = int(input(f"{jogador_atual} ({player}), escolhe uma coluna: "))
-                    make_move(player, column, height, board)
-                    if has_won(player, board, width, height, sequenced_pieces):
-                        print_board(width, board)
-                        print(f"{player} Venceu!")
+                    print_tabuleiro(comprimento_grelha, tabuleiro)
+                    coluna = int(input(f"{jogador_atual} ({jogador}), escolhe uma coluna: "))
+                    jogada(jogador, coluna, altura_grelha, tabuleiro)
+                    if ganhar(jogador, tabuleiro, comprimento_grelha, altura_grelha, tamanho_sequencia):
+                        print_tabuleiro(comprimento_grelha, tabuleiro)
+                        print(f"{jogador} Venceu!")
                         break
-                    player = 'O' if player == 'X' else 'X'
+                    jogador = 'O' if jogador == 'X' else 'X'
                     jogador_atual = nome_jogador2 if jogador_atual == nome_jogador1 else nome_jogador1          
 
 
@@ -181,7 +181,7 @@ def main():
 
         # G - Gravar
         elif op1 == "G":
-            gravar_jogo(lista_jogadores, decorrer_jogo, board, temp_var)
+            gravar_jogo(lista_jogadores, decorrer_jogo, tabuleiro, temp_var)
             if gravar_jogo == True:
                 os.system('cls')
                 print("Jogo gravado.")
