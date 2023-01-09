@@ -81,16 +81,16 @@ def main():
             print('''
               RJ + Nome - Registar jogador
               EJ + Nome - Remover jogador
-                     LJ - Listar jogadores
-           IJ + 2 Nomes - Iniciar jogo
+                    LJ - Listar jogadores
+            IJ + 2 Nomes - Iniciar jogo
                      DJ - Detalhes do jogo
-          D + 1/2 Nomes - Desistir
+            D + 1/2 Nomes - Desistir
                      CP - Colocar peça
                       V - Visualizar resultado
                       G - Gravar
                       L - Ler
                       X - Sair
-        ''')
+            ''')
             op1 = input("Digite uma opção: ")   # Opção 1
         
         # EJ - Remover jogador
@@ -103,13 +103,26 @@ def main():
                     print(lista_jogadores[i])
                 nome_apagar_jogador = input("Digite o nome do utilizador que pretende apagar")
                 remover_jogadores(lista_jogadores, nome_apagar_jogador, decorrer_jogo)
-                if registar_jogadores == True:
+                if remover_jogadores == True:
                     print("Jogador removido com sucesso")
                 elif remover_jogadores == False: 
                     print("Jogador participa no jogo em curso..")    
                 else: 
                     print("Jogador não existente.")
-
+            print('''
+            RJ + Nome - Registar jogador
+                EJ + Nome - Remover jogador
+                     LJ - Listar jogadores
+            IJ + 2 Nomes - Iniciar jogo
+                     DJ - Detalhes do jogo
+            D + 1/2 Nomes - Desistir
+                     CP - Colocar peça
+                      V - Visualizar resultado
+                      G - Gravar
+                      L - Ler
+                      X - Sair
+            ''')
+            op1 = input("Digite uma opção: ")   # Opção 1
         # LJ - Listar jogadores
         elif op1 == "LJ":
             os.system('cls')
