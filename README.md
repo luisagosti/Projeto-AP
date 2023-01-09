@@ -67,7 +67,7 @@ Um jogo opõe dois jogadores registados, e tem os seguintes parâmetros:
 - h— Altura da grelha em peças, ondeh∈N,⌈w 2 ⌉≤h≤w;
 - n— Número de peças em linha para determinar a vitória (i.e.,TamanhoSequência), onde
     n∈N, n≤w;
-- S— Conjunto de tamanhos de peças especiais disponível para cada jogador, onde∀s∈S:S∈
+- S— Conjunto de tamanhos de peças especiais disponível para cada jogador, onde ∀s∈S:S∈
     N, s < n. E.g.,n= 5, S= [3, 3 ,4], implica que cada jogador dispõe de duas peças especiais de 3
     peças, e uma peça especial de 4 peças, além do número ilimitado de peças unitárias.
 
