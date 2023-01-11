@@ -26,7 +26,7 @@ def print_board():
     for row in board:
         print('|'.join(row))
 
-def make_move(player, column, use_special_piece=False, special_piece_index=None):
+def make_move_right(player, column, use_special_piece=False, special_piece_index=None):
     column -= 1
     if use_special_piece:
         # Add the special piece
@@ -46,6 +46,25 @@ def make_move(player, column, use_special_piece=False, special_piece_index=None)
                 return
         print("A coluna encontra-se completa, escolhe outra coluna.")
 
+def make_move_left(player, column, use_special_piece=False, special_piece_index=None):
+    column -= 1
+    if use_special_piece:
+        # Add the special piece
+        special_piece_size = player_SpecialPiecesDictionary[player][special_piece_index]
+        for i in range(column, column-special_piece_size, -1):
+            for j in range(height-1, -1, -1):
+                if i >= 0 and board[j][i] == ' ':
+                    board[j][i] = player
+                    break
+        else:
+            print("A coluna encontra-se completa, escolhe outra coluna.")
+            return
+    else:
+        for i in range(height-1, -1, -1):
+            if board[i][column] == ' ':
+                board[i][column] = player
+                return
+        print("A coluna encontra-se completa, escolhe outra coluna.")
 
 def has_won(player):
     # Check for win using special pieces
@@ -126,7 +145,9 @@ def main():
                     print("{}: {} sequencias".format(i+1, special_piece))
                 special_piece_index = int(input("Peça especial: ")) - 1
                 use_special_piece = True
+                orientation = input("Em que sentido queres jogar a peça especial (E ou D): ")
                 column = int(input("Em que coluna queres jogar a peça especial: "))
+                    
             else:
                 print("Não existem peças especiais.")
                 continue
@@ -134,7 +155,15 @@ def main():
             print("Coluna inválida, escolhe outra coluna.")
             continue
 
-        make_move(player, column, use_special_piece=use_special_piece, special_piece_index=special_piece_index)
+        if orientation == "E":
+            make_move_left(player, column, use_special_piece=use_special_piece, special_piece_index=special_piece_index)
+        
+        elif orientation == "D":
+            make_move_right(player, column, use_special_piece=use_special_piece, special_piece_index=special_piece_index)
+        
+        else:
+            print("Orientação inválida, escolhe outra coluna.")
+            continue
 
         if use_special_piece:
             special_piece = player_SpecialPiecesDictionary[player][special_piece_index]
@@ -146,7 +175,6 @@ def main():
         player = 'O' if player == 'X' else 'X'
 
 main()
-
 
 
 
