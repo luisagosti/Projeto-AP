@@ -155,15 +155,18 @@ def main():
             print("Coluna inválida, escolhe outra coluna.")
             continue
 
-        if orientation == "E":
-            make_move_left(player, column, use_special_piece=use_special_piece, special_piece_index=special_piece_index)
-        
-        elif orientation == "D":
-            make_move_right(player, column, use_special_piece=use_special_piece, special_piece_index=special_piece_index)
-        
+        if use_special_piece == True:
+            if orientation == "E":
+                    make_move_left(player, column, use_special_piece=use_special_piece, special_piece_index=special_piece_index)
+                
+            elif orientation == "D":
+                make_move_right(player, column, use_special_piece=use_special_piece, special_piece_index=special_piece_index)
+            
+            else:
+                print("Orientação inválida, escolhe outra coluna.")
+                continue
         else:
-            print("Orientação inválida, escolhe outra coluna.")
-            continue
+            make_move_right(player, column, use_special_piece=use_special_piece, special_piece_index=special_piece_index)
 
         if use_special_piece:
             special_piece = player_SpecialPiecesDictionary[player][special_piece_index]
