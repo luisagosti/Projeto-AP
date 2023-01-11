@@ -1,16 +1,17 @@
-def registar_jogadores(nome_jogador, lista_jogadores):
-    if nome_jogador in lista_jogadores:
-        return False
+def registar_jogadores(op1, lista_jogadores):
+    if op1 not in lista_jogadores:
+        lista_jogadores.append(op1)
+        return True
     else:
-        lista_jogadores.append(nome_jogador)
-        return True
+        
+        return False
 
-def remover_jogadores(lista_jogadores, nome_apagar_jogador, decorrer_jogo):
+def remover_jogadores(lista_jogadores, op1, decorrer_jogo):
     
-    if nome_apagar_jogador in lista_jogadores:
-        lista_jogadores.remove(nome_apagar_jogador)
+    if op1[1] in lista_jogadores:
+        lista_jogadores.remove(op1[1])
         return True
-    elif decorrer_jogo == 1 and nome_apagar_jogador in lista_jogadores:
+    elif decorrer_jogo == 1 and op1[1] in lista_jogadores:
         return False
     else:
         return
