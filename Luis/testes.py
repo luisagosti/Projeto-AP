@@ -1,19 +1,20 @@
-
 # Get board width and height from user
-width = int(input("Enter the width of the board: "))
-height = int(input("Enter the height of the board: "))
+width = int(input("Indica o comprimento do tabuleiro: "))
+height = int(input("Indica a altura do tabuleiro: "))
 
 # Get the number of sequenced pieces needed to win
-sequenced_pieces = int(input("Enter the number of sequenced pieces needed to win: "))
-
+sequenced_pieces = int(input("Indica o numero de peças em sequência necessárias para ganhar: "))
 
 # Create a list to store the special pieces
 special_pieces = []
 
+# Create a dictionary to save the number of special pieces within the player name
+player_SpecialPiecesDictionary = {}
+
 # Get the number and size of special pieces from the user
-num_special_pieces = int(input("Enter the number of special pieces: "))
+num_special_pieces = int(input("Indica o numero de peças especiais: "))
 for i in range(num_special_pieces):
-    special_piece_size = int(input("Enter the size of special piece {} (in number of sequenced pieces): ".format(i+1)))
+    special_piece_size = int(input("Indica o tamanho da {} peça especial: ".format(i+1)))
     special_pieces.append(special_piece_size)
 
 # Generate board with the specified width and height
@@ -29,7 +30,7 @@ def make_move(player, column, use_special_piece=False, special_piece_index=None)
     column -= 1
     if use_special_piece:
         # Add the special piece
-        special_piece_size = special_pieces[special_piece_index]
+        special_piece_size = player_SpecialPiecesDictionary[player][special_piece_index]
         for i in range(column, column+special_piece_size):
             for j in range(height-1, -1, -1):
                 if i < width and board[j][i] == ' ':
@@ -44,6 +45,7 @@ def make_move(player, column, use_special_piece=False, special_piece_index=None)
                 board[i][column] = player
                 return
         print("A coluna encontra-se completa, escolhe outra coluna.")
+
 
 def has_won(player):
     # Check for win using special pieces
@@ -101,24 +103,42 @@ def has_won(player):
     return False
 
 
+# Initialize separate lists for each player's special pieces
+player_X_special_pieces = special_pieces.copy()
+player_O_special_pieces = special_pieces.copy()
+
+# Update player_SpecialPiecesDictionary with the separate lists
+player_SpecialPiecesDictionary.update({"X": player_X_special_pieces, "O": player_O_special_pieces})
+
 def main():
     player = 'X'
     while True:
+        print("player_SpecialPiecesDictionary: " + str(player_SpecialPiecesDictionary))
         print_board()
-        column = int(input(f"{player}, escolhe uma coluna: "))
+        column = int(input(f"{player}, escolhe uma coluna ou '0' para jogar uma peça especial: "))
         use_special_piece = False
         special_piece_index = None
+
         if column == 0:
-            print("Escolhe qual peça especial queres usar:")
-            for i, special_piece in enumerate(special_pieces):
-                print("{}: {} sequencias".format(i+1, special_piece))
-            special_piece_index = int(input("Peça especial: ")) - 1
-            use_special_piece = True
-            column = int(input("Em que coluna queres jogar a peça especial: "))
+            if len(player_SpecialPiecesDictionary[player]) > 0:
+                print("Escolhe qual peça especial queres usar:")
+                for i, special_piece in enumerate(player_SpecialPiecesDictionary[player]):
+                    print("{}: {} sequencias".format(i+1, special_piece))
+                special_piece_index = int(input("Peça especial: ")) - 1
+                use_special_piece = True
+                column = int(input("Em que coluna queres jogar a peça especial: "))
+            else:
+                print("Não existem peças especiais.")
+                continue
         elif column < 0 or column > width:
             print("Coluna inválida, escolhe outra coluna.")
             continue
+
         make_move(player, column, use_special_piece=use_special_piece, special_piece_index=special_piece_index)
+
+        if use_special_piece:
+            special_piece = player_SpecialPiecesDictionary[player][special_piece_index]
+            player_SpecialPiecesDictionary[player].remove(special_piece)
         if has_won(player):
             print_board()
             print(f"{player} Venceu!")
