@@ -90,3 +90,4 @@
 
 Notas joao:
     No Desistir Jogo não faz sentido estar assim, tipo como tá, o jogador 1 pode fazer o jogador 2 desistir invuluntáriamnete
+    Nem pode ser como está😭, vou mexer no meu ficheiro para ver se consigo meter como é suposto
