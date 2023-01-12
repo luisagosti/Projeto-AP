@@ -458,10 +458,54 @@ def main():
         # D - Desistir             
         elif op1[0] == "D": 
             os.system('cls')
-            print(f'''Apos desistencia do {nome_jogador1}
-                        O {nome_jogador2} vence
-                        ''')
-                        
+            
+            if decorrer_jogo == 0:
+                print("Comece um jogo para poder desistir.")
+                print('''
+                             RJ + Nome - Registar jogador
+                             EJ + Nome - Remover jogador
+                                    LJ - Listar jogadores
+                          IJ + 2 Nomes - Iniciar jogo
+                                    DJ - Detalhes do jogo
+                         D + 1/2 Nomes - Desistir
+                                    CP - Colocar peça
+                                     V - Visualizar resultado
+                                     G - Gravar
+                                     L - Ler
+                                     X - Sair
+                    ''')
+                op1 = input("Digite uma opção: ").split(' ', 2)
+
+                while op1[0].upper() not in ["RJ", "EJ", "LJ", "IJ", "DJ", "D", "CP", "V", "G", "L", "X"]:
+                    os.system('cls')
+
+                    print("Instrução inválida.")
+                    print('''
+                                RJ + Nome - Registar jogador
+                                EJ + Nome - Remover jogador
+                                       LJ - Listar jogadores
+                             IJ + 2 Nomes - Iniciar jogo
+                                       DJ - Detalhes do jogo
+                            D + 1/2 Nomes - Desistir
+                                       CP - Colocar peça
+                                        V - Visualizar resultado
+                                        G - Gravar
+                                        L - Ler
+                                        X - Sair
+                            ''')
+                    op1 = input("Digite uma opcão: ").split(' ', 2)   # Opção 1
+
+            else:
+                desistencia = int(input(f'''
+                                                Quem pretende desistir:
+                                                1 - {nome_jogador1}
+                                                2 - {nome_jogador2}
+                                                3 - Ambos
+
+                                                Opção: 
+                                            '''))
+                desistir_Jogo()
+
         # CP - Colocar peça            
         elif op1[0] == "CP":
             os.system('cls')

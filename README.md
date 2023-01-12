@@ -10,33 +10,51 @@
 
 - [x] Verificações de `Opção 1`
 
-- [x] Terminar `RJ - Registar jogador`
+- [x] `RJ - Registar jogador`
     - [x] Verificações de inputs
     - [x] Nome unico
 
-- [x] Terminar `EJ - Remover jogador`
+- [x] `EJ - Remover jogador`
     - [x] Verificações de inputs
 
-- [ ] Terminar `LJ - Listar jogadores`
+- [ ] `LJ - Listar jogadores`
     - [x] Verificações de inputs
     - [ ] Indicar número de jogos jogados e vitórias
 
-- [ ] Terminar `LJ - Listar jogadores`
+- [ ] `LJ - Listar jogadores`
     - [x] Jogo funcional
     - [ ] Verificações de inputs
         - [ ] `heigth` - Altura da grelha (`width/2` ≤ `heigth` ≤ `width`)
         - [ ] `sequenced_pieces` - Número de peças em linha para determinar a vitória (`sequenced_pieces` ≤ `width`)
         - [ ] `special_pieces` - Conjunto de tamanhos de peças especiais disponível para cada jogador (`special_pieces` < `sequenced_pieces`)
-    - [ ] Verificação de jogo em curso
-    - [ ] Verificação de se jogador indicado não se encontra registado
+    - [ ] Verificar se já se encontra jogo em curso
+    - [ ] Verificar se jogador indicado se encontra registado
 
-- [ ] Terminar `DJ - Detalhes do jogo`
+- [ ] `DJ - Detalhes do jogo`
     - [x] Verificações de inputs
     - [ ] Informações do jogo em curso
         - [x] Tamanho da grelha
         - [x] Nomes jogadores
             - [ ] Alfabéticamente
         - [x] Quantidade de peças especiais disponíveis para cada jogador
+
+- [ ] `D - Desistir`
+    - [ ] Verificações de inputs
+    - [ ] Criar função desistir_Jogo
+        - [ ] Editar dicionário jogos jogados e vitórias
+
+- [ ] `CP - Colocar peça`
+    - [ ] Verificações de inputs
+
+- [ ] `V - Visualizar resultado`
+    - [ ] Verificações de inputs
+
+- [ ] `G - Gravar`
+    - [ ] Verificações de inputs
+
+- [ ] `L - Ler`
+    - [ ] Verificações de inputs
+
 
 
 ### 1: Data relevantes
@@ -57,14 +75,14 @@
 
 ### 3: Avaliação
 
-- RJ    -   1 valor
-- EJ    -   1 valor
-- LJ    -   2 valor
-- IJ    -   2 valor
-- DJ    -   3 valores
-- D     -   2 valores
-- CP    -   4 valores
-- V     -   3 valores
-- G     -   1 valor
-- L     -   1 valor
+- RJ    —   1 valor
+- EJ    —   1 valor
+- LJ    —   2 valor
+- IJ    —   2 valor
+- DJ    —   3 valores
+- D     —   2 valores
+- CP    —   4 valores
+- V     —   3 valores
+- G     —   1 valor
+- L     —   1 valor
 

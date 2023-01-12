@@ -43,6 +43,9 @@ def gravar_jogo(lista_jogadores, decorrer_jogo, board, temp_var):
 
         return True
 
+def desistir_Jogo():
+    return
+
 ################ JOGO ###################
 
 def make_move_right(player, column, player_SpecialPiecesDictionary, height, width, board, use_special_piece, special_piece_index):
