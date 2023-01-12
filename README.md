@@ -1,4 +1,4 @@
-#### Situações em falta:
+### Situações em falta:
 
 - [x] Split nos inputs
 - [x] Peças especiais
@@ -39,13 +39,13 @@
         - [x] Quantidade de peças especiais disponíveis para cada jogador
 
 
-#### 1: Data relevantes
+### 1: Data relevantes
 
 - 05/12/2022              — Disponibilização do enunciado.
 - 13/01/2023 23:59:59 GMT —  Entrega final do trabalho.
 - 16/01/2023              — 27/01/2023 Apresentação dos trabalhos.
 
-#### 2.2 Parâmetros de jogo
+### 2: Parâmetros de jogo
 
 - w    —   Comprimento da grelha, em peças, ondew∈N;
 - h    —   Altura da grelha em peças, ondeh∈N,⌈w 2 ⌉≤h≤w;
@@ -55,7 +55,7 @@
            N, s < n. E.g.,n= 5, S= [3, 3 ,4], implica que cada jogador dispõe de duas peças especiais de 3
            peças, e uma peça especial de 4 peças, além do número ilimitado de peças unitárias.
 
-#### 3.3 Avaliação
+### 3: Avaliação
 
 - RJ    -   1 valor
 - EJ    -   1 valor
