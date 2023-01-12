@@ -3,22 +3,9 @@ import os
 
 def main():
 
-    # w (comprimento_Grelha) — Comprimento da grelha, em peças, onde w ∈ N
-    comprimento_grelha = 0
-
-    # h (altura_Grelha) — Altura da grelha em peças, onde h ∈ N, [w/2] ≤ h ≤ w
-    altura_grelha = 0
-
-    # n (tamanho_Sequencia) — Número de peças em linha para determinar a vitória, onde n ∈ N, n ≤ w
-    tamanho_sequencia = ''
-
-    # S (tamanho_PecasEspeciais) — Conjunto de tamanhos de peças especiais disponível para cada jogador, onde ∀s ∈ S : S ∈ N, s < n
-    tamanho_pecas_especiais = []
-
     # Lista jogadores
     lista_jogadores = ["Pedro", "João"]
     
-
     # Verificação de jogo em curso
     decorrer_jogo = 0
 
@@ -26,36 +13,38 @@ def main():
     temp_var = ''
 
     print('''
-                RJ + Nome - Registar jogador
-                EJ + Nome - Remover jogador
+                 RJ + Nome - Registar jogador
+                 EJ + Nome - Remover jogador
                         LJ - Listar jogadores
-            IJ + 2 Nomes - Iniciar jogo
+              IJ + 2 Nomes - Iniciar jogo
                         DJ - Detalhes do jogo
-            D + 1/2 Nomes - Desistir
+             D + 1/2 Nomes - Desistir
                         CP - Colocar peça
-                        V - Visualizar resultado
-                        G - Gravar
-                        L - Ler
-                        X - Sair
+                         V - Visualizar resultado
+                         G - Gravar
+                         L - Ler
+                         X - Sair
             ''')
     op1 = input("Digite uma opção: ").split(' ', 2)   # Opção 1
 
     # Enquanto a "Opção 1" não igualar nenhuma das opções do array, o programa irá continuar a perguntar por uma opção.
     # Ele passa quando a "Opção 1" for equivalente a alguma das opções dentro do array
     while op1[0].upper() not in ["RJ", "EJ", "LJ", "IJ", "DJ", "D", "CP", "V", "G", "L", "X"]:
+        os.system('cls')
+
         print("Instrução inválida.")
         print('''
-                RJ + Nome - Registar jogador
-                EJ + Nome - Remover jogador
+                 RJ + Nome - Registar jogador
+                 EJ + Nome - Remover jogador
                         LJ - Listar jogadores
-            IJ + 2 Nomes - Iniciar jogo
+              IJ + 2 Nomes - Iniciar jogo
                         DJ - Detalhes do jogo
-            D + 1/2 Nomes - Desistir
+             D + 1/2 Nomes - Desistir
                         CP - Colocar peça
-                        V - Visualizar resultado
-                        G - Gravar
-                        L - Ler
-                        X - Sair
+                         V - Visualizar resultado
+                         G - Gravar
+                         L - Ler
+                         X - Sair
             ''')
         op1 = input("Digite uma opcão: ").split(' ', 2)   # Opção 1
 
@@ -64,66 +53,225 @@ def main():
 
         # RJ - Registar jogador
         if op1[0] == "RJ":
-            r_registar = registar_jogadores(op1[1], lista_jogadores)
+            os.system('cls')
+
+            verificar_Registo = registar_jogadores(op1[1], lista_jogadores)
             print(lista_jogadores)
-            if r_registar == True:
+            if verificar_Registo == True:
                 print("Jogador adicionado com sucesso.")
     
             else: 
                 print("Jogador existente")    
 
             print('''
-                RJ + Nome - Registar jogador
-                EJ + Nome - Remover jogador
+                 RJ + Nome - Registar jogador
+                 EJ + Nome - Remover jogador
                         LJ - Listar jogadores
-            IJ + 2 Nomes - Iniciar jogo
+              IJ + 2 Nomes - Iniciar jogo
                         DJ - Detalhes do jogo
-            D + 1/2 Nomes - Desistir
+             D + 1/2 Nomes - Desistir
                         CP - Colocar peça
-                        V - Visualizar resultado
-                        G - Gravar
-                        L - Ler
-                        X - Sair
+                         V - Visualizar resultado
+                         G - Gravar
+                         L - Ler
+                         X - Sair
             ''')
             op1 = input("Digite uma opção: ").split(' ', 2)   # Opção 1
+
+            while op1[0].upper() not in ["RJ", "EJ", "LJ", "IJ", "DJ", "D", "CP", "V", "G", "L", "X"]:
+                os.system('cls')
+
+                print("Instrução inválida.")
+                print('''
+                         RJ + Nome - Registar jogador
+                         EJ + Nome - Remover jogador
+                                LJ - Listar jogadores
+                      IJ + 2 Nomes - Iniciar jogo
+                                DJ - Detalhes do jogo
+                     D + 1/2 Nomes - Desistir
+                                CP - Colocar peça
+                                 V - Visualizar resultado
+                                 G - Gravar
+                                 L - Ler
+                                 X - Sair
+                    ''')
+                op1 = input("Digite uma opcão: ").split(' ', 2)   # Opção 1
             
         # EJ - Remover jogador
         elif op1[0] == "EJ":
             if len(lista_jogadores) == 0:
+                os.system('cls')
+
                 print("Não existem jogadores registados.")
-            else:
-                for i in range(len(lista_jogadores)):
-                    print(lista_jogadores[i])
-                r_remover = remover_jogadores(lista_jogadores, op1, decorrer_jogo)
-                if r_remover == True:
-                    print("Jogador removido com sucesso")
-                elif r_remover == False: 
-                    print("Jogador participa no jogo em curso..")    
-                else: 
-                    print("Jogador não existente.")
                 print('''
-                RJ + Nome - Registar jogador
-                EJ + Nome - Remover jogador
-                        LJ - Listar jogadores
-                IJ + 2 Nomes - Iniciar jogo
-                        DJ - Detalhes do jogo
-                D + 1/2 Nomes - Desistir
-                        CP - Colocar peça
-                        V - Visualizar resultado
-                        G - Gravar
-                        L - Ler
-                        X - Sair
-                ''')
-                op1 = input("Digite uma opção: ").split(' ', 2)
+                             RJ + Nome - Registar jogador
+                             EJ + Nome - Remover jogador
+                                    LJ - Listar jogadores
+                          IJ + 2 Nomes - Iniciar jogo
+                                    DJ - Detalhes do jogo
+                         D + 1/2 Nomes - Desistir
+                                    CP - Colocar peça
+                                     V - Visualizar resultado
+                                     G - Gravar
+                                     L - Ler
+                                     X - Sair
+                        ''')
+                op1 = input("Digite uma opção: ").split(' ', 2)   # Opção 1
+
+                while op1[0].upper() not in ["RJ", "EJ", "LJ", "IJ", "DJ", "D", "CP", "V", "G", "L", "X"]:
+                    os.system('cls')
+
+                    print("Instrução inválida.")
+                    print('''
+                                RJ + Nome - Registar jogador
+                                EJ + Nome - Remover jogador
+                                        LJ - Listar jogadores
+                            IJ + 2 Nomes - Iniciar jogo
+                                        DJ - Detalhes do jogo
+                            D + 1/2 Nomes - Desistir
+                                        CP - Colocar peça
+                                        V - Visualizar resultado
+                                        G - Gravar
+                                        L - Ler
+                                        X - Sair
+                            ''')
+                    op1 = input("Digite uma opcão: ").split(' ', 2)   # Opção 1
+
+            else:
+                os.system('cls')
+
+                if op1[1] not in lista_jogadores:
+                    print("Jogador inexistente.")
+
+                    print('''
+                                 RJ + Nome - Registar jogador
+                                 EJ + Nome - Remover jogador
+                                        LJ - Listar jogadores
+                              IJ + 2 Nomes - Iniciar jogo
+                                        DJ - Detalhes do jogo
+                             D + 1/2 Nomes - Desistir
+                                        CP - Colocar peça
+                                         V - Visualizar resultado
+                                         G - Gravar
+                                         L - Ler
+                                         X - Sair
+                        ''')
+                    op1 = input("Digite uma opção: ").split(' ', 2)   # Opção 1
+
+                    while op1[0].upper() not in ["RJ", "EJ", "LJ", "IJ", "DJ", "D", "CP", "V", "G", "L", "X"]:
+                        os.system('cls')
+
+                        print("Instrução inválida.")
+                        print('''
+                                     RJ + Nome - Registar jogador
+                                     EJ + Nome - Remover jogador
+                                            LJ - Listar jogadores
+                                  IJ + 2 Nomes - Iniciar jogo
+                                            DJ - Detalhes do jogo
+                                 D + 1/2 Nomes - Desistir
+                                            CP - Colocar peça
+                                             V - Visualizar resultado
+                                             G - Gravar
+                                             L - Ler
+                                             X - Sair
+                            ''')
+                        op1 = input("Digite uma opcão: ").split(' ', 2)   # Opção 1
+                    
+                else:
+                    remover_Jogador = remover_jogadores(lista_jogadores, op1, decorrer_jogo)
+
+                    if remover_Jogador == True:
+                        print("Jogador removido com sucesso")
+
+                    elif remover_Jogador == False: 
+                        print("Jogador participa no jogo em curso..")    
+
+                        os.system('cls') 
+
+                        print("Jogador não existente.")
+                        print('''
+                                     RJ + Nome - Registar jogador
+                                     EJ + Nome - Remover jogador
+                                            LJ - Listar jogadores
+                                  IJ + 2 Nomes - Iniciar jogo
+                                            DJ - Detalhes do jogo
+                                 D + 1/2 Nomes - Desistir
+                                            CP - Colocar peça
+                                             V - Visualizar resultado
+                                             G - Gravar
+                                             L - Ler
+                                             X - Sair
+                                ''')
+                        op1 = input("Digite uma opção: ").split(' ', 2)
+
+                        while op1[0].upper() not in ["RJ", "EJ", "LJ", "IJ", "DJ", "D", "CP", "V", "G", "L", "X"]:
+                            os.system('cls')
+
+                            print("Instrução inválida.")
+                            print('''
+                                         RJ + Nome - Registar jogador
+                                         EJ + Nome - Remover jogador
+                                                LJ - Listar jogadores
+                                      IJ + 2 Nomes - Iniciar jogo
+                                                DJ - Detalhes do jogo
+                                     D + 1/2 Nomes - Desistir
+                                                CP - Colocar peça
+                                                 V - Visualizar resultado
+                                                 G - Gravar
+                                                 L - Ler
+                                                 X - Sair
+                                    ''')
+                            op1 = input("Digite uma opcão: ").split(' ', 2)   # Opção 1
+                    
+                    else:
+                        continue
 
         # LJ - Listar jogadores
         elif op1[0] == "LJ":
             os.system('cls')
-            listar_jogadores(lista_jogadores,len(lista_jogadores))
+
+            for i in len(lista_jogadores):
+                print(str(i + 1) + " - " + lista_jogadores[i])
+            
+            print('''\n
+                             RJ + Nome - Registar jogador
+                             EJ + Nome - Remover jogador
+                                    LJ - Listar jogadores
+                          IJ + 2 Nomes - Iniciar jogo
+                                    DJ - Detalhes do jogo
+                         D + 1/2 Nomes - Desistir
+                                    CP - Colocar peça
+                                     V - Visualizar resultado
+                                     G - Gravar
+                                     L - Ler
+                                     X - Sair
+                    ''')
+            op1 = input("Digite uma opção: ").split(' ', 2)
+
+            while op1[0].upper() not in ["RJ", "EJ", "LJ", "IJ", "DJ", "D", "CP", "V", "G", "L", "X"]:
+                os.system('cls')
+
+                print("Instrução inválida.")
+                print('''
+                            RJ + Nome - Registar jogador
+                            EJ + Nome - Remover jogador
+                                   LJ - Listar jogadores
+                         IJ + 2 Nomes - Iniciar jogo
+                                   DJ - Detalhes do jogo
+                        D + 1/2 Nomes - Desistir
+                                   CP - Colocar peça
+                                    V - Visualizar resultado
+                                    G - Gravar
+                                    L - Ler
+                                    X - Sair
+                        ''')
+                op1 = input("Digite uma opcão: ").split(' ', 2)   # Opção 1          
+
 
         # IJ - Iniciar jogo
         elif op1[0] == "IJ":
-            # os.system('cls')
+            os.system('cls')
+
             if len(lista_jogadores) < 2:
                 print("Jogadores insuficientes.")
             elif decorrer_jogo == 1:
@@ -225,10 +373,87 @@ def main():
         # DJ - Detalhes do jogo
         elif op1[0] == "DJ":
             os.system('cls')
-            print(f'''Para vencer é necessario o {nome_jogador1} ou o {nome_jogador2}
-        numa tabela de {comprimento_grelha}comprimento e {altura_grelha}altura         DENTRO E FORA DO IJ MAS ESTE É O DE DENTRO          
-        colocar {tamanho_sequencia}peças em linha horizontal,vertical ou diagonal
-        ''')
+
+            if decorrer_jogo == 0:
+                print("Comece um jogo para obter detalhes.")
+                print('''
+                             RJ + Nome - Registar jogador
+                             EJ + Nome - Remover jogador
+                                    LJ - Listar jogadores
+                          IJ + 2 Nomes - Iniciar jogo
+                                    DJ - Detalhes do jogo
+                         D + 1/2 Nomes - Desistir
+                                    CP - Colocar peça
+                                     V - Visualizar resultado
+                                     G - Gravar
+                                     L - Ler
+                                     X - Sair
+                    ''')
+                op1 = input("Digite uma opção: ").split(' ', 2)
+
+                while op1[0].upper() not in ["RJ", "EJ", "LJ", "IJ", "DJ", "D", "CP", "V", "G", "L", "X"]:
+                    os.system('cls')
+
+                    print("Instrução inválida.")
+                    print('''
+                                RJ + Nome - Registar jogador
+                                EJ + Nome - Remover jogador
+                                       LJ - Listar jogadores
+                             IJ + 2 Nomes - Iniciar jogo
+                                       DJ - Detalhes do jogo
+                            D + 1/2 Nomes - Desistir
+                                       CP - Colocar peça
+                                        V - Visualizar resultado
+                                        G - Gravar
+                                        L - Ler
+                                        X - Sair
+                            ''')
+                    op1 = input("Digite uma opcão: ").split(' ', 2)   # Opção 1
+
+            else:
+                print(f'''
+                        Tamanho grelha - {width}
+                        1º Jogador - {nome_jogador1}
+                        2º Jogador - {nome_jogador2} 
+
+                        Quantidade de peças especiais disponiveis de {nome_jogador1} - {len(player_X_special_pieces)}
+                        Quantidade de peças especiais disponiveis de {nome_jogador2} - {len(player_O_special_pieces)}
+                        ''')
+                
+                print('''\n
+                             RJ + Nome - Registar jogador
+                             EJ + Nome - Remover jogador
+                                    LJ - Listar jogadores
+                          IJ + 2 Nomes - Iniciar jogo
+                                    DJ - Detalhes do jogo
+                         D + 1/2 Nomes - Desistir
+                                    CP - Colocar peça
+                                     V - Visualizar resultado
+                                     G - Gravar
+                                     L - Ler
+                                     X - Sair
+                    ''')
+                op1 = input("Digite uma opção: ").split(' ', 2)
+
+                while op1[0].upper() not in ["RJ", "EJ", "LJ", "IJ", "DJ", "D", "CP", "V", "G", "L", "X"]:
+                    os.system('cls')
+
+                    print("Instrução inválida.")
+                    print('''
+                                RJ + Nome - Registar jogador
+                                EJ + Nome - Remover jogador
+                                       LJ - Listar jogadores
+                             IJ + 2 Nomes - Iniciar jogo
+                                       DJ - Detalhes do jogo
+                            D + 1/2 Nomes - Desistir
+                                       CP - Colocar peça
+                                        V - Visualizar resultado
+                                        G - Gravar
+                                        L - Ler
+                                        X - Sair
+                            ''')
+                    op1 = input("Digite uma opcão: ").split(' ', 2)   # Opção 1 
+            
 
         # D - Desistir             
         elif op1[0] == "D": 
@@ -236,6 +461,7 @@ def main():
             print(f'''Apos desistencia do {nome_jogador1}
                         O {nome_jogador2} vence
                         ''')
+                        
         # CP - Colocar peça            
         elif op1[0] == "CP":
             os.system('cls')
