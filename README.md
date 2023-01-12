@@ -39,8 +39,8 @@
         - [x] Quantidade de peças especiais disponíveis para cada jogador
 
 - [ ] `D - Desistir`
-    - [ ] Verificações de inputs
-    - [ ] Criar função desistir_Jogo
+    - [x] Verificações de inputs
+    - [+-] Criar função desistir_Jogo
         - [ ] Editar dicionário jogos jogados e vitórias
 
 - [ ] `CP - Colocar peça`
@@ -91,3 +91,6 @@
 Notas joao:
     No Desistir Jogo não faz sentido estar assim, tipo como tá, o jogador 1 pode fazer o jogador 2 desistir invuluntáriamnete
     Nem pode ser como está😭, vou mexer no meu ficheiro para ver se consigo meter como é suposto
+    
+    
+Falta "dar função" aos parametros no desistir, inputs e outputs feitos no ficheiro desistit.py no meu folder
