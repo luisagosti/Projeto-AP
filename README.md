@@ -41,13 +41,11 @@
 
 #### 1: Data relevantes
 
-05/12/2022              — Disponibilização do enunciado.
-13/01/2023 23:59:59 GMT —  Entrega final do trabalho.
-16/01/2023              — 27/01/2023 Apresentação dos trabalhos.
+- 05/12/2022              — Disponibilização do enunciado.
+- 13/01/2023 23:59:59 GMT —  Entrega final do trabalho.
+- 16/01/2023              — 27/01/2023 Apresentação dos trabalhos.
 
 #### 2.2 Parâmetros de jogo
-
-Um jogo opõe dois jogadores registados, e tem os seguintes parâmetros:
 
 - w    —   Comprimento da grelha, em peças, ondew∈N;
 - h    —   Altura da grelha em peças, ondeh∈N,⌈w 2 ⌉≤h≤w;
