@@ -12,6 +12,9 @@ def main():
     # Variável com valores temporários
     temp_var = ''
 
+    # Dicionário jogos jogados e vitórias
+    x = {}
+   
     print('''
                  RJ + Nome - Registar jogador
                  EJ + Nome - Remover jogador
@@ -55,7 +58,7 @@ def main():
         if op1[0] == "RJ":
             os.system('cls')
 
-            verificar_Registo = registar_jogadores(op1[1], lista_jogadores)
+            verificar_Registo = registar_jogadores(op1[1], lista_jogadores,x)
             print(lista_jogadores)
             if verificar_Registo == True:
                 print("Jogador adicionado com sucesso.")
@@ -178,7 +181,7 @@ def main():
                         op1 = input("Digite uma opcão: ").split(' ', 2)   # Opção 1
                     
                 else:
-                    remover_Jogador = remover_jogadores(lista_jogadores, op1, decorrer_jogo)
+                    remover_Jogador = remover_jogadores(lista_jogadores, op1, decorrer_jogo,x)
 
                     if remover_Jogador == True:
                         print("Jogador removido com sucesso")
@@ -271,6 +274,7 @@ def main():
         # IJ - Iniciar jogo
         elif op1[0] == "IJ":
             os.system('cls')
+        
 
             if len(lista_jogadores) < 2:
                 print("Jogadores insuficientes.")
@@ -345,10 +349,14 @@ def main():
                     if use_special_piece == True:
                         if orientation == "E":
                             make_move_left(player, player_SpecialPiecesDictionary, height, board, column, use_special_piece=use_special_piece, special_piece_index=special_piece_index)
-                            
+                            if make_move_left == True:
+                                print("A coluna encontra-se completa, escolhe outra coluna.")
+
                         elif orientation == "D":
                             make_move_right(player, column, player_SpecialPiecesDictionary, height, width, board, use_special_piece=use_special_piece, special_piece_index=special_piece_index)
-                        
+                            if make_move_right == True:
+                                print("A coluna encontra-se completa, escolhe outra coluna.")
+
                         else:
                             print("Orientação inválida, escolhe outra coluna.")
                             continue

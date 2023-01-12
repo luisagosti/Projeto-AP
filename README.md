@@ -86,3 +86,7 @@
 - G     —   1 valor
 - L     —   1 valor
 
+
+
+Notas joao:
+    No Desistir Jogo não faz sentido estar assim, tipo como tá, o jogador 1 pode fazer o jogador 2 desistir invuluntáriamnete

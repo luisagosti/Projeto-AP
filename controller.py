@@ -1,15 +1,21 @@
-def registar_jogadores(op1, lista_jogadores):
+def registar_jogadores(op1, lista_jogadores,x):
     if op1 not in lista_jogadores:
         lista_jogadores.append(op1)
+        p = ((op1),'Vitoria')               #O p e o o sao variaveis que iram armazenar a string vitoria e a string jogos_jogados
+        o = ((op1),'jogos_jogados')
+        y = {(p):0,(o):0}       # Dicionario y atribui valores a p e o 
+        x.update(y)             #Dicionario final de modo a não repetir nomes de variaveis
+        print(x)
         return True
 
     else:
         return False
 
-def remover_jogadores(lista_jogadores, op1, decorrer_jogo):
+def remover_jogadores(lista_jogadores, op1, decorrer_jogo,x):
     
     if op1[1] in lista_jogadores:
         lista_jogadores.remove(op1[1])
+    
         return True
 
     elif decorrer_jogo == 1 and op1[1] in lista_jogadores:
@@ -59,14 +65,13 @@ def make_move_right(player, column, player_SpecialPiecesDictionary, height, widt
                     board[j][i] = player
                     break
         else:
-            print("A coluna encontra-se completa, escolhe outra coluna.")
-            return
+            return True
     else:
         for i in range(height-1, -1, -1):
             if board[i][column] == ' ':
                 board[i][column] = player
                 return
-        print("A coluna encontra-se completa, escolhe outra coluna.")
+        return True
 
 
 
@@ -81,14 +86,13 @@ def make_move_left(player, player_SpecialPiecesDictionary, height, board, column
                     board[j][i] = player
                     break
         else:
-            print("A coluna encontra-se completa, escolhe outra coluna.")
-            return
+            return True
     else:
         for i in range(height-1, -1, -1):
             if board[i][column] == ' ':
                 board[i][column] = player
                 return
-        print("A coluna encontra-se completa, escolhe outra coluna.")
+        return True
 
 def has_won(player, height, width, board, sequenced_pieces):
     # Check for win using special pieces
