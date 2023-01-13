@@ -98,3 +98,8 @@
 - V     —   3 valores
 - G     —   1 valor
 - L     —   1 valor
+<<<<<<< Updated upstream
+=======
+
+B
+>>>>>>> Stashed changes
