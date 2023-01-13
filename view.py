@@ -21,7 +21,7 @@ def main():
     RJ + Nome - Registar jogador
     EJ + Nome - Remover jogador
     LJ - Listar jogadores
-    IJ + 2 Nomes - Iniciar jogo
+    IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
     DJ - Detalhes do jogo
     D + 1/2 Nomes - Desistir
     CP + Nome + Tamanho Peça + Posição + (Sentido) - Colocar peça
@@ -59,7 +59,7 @@ def main():
         RJ + Nome - Registar jogador
         EJ + Nome - Remover jogador
         LJ - Listar jogadores
-        IJ + 2 Nomes - Iniciar jogo
+        IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
         DJ - Detalhes do jogo
         D + 1/2 Nomes - Desistir
         CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -91,7 +91,7 @@ def main():
             RJ + Nome - Registar jogador
             EJ + Nome - Remover jogador
             LJ - Listar jogadores
-            IJ + 2 Nomes - Iniciar jogo
+            IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
             DJ - Detalhes do jogo
             D + 1/2 Nomes - Desistir
             CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -127,7 +127,7 @@ def main():
                 RJ + Nome - Registar jogador
                 EJ + Nome - Remover jogador
                 LJ - Listar jogadores
-                IJ + 2 Nomes - Iniciar jogo
+                IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                 DJ - Detalhes do jogo
                 D + 1/2 Nomes - Desistir
                 CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -149,7 +149,7 @@ def main():
                 RJ + Nome - Registar jogador
                 EJ + Nome - Remover jogador
                 LJ - Listar jogadores
-                IJ + 2 Nomes - Iniciar jogo
+                IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                 DJ - Detalhes do jogo
                 D + 1/2 Nomes - Desistir
                 CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -185,7 +185,7 @@ def main():
                     RJ + Nome - Registar jogador
                     EJ + Nome - Remover jogador
                     LJ - Listar jogadores
-                    IJ + 2 Nomes - Iniciar jogo
+                    IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                     DJ - Detalhes do jogo
                     D + 1/2 Nomes - Desistir
                     CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -207,7 +207,7 @@ def main():
                     RJ + Nome - Registar jogador
                     EJ + Nome - Remover jogador
                     LJ - Listar jogadores
-                    IJ + 2 Nomes - Iniciar jogo
+                    IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                     DJ - Detalhes do jogo
                     D + 1/2 Nomes - Desistir
                     CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -255,7 +255,7 @@ def main():
                         RJ + Nome - Registar jogador
                         EJ + Nome - Remover jogador
                         LJ - Listar jogadores
-                        IJ + 2 Nomes - Iniciar jogo
+                        IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                         DJ - Detalhes do jogo
                         D + 1/2 Nomes - Desistir
                         CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -278,7 +278,7 @@ def main():
                         RJ + Nome - Registar jogador
                         EJ + Nome - Remover jogador
                         LJ - Listar jogadores
-                        IJ + 2 Nomes - Iniciar jogo
+                        IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                         DJ - Detalhes do jogo
                         D + 1/2 Nomes - Desistir
                         CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -326,7 +326,7 @@ def main():
                             RJ + Nome - Registar jogador
                             EJ + Nome - Remover jogador
                             LJ - Listar jogadores
-                            IJ + 2 Nomes - Iniciar jogo
+                            IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                             DJ - Detalhes do jogo
                             D + 1/2 Nomes - Desistir
                             CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -344,7 +344,7 @@ def main():
                         RJ + Nome - Registar jogador
                         EJ + Nome - Remover jogador
                         LJ - Listar jogadores
-                        IJ + 2 Nomes - Iniciar jogo
+                        IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                         DJ - Detalhes do jogo
                         D + 1/2 Nomes - Desistir
                         CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -392,7 +392,7 @@ def main():
                             RJ + Nome - Registar jogador
                             EJ + Nome - Remover jogador
                             LJ - Listar jogadores
-                            IJ + 2 Nomes - Iniciar jogo
+                            IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                             DJ - Detalhes do jogo
                             D + 1/2 Nomes - Desistir
                             CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -410,7 +410,7 @@ def main():
                         RJ + Nome - Registar jogador
                         EJ + Nome - Remover jogador
                         LJ - Listar jogadores
-                        IJ + 2 Nomes - Iniciar jogo
+                        IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                         DJ - Detalhes do jogo
                         D + 1/2 Nomes - Desistir
                         CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -458,7 +458,7 @@ def main():
                             RJ + Nome - Registar jogador
                             EJ + Nome - Remover jogador
                             LJ - Listar jogadores
-                            IJ + 2 Nomes - Iniciar jogo
+                            IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                             DJ - Detalhes do jogo
                             D + 1/2 Nomes - Desistir
                             CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -480,7 +480,7 @@ def main():
                 RJ + Nome - Registar jogador
                 EJ + Nome - Remover jogador
                 LJ - Listar jogadores
-                IJ + 2 Nomes - Iniciar jogo
+                IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                 DJ - Detalhes do jogo
                 D + 1/2 Nomes - Desistir
                 CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -516,7 +516,7 @@ def main():
                     RJ + Nome - Registar jogador
                     EJ + Nome - Remover jogador
                     LJ - Listar jogadores
-                    IJ + 2 Nomes - Iniciar jogo
+                    IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                     DJ - Detalhes do jogo
                     D + 1/2 Nomes - Desistir
                     CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -540,7 +540,7 @@ def main():
                 RJ + Nome - Registar jogador
                 EJ + Nome - Remover jogador
                 LJ - Listar jogadores
-                IJ + 2 Nomes - Iniciar jogo
+                IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                 DJ - Detalhes do jogo
                 D + 1/2 Nomes - Desistir
                 CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -576,7 +576,7 @@ def main():
                     RJ + Nome - Registar jogador
                     EJ + Nome - Remover jogador
                     LJ - Listar jogadores
-                    IJ + 2 Nomes - Iniciar jogo
+                    IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                     DJ - Detalhes do jogo
                     D + 1/2 Nomes - Desistir
                     CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -601,7 +601,7 @@ def main():
                 RJ + Nome - Registar jogador
                 EJ + Nome - Remover jogador
                 LJ - Listar jogadores
-                IJ + 2 Nomes - Iniciar jogo
+                IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                 DJ - Detalhes do jogo
                 D + 1/2 Nomes - Desistir
                 CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -637,7 +637,7 @@ def main():
                     RJ + Nome - Registar jogador
                     EJ + Nome - Remover jogador
                     LJ - Listar jogadores
-                    IJ + 2 Nomes - Iniciar jogo
+                    IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                     DJ - Detalhes do jogo
                     D + 1/2 Nomes - Desistir
                     CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -655,7 +655,7 @@ def main():
                 RJ + Nome - Registar jogador
                 EJ + Nome - Remover jogador
                 LJ - Listar jogadores
-                IJ + 2 Nomes - Iniciar jogo
+                IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                 DJ - Detalhes do jogo
                 D + 1/2 Nomes - Desistir
                 CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -691,7 +691,7 @@ def main():
                     RJ + Nome - Registar jogador
                     EJ + Nome - Remover jogador
                     LJ - Listar jogadores
-                    IJ + 2 Nomes - Iniciar jogo
+                    IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                     DJ - Detalhes do jogo
                     D + 1/2 Nomes - Desistir
                     CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -709,7 +709,7 @@ def main():
                 RJ + Nome - Registar jogador
                 EJ + Nome - Remover jogador
                 LJ - Listar jogadores
-                IJ + 2 Nomes - Iniciar jogo
+                IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                 DJ - Detalhes do jogo
                 D + 1/2 Nomes - Desistir
                 CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -733,7 +733,7 @@ def main():
                     or op1.split(" ")[0].upper() in ["CP"]
                     and len(op1.split(" ")) > 5
                     or op1.split(" ")[0].upper() in ["IJ"]
-                    and len(op1.split(" ")) != 3
+                    and len(op1.split(" ")) != 5
                     or op1.split(" ")[0].upper() in ["D"]
                     and (len(op1.split(" ")) > 3 or len(op1.split(" ")) < 2)
                 ):
@@ -745,7 +745,7 @@ def main():
                     RJ + Nome - Registar jogador
                     EJ + Nome - Remover jogador
                     LJ - Listar jogadores
-                    IJ + 2 Nomes - Iniciar jogo
+                    IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                     DJ - Detalhes do jogo
                     D + 1/2 Nomes - Desistir
                     CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -763,11 +763,11 @@ def main():
                 # Get board width and height from user
                 while True:
                     try:
-                        width = int(input("Indica o comprimento do tabuleiro: "))
+                        width = op1.split(" ")[3]
                         if width <= 0:
                             raise ValueError
                         try:
-                            height = int(input("Indica a altura do tabuleiro: "))
+                            height = op1.split(" ")[4]
                             if height <= 0:
                                 raise ValueError
                             if width / 2 > height or height > width:
@@ -781,11 +781,7 @@ def main():
                 # Get the number of sequenced pieces needed to win
                 while True:
                     try:
-                        sequenced_pieces = int(
-                            input(
-                                "Indica o número de peças em sequência necessárias para ganhar: "
-                            )
-                        )
+                        sequenced_pieces = op1.split(" ")[5]
                         if sequenced_pieces <= 0:
                             print("Tamanho de sequência invalido.")
                         elif sequenced_pieces > width:
@@ -964,7 +960,7 @@ def main():
                                 RJ + Nome - Registar jogador
                                 EJ + Nome - Remover jogador
                                 LJ - Listar jogadores
-                                IJ + 2 Nomes - Iniciar jogo
+                                IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                                 DJ - Detalhes do jogo
                                 D + 1/2 Nomes - Desistir
                                 CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -1015,7 +1011,7 @@ def main():
                                     RJ + Nome - Registar jogador
                                     EJ + Nome - Remover jogador
                                     LJ - Listar jogadores
-                                    IJ + 2 Nomes - Iniciar jogo
+                                    IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                                     DJ - Detalhes do jogo
                                     D + 1/2 Nomes - Desistir
                                     CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -1049,7 +1045,7 @@ def main():
                                 RJ + Nome - Registar jogador
                                 EJ + Nome - Remover jogador
                                 LJ - Listar jogadores
-                                IJ + 2 Nomes - Iniciar jogo
+                                IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                                 DJ - Detalhes do jogo
                                 D + 1/2 Nomes - Desistir
                                 CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -1100,7 +1096,7 @@ def main():
                                     RJ + Nome - Registar jogador
                                     EJ + Nome - Remover jogador
                                     LJ - Listar jogadores
-                                    IJ + 2 Nomes - Iniciar jogo
+                                    IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                                     DJ - Detalhes do jogo
                                     D + 1/2 Nomes - Desistir
                                     CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -1128,7 +1124,7 @@ def main():
                         RJ + Nome - Registar jogador
                         EJ + Nome - Remover jogador
                         LJ - Listar jogadores
-                        IJ + 2 Nomes - Iniciar jogo
+                        IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                         DJ - Detalhes do jogo
                         D + 1/2 Nomes - Desistir
                         CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -1176,7 +1172,7 @@ def main():
                             RJ + Nome - Registar jogador
                             EJ + Nome - Remover jogador
                             LJ - Listar jogadores
-                            IJ + 2 Nomes - Iniciar jogo
+                            IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                             DJ - Detalhes do jogo
                             D + 1/2 Nomes - Desistir
                             CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -1231,7 +1227,7 @@ def main():
                     RJ + Nome - Registar jogador
                     EJ + Nome - Remover jogador
                     LJ - Listar jogadores
-                    IJ + 2 Nomes - Iniciar jogo
+                    IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                     DJ - Detalhes do jogo
                     D + 1/2 Nomes - Desistir
                     CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -1279,7 +1275,7 @@ def main():
                         RJ + Nome - Registar jogador
                         EJ + Nome - Remover jogador
                         LJ - Listar jogadores
-                        IJ + 2 Nomes - Iniciar jogo
+                        IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                         DJ - Detalhes do jogo
                         D + 1/2 Nomes - Desistir
                         CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -1301,7 +1297,7 @@ def main():
                 RJ + Nome - Registar jogador
                 EJ + Nome - Remover jogador
                 LJ - Listar jogadores
-                IJ + 2 Nomes - Iniciar jogo
+                IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                 DJ - Detalhes do jogo
                 D + 1/2 Nomes - Desistir
                 CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -1337,7 +1333,7 @@ def main():
                     RJ + Nome - Registar jogador
                     EJ + Nome - Remover jogador
                     LJ - Listar jogadores
-                    IJ + 2 Nomes - Iniciar jogo
+                    IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                     DJ - Detalhes do jogo
                     D + 1/2 Nomes - Desistir
                     CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -1386,7 +1382,7 @@ def main():
                 RJ + Nome - Registar jogador
                 EJ + Nome - Remover jogador
                 LJ - Listar jogadores
-                IJ + 2 Nomes - Iniciar jogo
+                IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                 DJ - Detalhes do jogo
                 D + 1/2 Nomes - Desistir
                 CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -1422,7 +1418,7 @@ def main():
                     RJ + Nome - Registar jogador
                     EJ + Nome - Remover jogador
                     LJ - Listar jogadores
-                    IJ + 2 Nomes - Iniciar jogo
+                    IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                     DJ - Detalhes do jogo
                     D + 1/2 Nomes - Desistir
                     CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -1444,7 +1440,7 @@ def main():
                 RJ + Nome - Registar jogador
                 EJ + Nome - Remover jogador
                 LJ - Listar jogadores
-                IJ + 2 Nomes - Iniciar jogo
+                IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                 DJ - Detalhes do jogo
                 D + 1/2 Nomes - Desistir
                 CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -1480,7 +1476,7 @@ def main():
                     RJ + Nome - Registar jogador
                     EJ + Nome - Remover jogador
                     LJ - Listar jogadores
-                    IJ + 2 Nomes - Iniciar jogo
+                    IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                     DJ - Detalhes do jogo
                     D + 1/2 Nomes - Desistir
                     CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -1499,7 +1495,7 @@ def main():
                     RJ + Nome - Registar jogador
                     EJ + Nome - Remover jogador
                     LJ - Listar jogadores
-                    IJ + 2 Nomes - Iniciar jogo
+                    IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                     DJ - Detalhes do jogo
                     D + 1/2 Nomes - Desistir
                     CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -1547,7 +1543,7 @@ def main():
                         RJ + Nome - Registar jogador
                         EJ + Nome - Remover jogador
                         LJ - Listar jogadores
-                        IJ + 2 Nomes - Iniciar jogo
+                        IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                         DJ - Detalhes do jogo
                         D + 1/2 Nomes - Desistir
                         CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -1565,7 +1561,7 @@ def main():
                 RJ + Nome - Registar jogador
                 EJ + Nome - Remover jogador
                 LJ - Listar jogadores
-                IJ + 2 Nomes - Iniciar jogo
+                IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                 DJ - Detalhes do jogo
                 D + 1/2 Nomes - Desistir
                 CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -1601,7 +1597,7 @@ def main():
                     RJ + Nome - Registar jogador
                     EJ + Nome - Remover jogador
                     LJ - Listar jogadores
-                    IJ + 2 Nomes - Iniciar jogo
+                    IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                     DJ - Detalhes do jogo
                     D + 1/2 Nomes - Desistir
                     CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -1644,7 +1640,7 @@ def main():
                 RJ + Nome - Registar jogador
                 EJ + Nome - Remover jogador
                 LJ - Listar jogadores
-                IJ + 2 Nomes - Iniciar jogo
+                IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                 DJ - Detalhes do jogo
                 D + 1/2 Nomes - Desistir
                 CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -1680,7 +1676,7 @@ def main():
                     RJ + Nome - Registar jogador
                     EJ + Nome - Remover jogador
                     LJ - Listar jogadores
-                    IJ + 2 Nomes - Iniciar jogo
+                    IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                     DJ - Detalhes do jogo
                     D + 1/2 Nomes - Desistir
                     CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -1704,7 +1700,7 @@ def main():
                 RJ + Nome - Registar jogador
                 EJ + Nome - Remover jogador
                 LJ - Listar jogadores
-                IJ + 2 Nomes - Iniciar jogo
+                IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                 DJ - Detalhes do jogo
                 D + 1/2 Nomes - Desistir
                 CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -1738,7 +1734,7 @@ def main():
                     RJ + Nome - Registar jogador
                     EJ + Nome - Remover jogador
                     LJ - Listar jogadores
-                    IJ + 2 Nomes - Iniciar jogo
+                    IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                     DJ - Detalhes do jogo
                     D + 1/2 Nomes - Desistir
                     CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -1768,7 +1764,7 @@ def main():
                     RJ + Nome - Registar jogador
                     EJ + Nome - Remover jogador
                     LJ - Listar jogadores
-                    IJ + 2 Nomes - Iniciar jogo
+                    IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                     DJ - Detalhes do jogo
                     D + 1/2 Nomes - Desistir
                     CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -1816,7 +1812,7 @@ def main():
                         RJ + Nome - Registar jogador
                         EJ + Nome - Remover jogador
                         LJ - Listar jogadores
-                        IJ + 2 Nomes - Iniciar jogo
+                        IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                         DJ - Detalhes do jogo
                         D + 1/2 Nomes - Desistir
                         CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -1834,7 +1830,7 @@ def main():
                     RJ + Nome - Registar jogador
                     EJ + Nome - Remover jogador
                     LJ - Listar jogadores
-                    IJ + 2 Nomes - Iniciar jogo
+                    IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                     DJ - Detalhes do jogo
                     D + 1/2 Nomes - Desistir
                     CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -1882,7 +1878,7 @@ def main():
                         RJ + Nome - Registar jogador
                         EJ + Nome - Remover jogador
                         LJ - Listar jogadores
-                        IJ + 2 Nomes - Iniciar jogo
+                        IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                         DJ - Detalhes do jogo
                         D + 1/2 Nomes - Desistir
                         CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -1900,7 +1896,7 @@ def main():
                     RJ + Nome - Registar jogador
                     EJ + Nome - Remover jogador
                     LJ - Listar jogadores
-                    IJ + 2 Nomes - Iniciar jogo
+                    IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                     DJ - Detalhes do jogo
                     D + 1/2 Nomes - Desistir
                     CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -1948,7 +1944,7 @@ def main():
                         RJ + Nome - Registar jogador
                         EJ + Nome - Remover jogador
                         LJ - Listar jogadores
-                        IJ + 2 Nomes - Iniciar jogo
+                        IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                         DJ - Detalhes do jogo
                         D + 1/2 Nomes - Desistir
                         CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -2015,7 +2011,7 @@ def main():
                                 RJ + Nome - Registar jogador
                                 EJ + Nome - Remover jogador
                                 LJ - Listar jogadores
-                                IJ + 2 Nomes - Iniciar jogo
+                                IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                                 DJ - Detalhes do jogo
                                 D + 1/2 Nomes - Desistir
                                 CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -2064,7 +2060,7 @@ def main():
                                     RJ + Nome - Registar jogador
                                     EJ + Nome - Remover jogador
                                     LJ - Listar jogadores
-                                    IJ + 2 Nomes - Iniciar jogo
+                                    IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                                     DJ - Detalhes do jogo
                                     D + 1/2 Nomes - Desistir
                                     CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -2088,7 +2084,7 @@ def main():
                             RJ + Nome - Registar jogador
                             EJ + Nome - Remover jogador
                             LJ - Listar jogadores
-                            IJ + 2 Nomes - Iniciar jogo
+                            IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                             DJ - Detalhes do jogo
                             D + 1/2 Nomes - Desistir
                             CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -2134,7 +2130,7 @@ def main():
                                 RJ + Nome - Registar jogador
                                 EJ + Nome - Remover jogador
                                 LJ - Listar jogadores
-                                IJ + 2 Nomes - Iniciar jogo
+                                IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                                 DJ - Detalhes do jogo
                                 D + 1/2 Nomes - Desistir
                                 CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -2235,7 +2231,7 @@ def main():
                                         RJ + Nome - Registar jogador
                                         EJ + Nome - Remover jogador
                                         LJ - Listar jogadores
-                                        IJ + 2 Nomes - Iniciar jogo
+                                        IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                                         DJ - Detalhes do jogo
                                         D + 1/2 Nomes - Desistir
                                         CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -2286,7 +2282,7 @@ def main():
                                             RJ + Nome - Registar jogador
                                             EJ + Nome - Remover jogador
                                             LJ - Listar jogadores
-                                            IJ + 2 Nomes - Iniciar jogo
+                                            IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                                             DJ - Detalhes do jogo
                                             D + 1/2 Nomes - Desistir
                                             CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -2320,7 +2316,7 @@ def main():
                                         RJ + Nome - Registar jogador
                                         EJ + Nome - Remover jogador
                                         LJ - Listar jogadores
-                                        IJ + 2 Nomes - Iniciar jogo
+                                        IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                                         DJ - Detalhes do jogo
                                         D + 1/2 Nomes - Desistir
                                         CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -2371,7 +2367,7 @@ def main():
                                             RJ + Nome - Registar jogador
                                             EJ + Nome - Remover jogador
                                             LJ - Listar jogadores
-                                            IJ + 2 Nomes - Iniciar jogo
+                                            IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                                             DJ - Detalhes do jogo
                                             D + 1/2 Nomes - Desistir
                                             CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -2417,7 +2413,7 @@ def main():
                                 RJ + Nome - Registar jogador
                                 EJ + Nome - Remover jogador
                                 LJ - Listar jogadores
-                                IJ + 2 Nomes - Iniciar jogo
+                                IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                                 DJ - Detalhes do jogo
                                 D + 1/2 Nomes - Desistir
                                 CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -2466,7 +2462,7 @@ def main():
                                     RJ + Nome - Registar jogador
                                     EJ + Nome - Remover jogador
                                     LJ - Listar jogadores
-                                    IJ + 2 Nomes - Iniciar jogo
+                                    IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                                     DJ - Detalhes do jogo
                                     D + 1/2 Nomes - Desistir
                                     CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -2490,7 +2486,7 @@ def main():
                             RJ + Nome - Registar jogador
                             EJ + Nome - Remover jogador
                             LJ - Listar jogadores
-                            IJ + 2 Nomes - Iniciar jogo
+                            IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                             DJ - Detalhes do jogo
                             D + 1/2 Nomes - Desistir
                             CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -2536,7 +2532,7 @@ def main():
                                 RJ + Nome - Registar jogador
                                 EJ + Nome - Remover jogador
                                 LJ - Listar jogadores
-                                IJ + 2 Nomes - Iniciar jogo
+                                IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                                 DJ - Detalhes do jogo
                                 D + 1/2 Nomes - Desistir
                                 CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -2553,7 +2549,7 @@ def main():
                             RJ + Nome - Registar jogador
                             EJ + Nome - Remover jogador
                             LJ - Listar jogadores
-                            IJ + 2 Nomes - Iniciar jogo
+                            IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                             DJ - Detalhes do jogo
                             D + 1/2 Nomes - Desistir
                             CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -2599,7 +2595,7 @@ def main():
                                 RJ + Nome - Registar jogador
                                 EJ + Nome - Remover jogador
                                 LJ - Listar jogadores
-                                IJ + 2 Nomes - Iniciar jogo
+                                IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                                 DJ - Detalhes do jogo
                                 D + 1/2 Nomes - Desistir
                                 CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -2621,7 +2617,7 @@ def main():
                     RJ + Nome - Registar jogador
                     EJ + Nome - Remover jogador
                     LJ - Listar jogadores
-                    IJ + 2 Nomes - Iniciar jogo
+                    IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                     DJ - Detalhes do jogo
                     D + 1/2 Nomes - Desistir
                     CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -2657,7 +2653,7 @@ def main():
                     RJ + Nome - Registar jogador
                     EJ + Nome - Remover jogador
                     LJ - Listar jogadores
-                    IJ + 2 Nomes - Iniciar jogo
+                    IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                     DJ - Detalhes do jogo
                     D + 1/2 Nomes - Desistir
                     CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -2681,7 +2677,7 @@ def main():
                     RJ + Nome - Registar jogador
                     EJ + Nome - Remover jogador
                     LJ - Listar jogadores
-                    IJ + 2 Nomes - Iniciar jogo
+                    IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                     DJ - Detalhes do jogo
                     D + 1/2 Nomes - Desistir
                     CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -2717,7 +2713,7 @@ def main():
                     RJ + Nome - Registar jogador
                     EJ + Nome - Remover jogador
                     LJ - Listar jogadores
-                    IJ + 2 Nomes - Iniciar jogo
+                    IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                     DJ - Detalhes do jogo
                     D + 1/2 Nomes - Desistir
                     CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -2737,7 +2733,7 @@ def main():
                         RJ + Nome - Registar jogador
                         EJ + Nome - Remover jogador
                         LJ - Listar jogadores
-                        IJ + 2 Nomes - Iniciar jogo
+                        IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                         DJ - Detalhes do jogo
                         D + 1/2 Nomes - Desistir
                         CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -2773,7 +2769,7 @@ def main():
                     RJ + Nome - Registar jogador
                     EJ + Nome - Remover jogador
                     LJ - Listar jogadores
-                    IJ + 2 Nomes - Iniciar jogo
+                    IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                     DJ - Detalhes do jogo
                     D + 1/2 Nomes - Desistir
                     CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -2794,7 +2790,7 @@ def main():
                         RJ + Nome - Registar jogador
                         EJ + Nome - Remover jogador
                         LJ - Listar jogadores
-                        IJ + 2 Nomes - Iniciar jogo
+                        IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                         DJ - Detalhes do jogo
                         D + 1/2 Nomes - Desistir
                         CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -2830,7 +2826,7 @@ def main():
                         RJ + Nome - Registar jogador
                         EJ + Nome - Remover jogador
                         LJ - Listar jogadores
-                        IJ + 2 Nomes - Iniciar jogo
+                        IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                         DJ - Detalhes do jogo
                         D + 1/2 Nomes - Desistir
                         CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -2849,7 +2845,7 @@ def main():
                         RJ + Nome - Registar jogador
                         EJ + Nome - Remover jogador
                         LJ - Listar jogadores
-                        IJ + 2 Nomes - Iniciar jogo
+                        IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                         DJ - Detalhes do jogo
                         D + 1/2 Nomes - Desistir
                         CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -2885,7 +2881,7 @@ def main():
                         RJ + Nome - Registar jogador
                         EJ + Nome - Remover jogador
                         LJ - Listar jogadores
-                        IJ + 2 Nomes - Iniciar jogo
+                        IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                         DJ - Detalhes do jogo
                         D + 1/2 Nomes - Desistir
                         CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -2914,7 +2910,7 @@ def main():
                 RJ + Nome - Registar jogador
                 EJ + Nome - Remover jogador
                 LJ - Listar jogadores
-                IJ + 2 Nomes - Iniciar jogo
+                IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                 DJ - Detalhes do jogo
                 D + 1/2 Nomes - Desistir
                 CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
@@ -2950,7 +2946,7 @@ def main():
                 RJ + Nome - Registar jogador
                 EJ + Nome - Remover jogador
                 LJ - Listar jogadores
-                IJ + 2 Nomes - Iniciar jogo
+                IJ + 2 Nomes + comprimento + altura + tamanho sequência - Iniciar jogo
                 DJ - Detalhes do jogo
                 D + 1/2 Nomes - Desistir
                 CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça

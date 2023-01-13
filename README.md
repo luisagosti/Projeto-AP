@@ -90,8 +90,8 @@
 
 - RJ    —   1 valor
 - EJ    —   1 valor
-- LJ    —   2 valor
-- IJ    —   2 valor
+- LJ    —   2 valores
+- IJ    —   2 valores
 - DJ    —   3 valores
 - D     —   2 valores
 - CP    —   4 valores
