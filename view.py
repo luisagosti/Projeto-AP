@@ -42,12 +42,12 @@ def main():
         or len(op1.split(" ")) > 5
         or op1.split(" ")[0].upper() in ["RJ", "EJ", "G"]
         and len(op1.split(" ")) != 2
-        or op1.split(" ")[0].upper() in ["LJ", "DJ", "CP"]
+        or op1.split(" ")[0].upper() in ["LJ", "DJ"]
         and len(op1.split(" ")) >= 2
         or op1.split(" ")[0].upper() in ["CP"]
         and len(op1.split(" ")) > 5
         or op1.split(" ")[0].upper() in ["IJ"]
-        and len(op1.split(" ")) != 3
+        and len(op1.split(" ")) != 6
         or op1.split(" ")[0].upper() in ["D"]
         and (len(op1.split(" ")) > 3 or len(op1.split(" ")) < 2)
     ):
@@ -110,12 +110,12 @@ def main():
                 or len(op1.split(" ")) > 5
                 or op1.split(" ")[0].upper() in ["RJ", "EJ"]
                 and len(op1.split(" ")) != 2
-                or op1.split(" ")[0].upper() in ["LJ", "DJ", "CP"]
+                or op1.split(" ")[0].upper() in ["LJ", "DJ"]
                 and len(op1.split(" ")) >= 2
                 or op1.split(" ")[0].upper() in ["CP"]
                 and len(op1.split(" ")) > 5
                 or op1.split(" ")[0].upper() in ["IJ"]
-                and len(op1.split(" ")) != 3
+                and len(op1.split(" ")) != 6
                 or op1.split(" ")[0].upper() in ["D"]
                 and (len(op1.split(" ")) > 3 or len(op1.split(" ")) < 2)
             ):
@@ -168,12 +168,12 @@ def main():
                     or len(op1.split(" ")) > 5
                     or op1.split(" ")[0].upper() in ["RJ", "EJ"]
                     and len(op1.split(" ")) != 2
-                    or op1.split(" ")[0].upper() in ["LJ", "DJ", "CP"]
+                    or op1.split(" ")[0].upper() in ["LJ", "DJ"]
                     and len(op1.split(" ")) >= 2
                     or op1.split(" ")[0].upper() in ["CP"]
                     and len(op1.split(" ")) > 5
                     or op1.split(" ")[0].upper() in ["IJ"]
-                    and len(op1.split(" ")) != 3
+                    and len(op1.split(" ")) != 6
                     or op1.split(" ")[0].upper() in ["D"]
                     and (len(op1.split(" ")) > 3 or len(op1.split(" ")) < 2)
                 ):
@@ -238,12 +238,12 @@ def main():
                         or len(op1.split(" ")) > 5
                         or op1.split(" ")[0].upper() in ["RJ", "EJ"]
                         and len(op1.split(" ")) != 2
-                        or op1.split(" ")[0].upper() in ["LJ", "DJ", "CP"]
+                        or op1.split(" ")[0].upper() in ["LJ", "DJ"]
                         and len(op1.split(" ")) >= 2
                         or op1.split(" ")[0].upper() in ["CP"]
                         and len(op1.split(" ")) > 5
                         or op1.split(" ")[0].upper() in ["IJ"]
-                        and len(op1.split(" ")) != 3
+                        and len(op1.split(" ")) != 6
                         or op1.split(" ")[0].upper() in ["D"]
                         and (len(op1.split(" ")) > 3 or len(op1.split(" ")) < 2)
                     ):
@@ -309,12 +309,12 @@ def main():
                             or len(op1.split(" ")) > 5
                             or op1.split(" ")[0].upper() in ["RJ", "EJ"]
                             and len(op1.split(" ")) != 2
-                            or op1.split(" ")[0].upper() in ["LJ", "DJ", "CP"]
+                            or op1.split(" ")[0].upper() in ["LJ", "DJ"]
                             and len(op1.split(" ")) >= 2
                             or op1.split(" ")[0].upper() in ["CP"]
                             and len(op1.split(" ")) > 5
                             or op1.split(" ")[0].upper() in ["IJ"]
-                            and len(op1.split(" ")) != 3
+                            and len(op1.split(" ")) != 6
                             or op1.split(" ")[0].upper() in ["D"]
                             and (len(op1.split(" ")) > 3 or len(op1.split(" ")) < 2)
                         ):
@@ -375,12 +375,12 @@ def main():
                             or len(op1.split(" ")) > 5
                             or op1.split(" ")[0].upper() in ["RJ", "EJ"]
                             and len(op1.split(" ")) != 2
-                            or op1.split(" ")[0].upper() in ["LJ", "DJ", "CP"]
+                            or op1.split(" ")[0].upper() in ["LJ", "DJ"]
                             and len(op1.split(" ")) >= 2
                             or op1.split(" ")[0].upper() in ["CP"]
                             and len(op1.split(" ")) > 5
                             or op1.split(" ")[0].upper() in ["IJ"]
-                            and len(op1.split(" ")) != 3
+                            and len(op1.split(" ")) != 6
                             or op1.split(" ")[0].upper() in ["D"]
                             and (len(op1.split(" ")) > 3 or len(op1.split(" ")) < 2)
                         ):
@@ -441,12 +441,12 @@ def main():
                             or len(op1.split(" ")) > 5
                             or op1.split(" ")[0].upper() in ["RJ", "EJ"]
                             and len(op1.split(" ")) != 2
-                            or op1.split(" ")[0].upper() in ["LJ", "DJ", "CP"]
+                            or op1.split(" ")[0].upper() in ["LJ", "DJ"]
                             and len(op1.split(" ")) >= 2
                             or op1.split(" ")[0].upper() in ["CP"]
                             and len(op1.split(" ")) > 5
                             or op1.split(" ")[0].upper() in ["IJ"]
-                            and len(op1.split(" ")) != 3
+                            and len(op1.split(" ")) != 6
                             or op1.split(" ")[0].upper() in ["D"]
                             and (len(op1.split(" ")) > 3 or len(op1.split(" ")) < 2)
                         ):
@@ -499,12 +499,12 @@ def main():
                     or len(op1.split(" ")) > 5
                     or op1.split(" ")[0].upper() in ["RJ", "EJ"]
                     and len(op1.split(" ")) != 2
-                    or op1.split(" ")[0].upper() in ["LJ", "DJ", "CP"]
+                    or op1.split(" ")[0].upper() in ["LJ", "DJ"]
                     and len(op1.split(" ")) >= 2
                     or op1.split(" ")[0].upper() in ["CP"]
                     and len(op1.split(" ")) > 5
                     or op1.split(" ")[0].upper() in ["IJ"]
-                    and len(op1.split(" ")) != 3
+                    and len(op1.split(" ")) != 6
                     or op1.split(" ")[0].upper() in ["D"]
                     and (len(op1.split(" ")) > 3 or len(op1.split(" ")) < 2)
                 ):
@@ -559,12 +559,12 @@ def main():
                     or len(op1.split(" ")) > 5
                     or op1.split(" ")[0].upper() in ["RJ", "EJ"]
                     and len(op1.split(" ")) != 2
-                    or op1.split(" ")[0].upper() in ["LJ", "DJ", "CP"]
+                    or op1.split(" ")[0].upper() in ["LJ", "DJ"]
                     and len(op1.split(" ")) >= 2
                     or op1.split(" ")[0].upper() in ["CP"]
                     and len(op1.split(" ")) > 5
                     or op1.split(" ")[0].upper() in ["IJ"]
-                    and len(op1.split(" ")) != 3
+                    and len(op1.split(" ")) != 6
                     or op1.split(" ")[0].upper() in ["D"]
                     and (len(op1.split(" ")) > 3 or len(op1.split(" ")) < 2)
                 ):
@@ -620,12 +620,12 @@ def main():
                     or len(op1.split(" ")) > 5
                     or op1.split(" ")[0].upper() in ["RJ", "EJ"]
                     and len(op1.split(" ")) != 2
-                    or op1.split(" ")[0].upper() in ["LJ", "DJ", "CP"]
+                    or op1.split(" ")[0].upper() in ["LJ", "DJ"]
                     and len(op1.split(" ")) >= 2
                     or op1.split(" ")[0].upper() in ["CP"]
                     and len(op1.split(" ")) > 5
                     or op1.split(" ")[0].upper() in ["IJ"]
-                    and len(op1.split(" ")) != 3
+                    and len(op1.split(" ")) != 6
                     or op1.split(" ")[0].upper() in ["D"]
                     and (len(op1.split(" ")) > 3 or len(op1.split(" ")) < 2)
                 ):
@@ -674,12 +674,12 @@ def main():
                     or len(op1.split(" ")) > 5
                     or op1.split(" ")[0].upper() in ["RJ", "EJ"]
                     and len(op1.split(" ")) != 2
-                    or op1.split(" ")[0].upper() in ["LJ", "DJ", "CP"]
+                    or op1.split(" ")[0].upper() in ["LJ", "DJ"]
                     and len(op1.split(" ")) >= 2
                     or op1.split(" ")[0].upper() in ["CP"]
                     and len(op1.split(" ")) > 5
                     or op1.split(" ")[0].upper() in ["IJ"]
-                    and len(op1.split(" ")) != 3
+                    and len(op1.split(" ")) != 6
                     or op1.split(" ")[0].upper() in ["D"]
                     and (len(op1.split(" ")) > 3 or len(op1.split(" ")) < 2)
                 ):
@@ -725,15 +725,15 @@ def main():
                     not in ["RJ", "EJ", "LJ", "IJ", "DJ", "D", "CP", "V", "G", "L", "X"]
                     or op1.split(" ")[0].upper() in ["V", "G", "L", "X"]
                     and len(op1) > 1
-                    or len(op1.split(" ")) > 5
+                    or len(op1.split(" ")) > 6
                     or op1.split(" ")[0].upper() in ["RJ", "EJ"]
                     and len(op1.split(" ")) != 2
-                    or op1.split(" ")[0].upper() in ["LJ", "DJ", "CP"]
+                    or op1.split(" ")[0].upper() in ["LJ", "DJ"]
                     and len(op1.split(" ")) >= 2
                     or op1.split(" ")[0].upper() in ["CP"]
                     and len(op1.split(" ")) > 5
                     or op1.split(" ")[0].upper() in ["IJ"]
-                    and len(op1.split(" ")) != 5
+                    and len(op1.split(" ")) != 6
                     or op1.split(" ")[0].upper() in ["D"]
                     and (len(op1.split(" ")) > 3 or len(op1.split(" ")) < 2)
                 ):
@@ -991,12 +991,12 @@ def main():
                                     or len(op1.split(" ")) > 5
                                     or op1.split(" ")[0].upper() in ["RJ", "EJ"]
                                     and len(op1.split(" ")) != 2
-                                    or op1.split(" ")[0].upper() in ["LJ", "DJ", "CP"]
+                                    or op1.split(" ")[0].upper() in ["LJ", "DJ"]
                                     and len(op1.split(" ")) >= 2
                                     or op1.split(" ")[0].upper() in ["CP"]
                                     and len(op1.split(" ")) > 5
                                     or op1.split(" ")[0].upper() in ["IJ"]
-                                    and len(op1.split(" ")) != 3
+                                    and len(op1.split(" ")) != 6
                                     or op1.split(" ")[0].upper() in ["D"]
                                     and (
                                         len(op1.split(" ")) > 3
@@ -1076,12 +1076,12 @@ def main():
                                     or len(op1.split(" ")) > 5
                                     or op1.split(" ")[0].upper() in ["RJ", "EJ"]
                                     and len(op1.split(" ")) != 2
-                                    or op1.split(" ")[0].upper() in ["LJ", "DJ", "CP"]
+                                    or op1.split(" ")[0].upper() in ["LJ", "DJ"]
                                     and len(op1.split(" ")) >= 2
                                     or op1.split(" ")[0].upper() in ["CP"]
                                     and len(op1.split(" ")) > 5
                                     or op1.split(" ")[0].upper() in ["IJ"]
-                                    and len(op1.split(" ")) != 3
+                                    and len(op1.split(" ")) != 6
                                     or op1.split(" ")[0].upper() in ["D"]
                                     and (
                                         len(op1.split(" ")) > 3
@@ -1155,12 +1155,12 @@ def main():
                             or len(op1.split(" ")) > 5
                             or op1.split(" ")[0].upper() in ["RJ", "EJ"]
                             and len(op1.split(" ")) != 2
-                            or op1.split(" ")[0].upper() in ["LJ", "DJ", "CP"]
+                            or op1.split(" ")[0].upper() in ["LJ", "DJ"]
                             and len(op1.split(" ")) >= 2
                             or op1.split(" ")[0].upper() in ["CP"]
                             and len(op1.split(" ")) > 5
                             or op1.split(" ")[0].upper() in ["IJ"]
-                            and len(op1.split(" ")) != 3
+                            and len(op1.split(" ")) != 6
                             or op1.split(" ")[0].upper() in ["D"]
                             and (len(op1.split(" ")) > 3 or len(op1.split(" ")) < 2)
                         ):
@@ -1258,12 +1258,12 @@ def main():
                         or len(op1.split(" ")) > 5
                         or op1.split(" ")[0].upper() in ["RJ", "EJ"]
                         and len(op1.split(" ")) != 2
-                        or op1.split(" ")[0].upper() in ["LJ", "DJ", "CP"]
+                        or op1.split(" ")[0].upper() in ["LJ", "DJ"]
                         and len(op1.split(" ")) >= 2
                         or op1.split(" ")[0].upper() in ["CP"]
                         and len(op1.split(" ")) > 5
                         or op1.split(" ")[0].upper() in ["IJ"]
-                        and len(op1.split(" ")) != 3
+                        and len(op1.split(" ")) != 6
                         or op1.split(" ")[0].upper() in ["D"]
                         and (len(op1.split(" ")) > 3 or len(op1.split(" ")) < 2)
                     ):
@@ -1316,12 +1316,12 @@ def main():
                     or len(op1.split(" ")) > 5
                     or op1.split(" ")[0].upper() in ["RJ", "EJ"]
                     and len(op1.split(" ")) != 2
-                    or op1.split(" ")[0].upper() in ["LJ", "DJ", "CP"]
+                    or op1.split(" ")[0].upper() in ["LJ", "DJ"]
                     and len(op1.split(" ")) >= 2
                     or op1.split(" ")[0].upper() in ["CP"]
                     and len(op1.split(" ")) > 5
                     or op1.split(" ")[0].upper() in ["IJ"]
-                    and len(op1.split(" ")) != 3
+                    and len(op1.split(" ")) != 6
                     or op1.split(" ")[0].upper() in ["D"]
                     and (len(op1.split(" ")) > 3 or len(op1.split(" ")) < 2)
                 ):
@@ -1401,12 +1401,12 @@ def main():
                     or len(op1.split(" ")) > 5
                     or op1.split(" ")[0].upper() in ["RJ", "EJ"]
                     and len(op1.split(" ")) != 2
-                    or op1.split(" ")[0].upper() in ["LJ", "DJ", "CP"]
+                    or op1.split(" ")[0].upper() in ["LJ", "DJ"]
                     and len(op1.split(" ")) >= 2
                     or op1.split(" ")[0].upper() in ["CP"]
                     and len(op1.split(" ")) > 5
                     or op1.split(" ")[0].upper() in ["IJ"]
-                    and len(op1.split(" ")) != 3
+                    and len(op1.split(" ")) != 6
                     or op1.split(" ")[0].upper() in ["D"]
                     and (len(op1.split(" ")) > 3 or len(op1.split(" ")) < 2)
                 ):
@@ -1459,12 +1459,12 @@ def main():
                     or len(op1.split(" ")) > 5
                     or op1.split(" ")[0].upper() in ["RJ", "EJ"]
                     and len(op1.split(" ")) != 2
-                    or op1.split(" ")[0].upper() in ["LJ", "DJ", "CP"]
+                    or op1.split(" ")[0].upper() in ["LJ", "DJ"]
                     and len(op1.split(" ")) >= 2
                     or op1.split(" ")[0].upper() in ["CP"]
                     and len(op1.split(" ")) > 5
                     or op1.split(" ")[0].upper() in ["IJ"]
-                    and len(op1.split(" ")) != 3
+                    and len(op1.split(" ")) != 6
                     or op1.split(" ")[0].upper() in ["D"]
                     and (len(op1.split(" ")) > 3 or len(op1.split(" ")) < 2)
                 ):
@@ -1526,12 +1526,12 @@ def main():
                         or len(op1.split(" ")) > 5
                         or op1.split(" ")[0].upper() in ["RJ", "EJ"]
                         and len(op1.split(" ")) != 2
-                        or op1.split(" ")[0].upper() in ["LJ", "DJ", "CP"]
+                        or op1.split(" ")[0].upper() in ["LJ", "DJ"]
                         and len(op1.split(" ")) >= 2
                         or op1.split(" ")[0].upper() in ["CP"]
                         and len(op1.split(" ")) > 5
                         or op1.split(" ")[0].upper() in ["IJ"]
-                        and len(op1.split(" ")) != 3
+                        and len(op1.split(" ")) != 6
                         or op1.split(" ")[0].upper() in ["D"]
                         and (len(op1.split(" ")) > 3 or len(op1.split(" ")) < 2)
                     ):
@@ -1580,12 +1580,12 @@ def main():
                     or len(op1.split(" ")) > 5
                     or op1.split(" ")[0].upper() in ["RJ", "EJ"]
                     and len(op1.split(" ")) != 2
-                    or op1.split(" ")[0].upper() in ["LJ", "DJ", "CP"]
+                    or op1.split(" ")[0].upper() in ["LJ", "DJ"]
                     and len(op1.split(" ")) >= 2
                     or op1.split(" ")[0].upper() in ["CP"]
                     and len(op1.split(" ")) > 5
                     or op1.split(" ")[0].upper() in ["IJ"]
-                    and len(op1.split(" ")) != 3
+                    and len(op1.split(" ")) != 6
                     or op1.split(" ")[0].upper() in ["D"]
                     and (len(op1.split(" ")) > 3 or len(op1.split(" ")) < 2)
                 ):
@@ -1659,12 +1659,12 @@ def main():
                     or len(op1.split(" ")) > 5
                     or op1.split(" ")[0].upper() in ["RJ", "EJ"]
                     and len(op1.split(" ")) != 2
-                    or op1.split(" ")[0].upper() in ["LJ", "DJ", "CP"]
+                    or op1.split(" ")[0].upper() in ["LJ", "DJ"]
                     and len(op1.split(" ")) >= 2
                     or op1.split(" ")[0].upper() in ["CP"]
                     and len(op1.split(" ")) > 5
                     or op1.split(" ")[0].upper() in ["IJ"]
-                    and len(op1.split(" ")) != 3
+                    and len(op1.split(" ")) != 6
                     or op1.split(" ")[0].upper() in ["D"]
                     and (len(op1.split(" ")) > 3 or len(op1.split(" ")) < 2)
                 ):
@@ -1719,10 +1719,10 @@ def main():
                     or len(op1.split(" ")) > 5
                     or op1.split(" ")[0].upper() in ["RJ", "EJ"]
                     and len(op1.split(" ")) != 2
-                    or op1.split(" ")[0].upper() in ["LJ", "DJ", "CP"]
+                    or op1.split(" ")[0].upper() in ["LJ", "DJ"]
                     and len(op1.split(" ")) >= 2
                     or op1.split(" ")[0].upper() in ["IJ"]
-                    and len(op1.split(" ")) != 3
+                    and len(op1.split(" ")) != 6
                     or op1.split(" ")[0].upper() in ["D"]
                     and (len(op1.split(" ")) > 3 or len(op1.split(" ")) < 2)
                 ):
@@ -1795,12 +1795,12 @@ def main():
                         or len(op1.split(" ")) > 5
                         or op1.split(" ")[0].upper() in ["RJ", "EJ"]
                         and len(op1.split(" ")) != 2
-                        or op1.split(" ")[0].upper() in ["LJ", "DJ", "CP"]
+                        or op1.split(" ")[0].upper() in ["LJ", "DJ"]
                         and len(op1.split(" ")) >= 2
                         or op1.split(" ")[0].upper() in ["CP"]
                         and len(op1.split(" ")) > 5
                         or op1.split(" ")[0].upper() in ["IJ"]
-                        and len(op1.split(" ")) != 3
+                        and len(op1.split(" ")) != 6
                         or op1.split(" ")[0].upper() in ["D"]
                         and (len(op1.split(" ")) > 3 or len(op1.split(" ")) < 2)
                     ):
@@ -1861,12 +1861,12 @@ def main():
                         or len(op1.split(" ")) > 5
                         or op1.split(" ")[0].upper() in ["RJ", "EJ"]
                         and len(op1.split(" ")) != 2
-                        or op1.split(" ")[0].upper() in ["LJ", "DJ", "CP"]
+                        or op1.split(" ")[0].upper() in ["LJ", "DJ"]
                         and len(op1.split(" ")) >= 2
                         or op1.split(" ")[0].upper() in ["CP"]
                         and len(op1.split(" ")) > 5
                         or op1.split(" ")[0].upper() in ["IJ"]
-                        and len(op1.split(" ")) != 3
+                        and len(op1.split(" ")) != 6
                         or op1.split(" ")[0].upper() in ["D"]
                         and (len(op1.split(" ")) > 3 or len(op1.split(" ")) < 2)
                     ):
@@ -1927,12 +1927,12 @@ def main():
                         or len(op1.split(" ")) > 5
                         or op1.split(" ")[0].upper() in ["RJ", "EJ"]
                         and len(op1.split(" ")) != 2
-                        or op1.split(" ")[0].upper() in ["LJ", "DJ", "CP"]
+                        or op1.split(" ")[0].upper() in ["LJ", "DJ"]
                         and len(op1.split(" ")) >= 2
                         or op1.split(" ")[0].upper() in ["CP"]
                         and len(op1.split(" ")) > 5
                         or op1.split(" ")[0].upper() in ["IJ"]
-                        and len(op1.split(" ")) != 3
+                        and len(op1.split(" ")) != 6
                         or op1.split(" ")[0].upper() in ["D"]
                         and (len(op1.split(" ")) > 3 or len(op1.split(" ")) < 2)
                     ):
@@ -2042,14 +2042,14 @@ def main():
                                     or len(op1.split(" ")) > 5
                                     or op1.split(" ")[0].upper() in ["RJ", "EJ"]
                                     and len(op1.split(" ")) != 2
-                                    or op1.split(" ")[0].upper() in ["LJ", "DJ", "CP"]
+                                    or op1.split(" ")[0].upper() in ["LJ", "DJ"]
                                     and len(op1.split(" ")) >= 2
+                                    or op1.split(" ")[0].upper() in ["CP"]
+                                    and len(op1.split(" ")) > 5
                                     or op1.split(" ")[0].upper() in ["IJ"]
-                                    and len(op1.split(" ")) != 3
+                                    and len(op1.split(" ")) != 6
                                     or op1.split(" ")[0].upper() in ["D"]
-                                    and (
-                                        len(op1.split(" ")) > 3
-                                        or len(op1.split(" ")) < 2
+                                    and (len(op1.split(" ")) > 3 or len(op1.split(" ")) < 2
                                     )
                                 ):
                                     # os.system("cls")
@@ -2115,12 +2115,15 @@ def main():
                                 or len(op1.split(" ")) > 5
                                 or op1.split(" ")[0].upper() in ["RJ", "EJ"]
                                 and len(op1.split(" ")) != 2
-                                or op1.split(" ")[0].upper() in ["LJ", "DJ", "CP"]
+                                or op1.split(" ")[0].upper() in ["LJ", "DJ"]
                                 and len(op1.split(" ")) >= 2
+                                or op1.split(" ")[0].upper() in ["CP"]
+                                and len(op1.split(" ")) > 5
                                 or op1.split(" ")[0].upper() in ["IJ"]
-                                and len(op1.split(" ")) != 3
+                                and len(op1.split(" ")) != 6
                                 or op1.split(" ")[0].upper() in ["D"]
-                                and (len(op1.split(" ")) > 3 or len(op1.split(" ")) < 2)
+                                and (len(op1.split(" ")) > 3 or len(op1.split(" ")) < 2
+                                )
                             ):
                                 # os.system("cls")
 
@@ -2257,21 +2260,19 @@ def main():
                                                 "L",
                                                 "X",
                                             ]
-                                            or op1.split(" ")[0].upper()
-                                            in ["V", "G", "L", "X"]
+                                            or op1.split(" ")[0].upper() in ["V", "G", "L", "X"]
                                             and len(op1) > 1
                                             or len(op1.split(" ")) > 5
                                             or op1.split(" ")[0].upper() in ["RJ", "EJ"]
                                             and len(op1.split(" ")) != 2
-                                            or op1.split(" ")[0].upper()
-                                            in ["LJ", "DJ", "CP"]
+                                            or op1.split(" ")[0].upper() in ["LJ", "DJ"]
                                             and len(op1.split(" ")) >= 2
+                                            or op1.split(" ")[0].upper() in ["CP"]
+                                            and len(op1.split(" ")) > 5
                                             or op1.split(" ")[0].upper() in ["IJ"]
-                                            and len(op1.split(" ")) != 3
+                                            and len(op1.split(" ")) != 6
                                             or op1.split(" ")[0].upper() in ["D"]
-                                            and (
-                                                len(op1.split(" ")) > 3
-                                                or len(op1.split(" ")) < 2
+                                            and (len(op1.split(" ")) > 3 or len(op1.split(" ")) < 2
                                             )
                                         ):
                                             # os.system("cls")
@@ -2342,21 +2343,19 @@ def main():
                                                 "L",
                                                 "X",
                                             ]
-                                            or op1.split(" ")[0].upper()
-                                            in ["V", "G", "L", "X"]
+                                            or op1.split(" ")[0].upper() in ["V", "G", "L", "X"]
                                             and len(op1) > 1
                                             or len(op1.split(" ")) > 5
                                             or op1.split(" ")[0].upper() in ["RJ", "EJ"]
                                             and len(op1.split(" ")) != 2
-                                            or op1.split(" ")[0].upper()
-                                            in ["LJ", "DJ", "CP"]
+                                            or op1.split(" ")[0].upper() in ["LJ", "DJ"]
                                             and len(op1.split(" ")) >= 2
+                                            or op1.split(" ")[0].upper() in ["CP"]
+                                            and len(op1.split(" ")) > 5
                                             or op1.split(" ")[0].upper() in ["IJ"]
-                                            and len(op1.split(" ")) != 3
+                                            and len(op1.split(" ")) != 6
                                             or op1.split(" ")[0].upper() in ["D"]
-                                            and (
-                                                len(op1.split(" ")) > 3
-                                                or len(op1.split(" ")) < 2
+                                            and (len(op1.split(" ")) > 3 or len(op1.split(" ")) < 2
                                             )
                                         ):
                                             # os.system("cls")
@@ -2444,14 +2443,14 @@ def main():
                                     or len(op1.split(" ")) > 5
                                     or op1.split(" ")[0].upper() in ["RJ", "EJ"]
                                     and len(op1.split(" ")) != 2
-                                    or op1.split(" ")[0].upper() in ["LJ", "DJ", "CP"]
+                                    or op1.split(" ")[0].upper() in ["LJ", "DJ"]
                                     and len(op1.split(" ")) >= 2
+                                    or op1.split(" ")[0].upper() in ["CP"]
+                                    and len(op1.split(" ")) > 5
                                     or op1.split(" ")[0].upper() in ["IJ"]
-                                    and len(op1.split(" ")) != 3
+                                    and len(op1.split(" ")) != 6
                                     or op1.split(" ")[0].upper() in ["D"]
-                                    and (
-                                        len(op1.split(" ")) > 3
-                                        or len(op1.split(" ")) < 2
+                                    and (len(op1.split(" ")) > 3 or len(op1.split(" ")) < 2
                                     )
                                 ):
                                     # os.system("cls")
@@ -2517,12 +2516,15 @@ def main():
                                 or len(op1.split(" ")) > 5
                                 or op1.split(" ")[0].upper() in ["RJ", "EJ"]
                                 and len(op1.split(" ")) != 2
-                                or op1.split(" ")[0].upper() in ["LJ", "DJ", "CP"]
+                                or op1.split(" ")[0].upper() in ["LJ", "DJ"]
                                 and len(op1.split(" ")) >= 2
+                                or op1.split(" ")[0].upper() in ["CP"]
+                                and len(op1.split(" ")) > 5
                                 or op1.split(" ")[0].upper() in ["IJ"]
-                                and len(op1.split(" ")) != 3
+                                and len(op1.split(" ")) != 6
                                 or op1.split(" ")[0].upper() in ["D"]
-                                and (len(op1.split(" ")) > 3 or len(op1.split(" ")) < 2)
+                                and (len(op1.split(" ")) > 3 or len(op1.split(" ")) < 2
+                                )
                             ):
                                 # os.system("cls")
 
@@ -2580,12 +2582,15 @@ def main():
                                 or len(op1.split(" ")) > 5
                                 or op1.split(" ")[0].upper() in ["RJ", "EJ"]
                                 and len(op1.split(" ")) != 2
-                                or op1.split(" ")[0].upper() in ["LJ", "DJ", "CP"]
+                                or op1.split(" ")[0].upper() in ["LJ", "DJ"]
                                 and len(op1.split(" ")) >= 2
+                                or op1.split(" ")[0].upper() in ["CP"]
+                                and len(op1.split(" ")) > 5
                                 or op1.split(" ")[0].upper() in ["IJ"]
-                                and len(op1.split(" ")) != 3
+                                and len(op1.split(" ")) != 6
                                 or op1.split(" ")[0].upper() in ["D"]
-                                and (len(op1.split(" ")) > 3 or len(op1.split(" ")) < 2)
+                                and (len(op1.split(" ")) > 3 or len(op1.split(" ")) < 2
+                                )
                             ):
                                 # os.system("cls")
 
@@ -2636,12 +2641,12 @@ def main():
                     or len(op1.split(" ")) > 5
                     or op1.split(" ")[0].upper() in ["RJ", "EJ"]
                     and len(op1.split(" ")) != 2
-                    or op1.split(" ")[0].upper() in ["LJ", "DJ", "CP"]
+                    or op1.split(" ")[0].upper() in ["LJ", "DJ"]
                     and len(op1.split(" ")) >= 2
                     or op1.split(" ")[0].upper() in ["CP"]
                     and len(op1.split(" ")) > 5
                     or op1.split(" ")[0].upper() in ["IJ"]
-                    and len(op1.split(" ")) != 3
+                    and len(op1.split(" ")) != 6
                     or op1.split(" ")[0].upper() in ["D"]
                     and (len(op1.split(" ")) > 3 or len(op1.split(" ")) < 2)
                 ):
@@ -2696,12 +2701,12 @@ def main():
                     or len(op1.split(" ")) > 5
                     or op1.split(" ")[0].upper() in ["RJ", "EJ"]
                     and len(op1.split(" ")) != 2
-                    or op1.split(" ")[0].upper() in ["LJ", "DJ", "CP"]
+                    or op1.split(" ")[0].upper() in ["LJ", "DJ"]
                     and len(op1.split(" ")) >= 2
                     or op1.split(" ")[0].upper() in ["CP"]
                     and len(op1.split(" ")) > 5
                     or op1.split(" ")[0].upper() in ["IJ"]
-                    and len(op1.split(" ")) != 3
+                    and len(op1.split(" ")) != 6
                     or op1.split(" ")[0].upper() in ["D"]
                     and (len(op1.split(" ")) > 3 or len(op1.split(" ")) < 2)
                 ):
@@ -2752,12 +2757,12 @@ def main():
                     or len(op1.split(" ")) > 5
                     or op1.split(" ")[0].upper() in ["RJ", "EJ"]
                     and len(op1.split(" ")) != 2
-                    or op1.split(" ")[0].upper() in ["LJ", "DJ", "CP"]
+                    or op1.split(" ")[0].upper() in ["LJ", "DJ"]
                     and len(op1.split(" ")) >= 2
                     or op1.split(" ")[0].upper() in ["CP"]
                     and len(op1.split(" ")) > 5
                     or op1.split(" ")[0].upper() in ["IJ"]
-                    and len(op1.split(" ")) != 3
+                    and len(op1.split(" ")) != 6
                     or op1.split(" ")[0].upper() in ["D"]
                     and (len(op1.split(" ")) > 3 or len(op1.split(" ")) < 2)
                 ):
@@ -2809,12 +2814,12 @@ def main():
                         or len(op1.split(" ")) > 5
                         or op1.split(" ")[0].upper() in ["RJ", "EJ"]
                         and len(op1.split(" ")) != 2
-                        or op1.split(" ")[0].upper() in ["LJ", "DJ", "CP"]
+                        or op1.split(" ")[0].upper() in ["LJ", "DJ"]
                         and len(op1.split(" ")) >= 2
                         or op1.split(" ")[0].upper() in ["CP"]
                         and len(op1.split(" ")) > 5
                         or op1.split(" ")[0].upper() in ["IJ"]
-                        and len(op1.split(" ")) != 3
+                        and len(op1.split(" ")) != 6
                         or op1.split(" ")[0].upper() in ["D"]
                         and (len(op1.split(" ")) > 3 or len(op1.split(" ")) < 2)
                     ):
@@ -2864,12 +2869,12 @@ def main():
                         or len(op1.split(" ")) > 5
                         or op1.split(" ")[0].upper() in ["RJ", "EJ"]
                         and len(op1.split(" ")) != 2
-                        or op1.split(" ")[0].upper() in ["LJ", "DJ", "CP"]
+                        or op1.split(" ")[0].upper() in ["LJ", "DJ"]
                         and len(op1.split(" ")) >= 2
                         or op1.split(" ")[0].upper() in ["CP"]
                         and len(op1.split(" ")) > 5
                         or op1.split(" ")[0].upper() in ["IJ"]
-                        and len(op1.split(" ")) != 3
+                        and len(op1.split(" ")) != 6
                         or op1.split(" ")[0].upper() in ["D"]
                         and (len(op1.split(" ")) > 3 or len(op1.split(" ")) < 2)
                     ):
@@ -2929,12 +2934,12 @@ def main():
                 or len(op1.split(" ")) > 5
                 or op1.split(" ")[0].upper() in ["RJ", "EJ"]
                 and len(op1.split(" ")) != 2
-                or op1.split(" ")[0].upper() in ["LJ", "DJ", "CP"]
+                or op1.split(" ")[0].upper() in ["LJ", "DJ"]
                 and len(op1.split(" ")) >= 2
                 or op1.split(" ")[0].upper() in ["CP"]
                 and len(op1.split(" ")) > 5
                 or op1.split(" ")[0].upper() in ["IJ"]
-                and len(op1.split(" ")) != 3
+                and len(op1.split(" ")) != 6
                 or op1.split(" ")[0].upper() in ["D"]
                 and (len(op1.split(" ")) > 3 or len(op1.split(" ")) < 2)
             ):
