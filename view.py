@@ -16,51 +16,43 @@ def main():
     # Dicionário jogos jogados e vitórias
     dicionario_Jogos = {}
 
-    print(
-        """
-                 RJ + Nome - Registar jogador
-                 EJ + Nome - Remover jogador
-                        LJ - Listar jogadores
-              IJ + 2 Nomes - Iniciar jogo
-                        DJ - Detalhes do jogo
-             D + 1/2 Nomes - Desistir
-                        CP - Colocar peça
-                         V - Visualizar resultado
-                         G - Gravar
-                         L - Ler
-                         X - Sair
-            """
-    )
+    print('''
+    RJ + Nome - Registar jogador
+    EJ + Nome - Remover jogador
+    LJ - Listar jogadores
+    IJ + 2 Nomes - Iniciar jogo
+    DJ - Detalhes do jogo
+    D + 1/2 Nomes - Desistir
+    CP - Colocar peça
+    V - Visualizar resultado
+    G - Gravar
+    L - Ler
+    X - Sair ''')
     op1 = input("Digite uma opção: ")  # Opção 1
 
     # Enquanto a "Opção 1" não igualar nenhuma das opções do array, o programa irá continuar a perguntar por uma opção.
     # Ele passa quando a "Opção 1" for equivalente a alguma das opções dentro do array
-    while (
-        op1.split(" ")[0].upper() not in ["RJ", "EJ", "LJ", "IJ", "DJ", "D", "CP", "V", "G", "L", "X"]
+    while (op1.split(" ")[0].upper() not in ["RJ", "EJ", "LJ", "IJ", "DJ", "D", "CP", "V", "G", "L", "X"]
         or len(op1.split(" ")) > 3
         or op1.split(" ")[0].upper() in ["RJ", "EJ"] and len(op1.split(" ")) != 2
         or op1.split(" ")[0].upper() in ["LJ", "DJ", "CP", "V", "G", "L", "X"] and len(op1.split(" ")) > 1
         or op1.split(" ")[0].upper() in ["IJ"] and len(op1.split(" ")) != 3
-        or op1.split(" ")[0].upper() in ["D"] and len(op1.split(" ")) > 3 and len(op1.split(" ")) < 2
-    ):
+        or op1.split(" ")[0].upper() in ["D"] and len(op1.split(" ")) > 3 and len(op1.split(" ")) < 2):
         # os.system("cls")
 
         print("Instrução inválida.")
-        print(
-            """
-                 RJ + Nome - Registar jogador
-                 EJ + Nome - Remover jogador
-                        LJ - Listar jogadores
-              IJ + 2 Nomes - Iniciar jogo
-                        DJ - Detalhes do jogo
-             D + 1/2 Nomes - Desistir
-                        CP - Colocar peça
-                         V - Visualizar resultado
-                         G - Gravar
-                         L - Ler
-                         X - Sair
-            """
-        )
+        print('''
+        RJ + Nome - Registar jogador
+        EJ + Nome - Remover jogador
+        LJ - Listar jogadores
+        IJ + 2 Nomes - Iniciar jogo
+        DJ - Detalhes do jogo
+        D + 1/2 Nomes - Desistir
+        CP - Colocar peça
+        V - Visualizar resultado
+        G - Gravar
+        L - Ler
+        X - Sair ''')
         op1 = input("Digite uma opção: ")  # Opção 1
 
     # Enquanto a "Opção 1" for diferente de X
@@ -70,31 +62,25 @@ def main():
         if op1.split(" ")[0].upper() == "RJ":
             # os.system("cls")
 
-            verificar_Registo = registar_jogadores(
-                op1, lista_jogadores, dicionario_Jogos, decorrer_jogo
-            )
+            verificar_Registo = registar_jogadores(op1, lista_jogadores, dicionario_Jogos, decorrer_jogo)
 
             if verificar_Registo == True:
                 print("Jogador adicionado com sucesso.")
 
             else:
                 print("Jogador existente")
-
-            print(
-                """
-                         RJ + Nome - Registar jogador
-                         EJ + Nome - Remover jogador
-                                LJ - Listar jogadores
-                      IJ + 2 Nomes - Iniciar jogo
-                                DJ - Detalhes do jogo
-                     D + 1/2 Nomes - Desistir
-                                CP - Colocar peça
-                                 V - Visualizar resultado
-                                 G - Gravar
-                                 L - Ler
-                                 X - Sair
-                    """
-            )
+            print('''
+            RJ + Nome - Registar jogador
+            EJ + Nome - Remover jogador
+            LJ - Listar jogadores
+            IJ + 2 Nomes - Iniciar jogo
+            DJ - Detalhes do jogo
+            D + 1/2 Nomes - Desistir
+            CP - Colocar peça
+            V - Visualizar resultado
+            G - Gravar
+            L - Ler
+            X - Sair ''')
             op1 = input("Digite uma opção: ")  # Opção 1
 
             while (
@@ -108,21 +94,18 @@ def main():
                 # os.system("cls")
 
                 print("Instrução inválida.")
-                print(
-                    """
-                             RJ + Nome - Registar jogador
-                             EJ + Nome - Remover jogador
-                                    LJ - Listar jogadores
-                          IJ + 2 Nomes - Iniciar jogo
-                                    DJ - Detalhes do jogo
-                         D + 1/2 Nomes - Desistir
-                                    CP - Colocar peça
-                                     V - Visualizar resultado
-                                     G - Gravar
-                                     L - Ler
-                                     X - Sair
-                        """
-                )
+                print('''
+                RJ + Nome - Registar jogador
+                EJ + Nome - Remover jogador
+                LJ - Listar jogadores
+                IJ + 2 Nomes - Iniciar jogo
+                DJ - Detalhes do jogo
+                D + 1/2 Nomes - Desistir
+                CP - Colocar peça
+                V - Visualizar resultado
+                G - Gravar
+                L - Ler
+                X - Sair ''')
                 op1 = input("Digite uma opção: ")  # Opção 1
 
         # EJ - Remover jogador
@@ -131,21 +114,18 @@ def main():
                 # os.system("cls")
 
                 print("Não existem jogadores registados.")
-                print(
-                    """
-                             RJ + Nome - Registar jogador
-                             EJ + Nome - Remover jogador
-                                    LJ - Listar jogadores
-                          IJ + 2 Nomes - Iniciar jogo
-                                    DJ - Detalhes do jogo
-                         D + 1/2 Nomes - Desistir
-                                    CP - Colocar peça
-                                     V - Visualizar resultado
-                                     G - Gravar
-                                     L - Ler
-                                     X - Sair
-                        """
-                )
+                print('''
+                RJ + Nome - Registar jogador
+                EJ + Nome - Remover jogador
+                LJ - Listar jogadores
+                IJ + 2 Nomes - Iniciar jogo
+                DJ - Detalhes do jogo
+                D + 1/2 Nomes - Desistir
+                CP - Colocar peça
+                V - Visualizar resultado
+                G - Gravar                    
+                L - Ler
+                X - Sair ''')
                 op1 = input("Digite uma opção: ")  # Opção 1
 
                 while (
@@ -159,21 +139,18 @@ def main():
                     # os.system("cls")
 
                     print("Instrução inválida.")
-                    print(
-                        """
-                                 RJ + Nome - Registar jogador
-                                 EJ + Nome - Remover jogador
-                                        LJ - Listar jogadores
-                              IJ + 2 Nomes - Iniciar jogo
-                                        DJ - Detalhes do jogo
-                             D + 1/2 Nomes - Desistir
-                                        CP - Colocar peça
-                                         V - Visualizar resultado
-                                         G - Gravar
-                                         L - Ler
-                                         X - Sair
-                            """
-                    )
+                    print('''
+                    RJ + Nome - Registar jogador
+                    EJ + Nome - Remover jogador
+                    LJ - Listar jogadores
+                    IJ + 2 Nomes - Iniciar jogo
+                    DJ - Detalhes do jogo
+                    D + 1/2 Nomes - Desistir
+                    CP - Colocar peça
+                    V - Visualizar resultado
+                    G - Gravar
+                    L - Ler
+                    X - Sair ''')
                     op1 = input("Digite uma opção: ")  # Opção 1
 
             else:
@@ -182,21 +159,18 @@ def main():
                 if op1.split(" ")[1] not in lista_jogadores:
                     print("Jogador inexistente.")
 
-                    print(
-                        """
-                                 RJ + Nome - Registar jogador
-                                 EJ + Nome - Remover jogador
-                                        LJ - Listar jogadores
-                              IJ + 2 Nomes - Iniciar jogo
-                                        DJ - Detalhes do jogo
-                             D + 1/2 Nomes - Desistir
-                                        CP - Colocar peça
-                                         V - Visualizar resultado
-                                         G - Gravar
-                                         L - Ler
-                                         X - Sair
-                        """
-                    )
+                    print('''
+                    RJ + Nome - Registar jogador
+                    EJ + Nome - Remover jogador
+                    LJ - Listar jogadores
+                    IJ + 2 Nomes - Iniciar jogo
+                    DJ - Detalhes do jogo
+                    D + 1/2 Nomes - Desistir
+                    CP - Colocar peça
+                    V - Visualizar resultado
+                    G - Gravar
+                    L - Ler
+                    X - Sair ''')
                     op1 = input("Digite uma opção: ")  # Opção 1
 
                     while (
@@ -210,21 +184,18 @@ def main():
                         # os.system("cls")
 
                         print("Instrução inválida.")
-                        print(
-                            """
-                                     RJ + Nome - Registar jogador
-                                     EJ + Nome - Remover jogador
-                                            LJ - Listar jogadores
-                                  IJ + 2 Nomes - Iniciar jogo
-                                            DJ - Detalhes do jogo
-                                 D + 1/2 Nomes - Desistir
-                                            CP - Colocar peça
-                                             V - Visualizar resultado
-                                             G - Gravar
-                                             L - Ler
-                                             X - Sair
-                            """
-                        )
+                        print('''
+                        RJ + Nome - Registar jogador
+                        EJ + Nome - Remover jogador
+                        LJ - Listar jogadores
+                        IJ + 2 Nomes - Iniciar jogo
+                        DJ - Detalhes do jogo
+                        D + 1/2 Nomes - Desistir
+                        CP - Colocar peça
+                        V - Visualizar resultado
+                        G - Gravar
+                        L - Ler
+                        X - Sair ''')
                         op1 = input("Digite uma opção: ")  # Opção 1
 
                 else:
@@ -232,21 +203,18 @@ def main():
 
                     if remover_Jogador == 1:
                         print("Jogador removido com sucesso.")
-                        print(
-                            """
-                                     RJ + Nome - Registar jogador
-                                     EJ + Nome - Remover jogador
-                                            LJ - Listar jogadores
-                                  IJ + 2 Nomes - Iniciar jogo
-                                            DJ - Detalhes do jogo
-                                 D + 1/2 Nomes - Desistir
-                                            CP - Colocar peça
-                                             V - Visualizar resultado
-                                             G - Gravar
-                                             L - Ler
-                                             X - Sair
-                                """
-                        )
+                        print('''
+                        RJ + Nome - Registar jogador
+                        EJ + Nome - Remover jogador
+                        LJ - Listar jogadores
+                        IJ + 2 Nomes - Iniciar jogo
+                        DJ - Detalhes do jogo
+                        D + 1/2 Nomes - Desistir
+                        CP - Colocar peça
+                        V - Visualizar resultado
+                        G - Gravar
+                        L - Ler
+                        X - Sair ''')
                         op1 = input("Digite uma opção: ")
 
                         while (
@@ -260,40 +228,34 @@ def main():
                             # os.system("cls")
 
                             print("Instrução inválida.")
-                            print(
-                                """
-                                         RJ + Nome - Registar jogador
-                                         EJ + Nome - Remover jogador
-                                                LJ - Listar jogadores
-                                      IJ + 2 Nomes - Iniciar jogo
-                                                DJ - Detalhes do jogo
-                                     D + 1/2 Nomes - Desistir
-                                                CP - Colocar peça
-                                                 V - Visualizar resultado
-                                                 G - Gravar
-                                                 L - Ler
-                                                 X - Sair
-                                    """
-                            )
+                            print('''
+                            RJ + Nome - Registar jogador
+                            EJ + Nome - Remover jogador
+                            LJ - Listar jogadores
+                            IJ + 2 Nomes - Iniciar jogo
+                            DJ - Detalhes do jogo
+                            D + 1/2 Nomes - Desistir
+                            CP - Colocar peça
+                            V - Visualizar resultado
+                            G - Gravar
+                            L - Ler
+                            X - Sair ''')
                             op1 = input("Digite uma opção: ")  # Opção 1
 
                     elif remover_Jogador == 2:
                         print("Jogador participa no jogo em curso.")
-                        print(
-                            """
-                                     RJ + Nome - Registar jogador
-                                     EJ + Nome - Remover jogador
-                                            LJ - Listar jogadores
-                                  IJ + 2 Nomes - Iniciar jogo
-                                            DJ - Detalhes do jogo
-                                 D + 1/2 Nomes - Desistir
-                                            CP - Colocar peça
-                                             V - Visualizar resultado
-                                             G - Gravar
-                                             L - Ler
-                                             X - Sair
-                                """
-                        )
+                        print('''
+                        RJ + Nome - Registar jogador
+                        EJ + Nome - Remover jogador
+                        LJ - Listar jogadores
+                        IJ + 2 Nomes - Iniciar jogo
+                        DJ - Detalhes do jogo
+                        D + 1/2 Nomes - Desistir
+                        CP - Colocar peça
+                        V - Visualizar resultado
+                        G - Gravar
+                        L - Ler
+                        X - Sair ''')
                         op1 = input("Digite uma opção: ")
 
                         while (
@@ -307,40 +269,34 @@ def main():
                             # os.system("cls")
 
                             print("Instrução inválida.")
-                            print(
-                                """
-                                         RJ + Nome - Registar jogador
-                                         EJ + Nome - Remover jogador
-                                                LJ - Listar jogadores
-                                      IJ + 2 Nomes - Iniciar jogo
-                                                DJ - Detalhes do jogo
-                                     D + 1/2 Nomes - Desistir
-                                                CP - Colocar peça
-                                                 V - Visualizar resultado
-                                                 G - Gravar
-                                                 L - Ler
-                                                 X - Sair
-                                    """
-                            )
+                            print('''
+                            RJ + Nome - Registar jogador
+                            EJ + Nome - Remover jogador
+                            LJ - Listar jogadores
+                            IJ + 2 Nomes - Iniciar jogo
+                            DJ - Detalhes do jogo
+                            D + 1/2 Nomes - Desistir
+                            CP - Colocar peça
+                            V - Visualizar resultado
+                            G - Gravar
+                            L - Ler
+                            X - Sair ''')
                             op1 = input("Digite uma opção: ")  # Opção 1
 
                     else:
                         print("Jogador não existente.")
-                        print(
-                            """
-                                     RJ + Nome - Registar jogador
-                                     EJ + Nome - Remover jogador
-                                            LJ - Listar jogadores
-                                  IJ + 2 Nomes - Iniciar jogo
-                                            DJ - Detalhes do jogo
-                                 D + 1/2 Nomes - Desistir
-                                            CP - Colocar peça
-                                             V - Visualizar resultado
-                                             G - Gravar
-                                             L - Ler
-                                             X - Sair
-                                """
-                        )
+                        print('''
+                        RJ + Nome - Registar jogador
+                        EJ + Nome - Remover jogador
+                        LJ - Listar jogadores
+                        IJ + 2 Nomes - Iniciar jogo
+                        DJ - Detalhes do jogo
+                        D + 1/2 Nomes - Desistir
+                        CP - Colocar peça
+                        V - Visualizar resultado
+                        G - Gravar
+                        L - Ler
+                        X - Sair ''')
                         op1 = input("Digite uma opção: ")
 
                         while (
@@ -354,21 +310,18 @@ def main():
                             # os.system("cls")
 
                             print("Instrução inválida.")
-                            print(
-                                """
-                                         RJ + Nome - Registar jogador
-                                         EJ + Nome - Remover jogador
-                                                LJ - Listar jogadores
-                                      IJ + 2 Nomes - Iniciar jogo
-                                                DJ - Detalhes do jogo
-                                     D + 1/2 Nomes - Desistir
-                                                CP - Colocar peça
-                                                 V - Visualizar resultado
-                                                 G - Gravar
-                                                 L - Ler
-                                                 X - Sair
-                                    """
-                            )
+                            print('''
+                            RJ + Nome - Registar jogador
+                            EJ + Nome - Remover jogador
+                            LJ - Listar jogadores
+                            IJ + 2 Nomes - Iniciar jogo
+                            DJ - Detalhes do jogo
+                            D + 1/2 Nomes - Desistir
+                            CP - Colocar peça
+                            V - Visualizar resultado
+                            G - Gravar
+                            L - Ler
+                            X - Sair ''')
                             op1 = input("Digite uma opção: ")  # Opção 1
                         
 
@@ -382,21 +335,18 @@ def main():
             for jogador, jogos in dicionario_Jogos.items():
                 print(str(jogador) + " - " + str(jogos["Jogos"]) + " jogos,", str(jogos["Vitorias"]) + " vitórias.")
 
-            print(
-                """\n
-                             RJ + Nome - Registar jogador
-                             EJ + Nome - Remover jogador
-                                    LJ - Listar jogadores
-                          IJ + 2 Nomes - Iniciar jogo
-                                    DJ - Detalhes do jogo
-                         D + 1/2 Nomes - Desistir
-                                    CP - Colocar peça
-                                     V - Visualizar resultado
-                                     G - Gravar
-                                     L - Ler
-                                     X - Sair
-                    """
-            )
+            print('''
+            RJ + Nome - Registar jogador
+            EJ + Nome - Remover jogador
+            LJ - Listar jogadores
+            IJ + 2 Nomes - Iniciar jogo
+            DJ - Detalhes do jogo
+            D + 1/2 Nomes - Desistir
+            CP - Colocar peça
+            V - Visualizar resultado
+            G - Gravar
+            L - Ler
+            X - Sair ''')
             op1 = input("Digite uma opção: ")
 
             while (
@@ -410,21 +360,18 @@ def main():
                 # os.system("cls")
 
                 print("Instrução inválida.")
-                print(
-                    """
-                            RJ + Nome - Registar jogador
-                            EJ + Nome - Remover jogador
-                                   LJ - Listar jogadores
-                         IJ + 2 Nomes - Iniciar jogo
-                                   DJ - Detalhes do jogo
-                        D + 1/2 Nomes - Desistir
-                                   CP - Colocar peça
-                                    V - Visualizar resultado
-                                    G - Gravar
-                                    L - Ler
-                                    X - Sair
-                        """
-                )
+                print('''
+                RJ + Nome - Registar jogador
+                EJ + Nome - Remover jogador
+                LJ - Listar jogadores
+                IJ + 2 Nomes - Iniciar jogo
+                DJ - Detalhes do jogo
+                D + 1/2 Nomes - Desistir
+                CP - Colocar peça
+                V - Visualizar resultado
+                G - Gravar
+                L - Ler
+                X - Sair ''')
                 op1 = input("Digite uma opção: ")  # Opção 1
 
         # IJ - Iniciar jogo
@@ -433,20 +380,18 @@ def main():
 
             if op1.split(" ")[1] not in lista_jogadores or op1.split(" ")[2] not in lista_jogadores:
                 print("Jogador não registado.")
-                print(
-                """
-                             RJ + Nome - Registar jogador
-                             EJ + Nome - Remover jogador
-                                    LJ - Listar jogadores
-                          IJ + 2 Nomes - Iniciar jogo
-                                    DJ - Detalhes do jogo
-                         D + 1/2 Nomes - Desistir
-                                    CP - Colocar peça
-                                     V - Visualizar resultado
-                                     G - Gravar
-                                     L - Ler
-                                     X - Sair
-                    """)
+                print('''
+                RJ + Nome - Registar jogador
+                EJ + Nome - Remover jogador
+                LJ - Listar jogadores
+                IJ + 2 Nomes - Iniciar jogo
+                DJ - Detalhes do jogo
+                D + 1/2 Nomes - Desistir
+                CP - Colocar peça
+                V - Visualizar resultado
+                G - Gravar
+                L - Ler
+                X - Sair ''')
                 op1 = input("Digite uma opção: ")
 
                 while (
@@ -460,38 +405,34 @@ def main():
                     # os.system("cls")
 
                     print("Instrução inválida.")
-                    print(
-                        """
-                                RJ + Nome - Registar jogador
-                                EJ + Nome - Remover jogador
-                                       LJ - Listar jogadores
-                             IJ + 2 Nomes - Iniciar jogo
-                                       DJ - Detalhes do jogo
-                            D + 1/2 Nomes - Desistir
-                                       CP - Colocar peça
-                                        V - Visualizar resultado
-                                        G - Gravar
-                                        L - Ler
-                                        X - Sair
-                            """)
+                    print('''
+                    RJ + Nome - Registar jogador
+                    EJ + Nome - Remover jogador
+                    LJ - Listar jogadores
+                    IJ + 2 Nomes - Iniciar jogo
+                    DJ - Detalhes do jogo
+                    D + 1/2 Nomes - Desistir
+                    CP - Colocar peça
+                    V - Visualizar resultado
+                    G - Gravar
+                    L - Ler
+                    X - Sair ''')
                     op1 = input("Digite uma opção: ")  # Opção 1
 
             elif len(lista_jogadores) < 2:
                 print("Jogadores insuficientes.")
-                print(
-                """
-                             RJ + Nome - Registar jogador
-                             EJ + Nome - Remover jogador
-                                    LJ - Listar jogadores
-                          IJ + 2 Nomes - Iniciar jogo
-                                    DJ - Detalhes do jogo
-                         D + 1/2 Nomes - Desistir
-                                    CP - Colocar peça
-                                     V - Visualizar resultado
-                                     G - Gravar
-                                     L - Ler
-                                     X - Sair
-                    """)
+                print('''
+                RJ + Nome - Registar jogador
+                EJ + Nome - Remover jogador
+                LJ - Listar jogadores
+                IJ + 2 Nomes - Iniciar jogo
+                DJ - Detalhes do jogo
+                D + 1/2 Nomes - Desistir
+                CP - Colocar peça
+                V - Visualizar resultado
+                G - Gravar
+                L - Ler
+                X - Sair ''')
                 op1 = input("Digite uma opção: ")
 
                 while (
@@ -505,38 +446,34 @@ def main():
                     # os.system("cls")
 
                     print("Instrução inválida.")
-                    print(
-                        """
-                                RJ + Nome - Registar jogador
-                                EJ + Nome - Remover jogador
-                                       LJ - Listar jogadores
-                             IJ + 2 Nomes - Iniciar jogo
-                                       DJ - Detalhes do jogo
-                            D + 1/2 Nomes - Desistir
-                                       CP - Colocar peça
-                                        V - Visualizar resultado
-                                        G - Gravar
-                                        L - Ler
-                                        X - Sair
-                            """)
+                    print('''
+                    RJ + Nome - Registar jogador
+                    EJ + Nome - Remover jogador
+                    LJ - Listar jogadores
+                    IJ + 2 Nomes - Iniciar jogo
+                    DJ - Detalhes do jogo
+                    D + 1/2 Nomes - Desistir
+                    CP - Colocar peça
+                    V - Visualizar resultado
+                    G - Gravar
+                    L - Ler
+                    X - Sair ''')
                     op1 = input("Digite uma opção: ")  # Opção 1
 
             elif decorrer_jogo == 1:
                 print("Existe um jogo em curso.")
-                print(
-                """
-                             RJ + Nome - Registar jogador
-                             EJ + Nome - Remover jogador
-                                    LJ - Listar jogadores
-                          IJ + 2 Nomes - Iniciar jogo
-                                    DJ - Detalhes do jogo
-                         D + 1/2 Nomes - Desistir
-                                    CP - Colocar peça
-                                     V - Visualizar resultado
-                                     G - Gravar
-                                     L - Ler
-                                     X - Sair
-                    """)
+                print('''
+                RJ + Nome - Registar jogador
+                EJ + Nome - Remover jogador
+                LJ - Listar jogadores
+                IJ + 2 Nomes - Iniciar jogo
+                DJ - Detalhes do jogo
+                D + 1/2 Nomes - Desistir
+                CP - Colocar peça
+                V - Visualizar resultado
+                G - Gravar
+                L - Ler
+                X - Sair ''')
                 op1 = input("Digite uma opção: ")
 
                 while (
@@ -550,20 +487,18 @@ def main():
                     # os.system("cls")
 
                     print("Instrução inválida.")
-                    print(
-                        """
-                                RJ + Nome - Registar jogador
-                                EJ + Nome - Remover jogador
-                                       LJ - Listar jogadores
-                             IJ + 2 Nomes - Iniciar jogo
-                                       DJ - Detalhes do jogo
-                            D + 1/2 Nomes - Desistir
-                                       CP - Colocar peça
-                                        V - Visualizar resultado
-                                        G - Gravar
-                                        L - Ler
-                                        X - Sair
-                            """)
+                    print('''
+                    RJ + Nome - Registar jogador
+                    EJ + Nome - Remover jogador
+                    LJ - Listar jogadores
+                    IJ + 2 Nomes - Iniciar jogo
+                    DJ - Detalhes do jogo
+                    D + 1/2 Nomes - Desistir
+                    CP - Colocar peça
+                    V - Visualizar resultado
+                    G - Gravar
+                    L - Ler
+                    X - Sair ''')
                     op1 = input("Digite uma opção: ")  # Opção 1
 
             else:
@@ -722,20 +657,18 @@ def main():
                                     "A coluna encontra-se completa, escolhe outra coluna."
                                 )
                             else:
-                                print(
-                                    """
-                                             RJ + Nome - Registar jogador
-                                             EJ + Nome - Remover jogador
-                                                    LJ - Listar jogadores
-                                          IJ + 2 Nomes - Iniciar jogo
-                                                    DJ - Detalhes do jogo
-                                         D + 1/2 Nomes - Desistir
-                                                    CP - Colocar peça
-                                                     V - Visualizar resultado
-                                                     G - Gravar
-                                                     L - Ler
-                                                     X - Sair
-                                        """)
+                                print('''
+                                RJ + Nome - Registar jogador
+                                EJ + Nome - Remover jogador
+                                LJ - Listar jogadores
+                                IJ + 2 Nomes - Iniciar jogo
+                                DJ - Detalhes do jogo
+                                D + 1/2 Nomes - Desistir
+                                CP - Colocar peça
+                                V - Visualizar resultado
+                                G - Gravar
+                                L - Ler
+                                X - Sair ''')
                                 op1 = input("Digite uma opção: ")
 
                                 while (
@@ -749,20 +682,18 @@ def main():
                                     # os.system("cls")
 
                                     print("Instrução inválida.")
-                                    print(
-                                        """
-                                                RJ + Nome - Registar jogador
-                                                EJ + Nome - Remover jogador
-                                                       LJ - Listar jogadores
-                                             IJ + 2 Nomes - Iniciar jogo
-                                                       DJ - Detalhes do jogo
-                                            D + 1/2 Nomes - Desistir
-                                                       CP - Colocar peça
-                                                        V - Visualizar resultado
-                                                        G - Gravar
-                                                        L - Ler
-                                                        X - Sair
-                                            """)
+                                    print('''
+                                    RJ + Nome - Registar jogador
+                                    EJ + Nome - Remover jogador
+                                    LJ - Listar jogadores
+                                    IJ + 2 Nomes - Iniciar jogo
+                                    DJ - Detalhes do jogo
+                                    D + 1/2 Nomes - Desistir
+                                    CP - Colocar peça
+                                    V - Visualizar resultado
+                                    G - Gravar
+                                    L - Ler
+                                    X - Sair ''')
                                     op1 = input("Digite uma opção: ")  # Opção 1
                                 break
 
@@ -783,20 +714,18 @@ def main():
                                 )
                             
                             else:
-                                print(
-                                    """
-                                             RJ + Nome - Registar jogador
-                                             EJ + Nome - Remover jogador
-                                                    LJ - Listar jogadores
-                                          IJ + 2 Nomes - Iniciar jogo
-                                                    DJ - Detalhes do jogo
-                                         D + 1/2 Nomes - Desistir
-                                                    CP - Colocar peça
-                                                     V - Visualizar resultado
-                                                     G - Gravar
-                                                     L - Ler
-                                                     X - Sair
-                                        """)
+                                print('''
+                                RJ + Nome - Registar jogador
+                                EJ + Nome - Remover jogador
+                                LJ - Listar jogadores
+                                IJ + 2 Nomes - Iniciar jogo
+                                DJ - Detalhes do jogo
+                                D + 1/2 Nomes - Desistir
+                                CP - Colocar peça
+                                V - Visualizar resultado
+                                G - Gravar
+                                L - Ler
+                                X - Sair ''')
                                 op1 = input("Digite uma opção: ")
 
                                 while (
@@ -810,20 +739,18 @@ def main():
                                     # os.system("cls")
 
                                     print("Instrução inválida.")
-                                    print(
-                                        """
-                                                RJ + Nome - Registar jogador
-                                                EJ + Nome - Remover jogador
-                                                       LJ - Listar jogadores
-                                             IJ + 2 Nomes - Iniciar jogo
-                                                       DJ - Detalhes do jogo
-                                            D + 1/2 Nomes - Desistir
-                                                       CP - Colocar peça
-                                                        V - Visualizar resultado
-                                                        G - Gravar
-                                                        L - Ler
-                                                        X - Sair
-                                            """)
+                                    print('''
+                                    RJ + Nome - Registar jogador
+                                    EJ + Nome - Remover jogador
+                                    LJ - Listar jogadores
+                                    IJ + 2 Nomes - Iniciar jogo
+                                    DJ - Detalhes do jogo
+                                    D + 1/2 Nomes - Desistir
+                                    CP - Colocar peça
+                                    V - Visualizar resultado
+                                    G - Gravar
+                                    L - Ler
+                                    X - Sair ''')
                                     op1 = input("Digite uma opção: ")  # Opção 1
                                 break
 
@@ -842,20 +769,18 @@ def main():
                             special_piece_index=special_piece_index,
                         )
 
-                        print(
-                            """
-                                     RJ + Nome - Registar jogador
-                                     EJ + Nome - Remover jogador
-                                            LJ - Listar jogadores
-                                  IJ + 2 Nomes - Iniciar jogo
-                                            DJ - Detalhes do jogo
-                                 D + 1/2 Nomes - Desistir
-                                            CP - Colocar peça
-                                             V - Visualizar resultado
-                                             G - Gravar
-                                             L - Ler
-                                             X - Sair
-                                """)
+                        print('''
+                        RJ + Nome - Registar jogador
+                        EJ + Nome - Remover jogador
+                        LJ - Listar jogadores
+                        IJ + 2 Nomes - Iniciar jogo
+                        DJ - Detalhes do jogo
+                        D + 1/2 Nomes - Desistir
+                        CP - Colocar peça
+                        V - Visualizar resultado
+                        G - Gravar
+                        L - Ler
+                        X - Sair ''')
                         op1 = input("Digite uma opção: ")
 
                         while (
@@ -869,20 +794,18 @@ def main():
                             # os.system("cls")
 
                             print("Instrução inválida.")
-                            print(
-                                """
-                                         RJ + Nome - Registar jogador
-                                         EJ + Nome - Remover jogador
-                                                LJ - Listar jogadores
-                                      IJ + 2 Nomes - Iniciar jogo
-                                                DJ - Detalhes do jogo
-                                     D + 1/2 Nomes - Desistir
-                                                CP - Colocar peça
-                                                 V - Visualizar resultado
-                                                 G - Gravar
-                                                 L - Ler
-                                                 X - Sair
-                                    """)
+                            print('''
+                            RJ + Nome - Registar jogador
+                            EJ + Nome - Remover jogador
+                            LJ - Listar jogadores
+                            IJ + 2 Nomes - Iniciar jogo
+                            DJ - Detalhes do jogo
+                            D + 1/2 Nomes - Desistir
+                            CP - Colocar peça
+                            V - Visualizar resultado
+                            G - Gravar
+                            L - Ler
+                            X - Sair ''')
                             op1 = input("Digite uma opção: ")  # Opção 1
                         break
 
@@ -924,20 +847,18 @@ def main():
                         else nome_jogador1
                     )
 
-                    print(
-                        """
-                                 RJ + Nome - Registar jogador
-                                 EJ + Nome - Remover jogador
-                                        LJ - Listar jogadores
-                              IJ + 2 Nomes - Iniciar jogo
-                                        DJ - Detalhes do jogo
-                             D + 1/2 Nomes - Desistir
-                                        CP - Colocar peça
-                                         V - Visualizar resultado
-                                         G - Gravar
-                                         L - Ler
-                                         X - Sair
-                            """)
+                    print('''
+                    RJ + Nome - Registar jogador
+                    EJ + Nome - Remover jogador
+                    LJ - Listar jogadores
+                    IJ + 2 Nomes - Iniciar jogo
+                    DJ - Detalhes do jogo
+                    D + 1/2 Nomes - Desistir
+                    CP - Colocar peça
+                    V - Visualizar resultado
+                    G - Gravar
+                    L - Ler
+                    X - Sair ''')
                     op1 = input("Digite uma opção: ")
 
                     while (
@@ -951,20 +872,18 @@ def main():
                         # os.system("cls")
 
                         print("Instrução inválida.")
-                        print(
-                            """
-                                     RJ + Nome - Registar jogador
-                                     EJ + Nome - Remover jogador
-                                            LJ - Listar jogadores
-                                  IJ + 2 Nomes - Iniciar jogo
-                                            DJ - Detalhes do jogo
-                                 D + 1/2 Nomes - Desistir
-                                            CP - Colocar peça
-                                             V - Visualizar resultado
-                                             G - Gravar
-                                             L - Ler
-                                             X - Sair
-                                """)
+                        print('''
+                        RJ + Nome - Registar jogador
+                        EJ + Nome - Remover jogador
+                        LJ - Listar jogadores
+                        IJ + 2 Nomes - Iniciar jogo
+                        DJ - Detalhes do jogo
+                        D + 1/2 Nomes - Desistir
+                        CP - Colocar peça
+                        V - Visualizar resultado
+                        G - Gravar
+                        L - Ler
+                        X - Sair ''')
                         op1 = input("Digite uma opção: ")  # Opção 1
 
         # DJ - Detalhes do jogo
@@ -973,21 +892,18 @@ def main():
 
             if decorrer_jogo == 0:
                 print("Comece um jogo para obter detalhes.")
-                print(
-                    """
-                             RJ + Nome - Registar jogador
-                             EJ + Nome - Remover jogador
-                                    LJ - Listar jogadores
-                          IJ + 2 Nomes - Iniciar jogo
-                                    DJ - Detalhes do jogo
-                         D + 1/2 Nomes - Desistir
-                                    CP - Colocar peça
-                                     V - Visualizar resultado
-                                     G - Gravar
-                                     L - Ler
-                                     X - Sair
-                    """
-                )
+                print('''
+                RJ + Nome - Registar jogador
+                EJ + Nome - Remover jogador
+                LJ - Listar jogadores
+                IJ + 2 Nomes - Iniciar jogo
+                DJ - Detalhes do jogo
+                D + 1/2 Nomes - Desistir
+                CP - Colocar peça
+                V - Visualizar resultado
+                G - Gravar
+                L - Ler
+                X - Sair ''')
                 op1 = input("Digite uma opção: ")
 
                 while (
@@ -1001,21 +917,18 @@ def main():
                     # os.system("cls")
 
                     print("Instrução inválida.")
-                    print(
-                        """
-                                RJ + Nome - Registar jogador
-                                EJ + Nome - Remover jogador
-                                       LJ - Listar jogadores
-                             IJ + 2 Nomes - Iniciar jogo
-                                       DJ - Detalhes do jogo
-                            D + 1/2 Nomes - Desistir
-                                       CP - Colocar peça
-                                        V - Visualizar resultado
-                                        G - Gravar
-                                        L - Ler
-                                        X - Sair
-                            """
-                    )
+                    print('''
+                    RJ + Nome - Registar jogador
+                    EJ + Nome - Remover jogador
+                    LJ - Listar jogadores
+                    IJ + 2 Nomes - Iniciar jogo
+                    DJ - Detalhes do jogo
+                    D + 1/2 Nomes - Desistir
+                    CP - Colocar peça
+                    V - Visualizar resultado
+                    G - Gravar
+                    L - Ler
+                    X - Sair ''')
                     op1 = input("Digite uma opção: ")  # Opção 1
 
             else:
@@ -1040,21 +953,18 @@ def main():
                         f"{temp_var2}" 
                 )
 
-                print(
-                    """\n
-                             RJ + Nome - Registar jogador
-                             EJ + Nome - Remover jogador
-                                    LJ - Listar jogadores
-                          IJ + 2 Nomes - Iniciar jogo
-                                    DJ - Detalhes do jogo
-                         D + 1/2 Nomes - Desistir
-                                    CP - Colocar peça
-                                     V - Visualizar resultado
-                                     G - Gravar
-                                     L - Ler
-                                     X - Sair
-                    """
-                )
+                print('''
+                RJ + Nome - Registar jogador
+                EJ + Nome - Remover jogador
+                LJ - Listar jogadores
+                IJ + 2 Nomes - Iniciar jogo
+                DJ - Detalhes do jogo
+                D + 1/2 Nomes - Desistir
+                CP - Colocar peça
+                V - Visualizar resultado
+                G - Gravar
+                L - Ler
+                X - Sair ''')
                 op1 = input("Digite uma opção: ")
 
                 while (
@@ -1068,21 +978,18 @@ def main():
                     # os.system("cls")
 
                     print("Instrução inválida.")
-                    print(
-                        """
-                                RJ + Nome - Registar jogador
-                                EJ + Nome - Remover jogador
-                                       LJ - Listar jogadores
-                             IJ + 2 Nomes - Iniciar jogo
-                                       DJ - Detalhes do jogo
-                            D + 1/2 Nomes - Desistir
-                                       CP - Colocar peça
-                                        V - Visualizar resultado
-                                        G - Gravar
-                                        L - Ler
-                                        X - Sair
-                            """
-                    )
+                    print('''
+                    RJ + Nome - Registar jogador
+                    EJ + Nome - Remover jogador
+                    LJ - Listar jogadores
+                    IJ + 2 Nomes - Iniciar jogo
+                    DJ - Detalhes do jogo
+                    D + 1/2 Nomes - Desistir
+                    CP - Colocar peça
+                    V - Visualizar resultado
+                    G - Gravar
+                    L - Ler
+                    X - Sair ''')
                     op1 = input("Digite uma opção: ")  # Opção 1
 
         # D - Desistir
@@ -1091,21 +998,18 @@ def main():
 
             if decorrer_jogo == 0:
                 print("Comece um jogo para poder desistir.")
-                print(
-                    """
-                             RJ + Nome - Registar jogador
-                             EJ + Nome - Remover jogador
-                                    LJ - Listar jogadores
-                          IJ + 2 Nomes - Iniciar jogo
-                                    DJ - Detalhes do jogo
-                         D + 1/2 Nomes - Desistir
-                                    CP - Colocar peça
-                                     V - Visualizar resultado
-                                     G - Gravar
-                                     L - Ler
-                                     X - Sair
-                    """
-                )
+                print('''
+                RJ + Nome - Registar jogador
+                EJ + Nome - Remover jogador
+                LJ - Listar jogadores
+                IJ + 2 Nomes - Iniciar jogo
+                DJ - Detalhes do jogo
+                D + 1/2 Nomes - Desistir
+                CP - Colocar peça
+                V - Visualizar resultado
+                G - Gravar
+                L - Ler
+                X - Sair ''')
                 op1 = input("Digite uma opção: ")
 
                 while (
@@ -1119,21 +1023,18 @@ def main():
                     # os.system("cls")
 
                     print("Instrução inválida.")
-                    print(
-                        """
-                                RJ + Nome - Registar jogador
-                                EJ + Nome - Remover jogador
-                                       LJ - Listar jogadores
-                             IJ + 2 Nomes - Iniciar jogo
-                                       DJ - Detalhes do jogo
-                            D + 1/2 Nomes - Desistir
-                                       CP - Colocar peça
-                                        V - Visualizar resultado
-                                        G - Gravar
-                                        L - Ler
-                                        X - Sair
-                            """
-                    )
+                    print('''
+                    RJ + Nome - Registar jogador
+                    EJ + Nome - Remover jogador
+                    LJ - Listar jogadores
+                    IJ + 2 Nomes - Iniciar jogo
+                    DJ - Detalhes do jogo
+                    D + 1/2 Nomes - Desistir
+                    CP - Colocar peça
+                    V - Visualizar resultado
+                    G - Gravar
+                    L - Ler
+                    X - Sair ''')
                     op1 = input("Digite uma opção: ")  # Opção 1
 
             else:
