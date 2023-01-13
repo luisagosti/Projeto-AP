@@ -72,12 +72,12 @@ def desistir_Jogo():
 
 ################ JOGO ###################
 
-def make_move_right(jogador, coluna, dicionario_pecas_especiais, altura, largura, tabela, usar_peca_especial, index_pecas_especiais):
+def movimento_direita(jogador, coluna, dicionario_pecas_especiais, altura, largura, tabela, usar_peca_especial, index_pecas_especiais):
     coluna -= 1
     if usar_peca_especial:
         # Adicionar peca especial
-        special_piece_size = dicionario_pecas_especiais[jogador][index_pecas_especiais]
-        for i in range(coluna, coluna+special_piece_size):
+        tamanho_pecas_especiais = dicionario_pecas_especiais[jogador][index_pecas_especiais]
+        for i in range(coluna, coluna+tamanho_pecas_especiais):
             for j in range(altura-1, -1, -1):
                 if i < largura and tabela[j][i] == ' ':
                     tabela[j][i] = jogador
@@ -93,12 +93,12 @@ def make_move_right(jogador, coluna, dicionario_pecas_especiais, altura, largura
 
 
 
-def make_move_left(jogador, dicionario_pecas_especiais, altura, tabela, coluna, usar_peca_especial, index_pecas_especiais):
+def movimento_esquerda(jogador, dicionario_pecas_especiais, altura, tabela, coluna, usar_peca_especial, index_pecas_especiais):
     coluna -= 1
     if usar_peca_especial:
         # Adicionar peca especial
-        special_piece_size = dicionario_pecas_especiais[jogador][index_pecas_especiais]
-        for i in range(coluna, coluna-special_piece_size, -1):
+        tamanho_pecas_especiais = dicionario_pecas_especiais[jogador][index_pecas_especiais]
+        for i in range(coluna, coluna-tamanho_pecas_especiais, -1):
             for j in range(altura-1, -1, -1):
                 if i >= 0 and tabela[j][i] == ' ':
                     tabela[j][i] = jogador
@@ -112,24 +112,24 @@ def make_move_left(jogador, dicionario_pecas_especiais, altura, tabela, coluna, 
                 return
         return True
 
-def has_won(jogador, altura, largura, tabela, peca_sequenciais):
+def ganhou(jogador, altura, largura, tabela, peca_sequenciais):
     # Verifica vitoria usando pecas especiais
     for row in range(altura):
         for col in range(largura):
             # Verifica se a posicao atual e uma peca especial
             if tabela[row][col] == jogador:
                 # Verifica se a peca especial e longa o sufeciente para vencer
-                special_piece_size = 0
-                while col+special_piece_size < largura and tabela[row][col+special_piece_size] == jogador:
-                    special_piece_size += 1
-                if special_piece_size >= peca_sequenciais:
+                tamanho_peca_especiais = 0
+                while col+tamanho_peca_especiais < largura and tabela[row][col+tamanho_peca_especiais] == jogador:
+                    tamanho_peca_especiais += 1
+                if tamanho_peca_especiais >= peca_sequenciais:
                     return True
                 
                 # Verifica se a peca especial e alta o sufeciente para vencer
-                special_piece_size = 0
-                while row+special_piece_size < altura and tabela[row+special_piece_size][col] == jogador:
-                    special_piece_size += 1
-                if special_piece_size >= peca_sequenciais:
+                tamanho_peca_especiais = 0
+                while row+tamanho_peca_especiais < altura and tabela[row+tamanho_peca_especiais][col] == jogador:
+                    tamanho_peca_especiais += 1
+                if tamanho_peca_especiais >= peca_sequenciais:
                     return True
     
     # Verifica vitoria na horizontal

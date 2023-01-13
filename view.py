@@ -505,17 +505,17 @@ def main():
                 nome_jogador1 = op1.split(" ")[1]
                 nome_jogador2 = op1.split(" ")[2]
 
-                # Get board width and height from user
+                # Get tabela largura and altura from user
                 while True:
                     try:
-                        width = int(input("Indica o comprimento do tabuleiro: "))
-                        if width <= 0:
+                        largura = int(input("Indica o comprimento do tabuleiro: "))
+                        if largura <= 0:
                             raise ValueError
                         try:
-                            height = int(input("Indica a altura do tabuleiro: "))
-                            if height <= 0:
+                            altura = int(input("Indica a altura do tabuleiro: "))
+                            if altura <= 0:
                                 raise ValueError
-                            if width/2 > height or height > width:
+                            if largura/2 > altura or altura > largura:
                                 raise ValueError
                             break
                         except ValueError:
@@ -526,10 +526,10 @@ def main():
                 # Get the number of sequenced pieces needed to win
                 while True:
                     try:
-                        sequenced_pieces = int(input("Indica o número de peças em sequência necessárias para ganhar: "))
-                        if sequenced_pieces <= 0:
+                        sequencia_pecas = int(input("Indica o número de peças em sequência necessárias para ganhar: "))
+                        if sequencia_pecas <= 0:
                             print("Tamanho de sequência invalido.")
-                        elif sequenced_pieces > width:
+                        elif sequencia_pecas > largura:
                             print("Tamanho de sequência invalido.")
                         else:
                             break
@@ -538,50 +538,50 @@ def main():
 
 
                 # Create a list to store the special pieces
-                special_pieces = []
+                peca_especiais = []
 
                 # Create a dictionary to save the number of special pieces within the player name
-                player_SpecialPiecesDictionary = {}
+                dicionario_pecas_especiais_jogadores = {}
 
                 # Get the number and size of special pieces from the user
                 while True:
-                    num_special_pieces = input("Indica o numero de peças especiais: ")
-                    if num_special_pieces.isnumeric():
-                        num_special_pieces = int(num_special_pieces)
+                    numero_pecas_especiais = input("Indica o numero de peças especiais: ")
+                    if numero_pecas_especiais.isnumeric():
+                        numero_pecas_especiais = int(numero_pecas_especiais)
                         break
-                    elif num_special_pieces == "":
+                    elif numero_pecas_especiais == "":
                         print("Input inválido.")
                     else:
                         print("Input inválido.")
 
                     
 
-                for i in range(num_special_pieces):
+                for i in range(numero_pecas_especiais):
                     try:
-                        special_piece_size = int(input("Indica o tamanho da {} peça especial: ".format(i + 1)))
-                        while special_piece_size > sequenced_pieces or special_piece_size <= 0 or special_piece_size == '':
+                        tamanho_pecas_especiais = int(input("Indica o tamanho da {} peça especial: ".format(i + 1)))
+                        while tamanho_pecas_especiais > sequencia_pecas or tamanho_pecas_especiais <= 0 or tamanho_pecas_especiais == '':
                             print("Dimensões de peças especiais invalidas.")
-                            special_piece_size = int(input("Indica o tamanho da {} peça especial: ".format(i + 1)))
+                            tamanho_pecas_especiais = int(input("Indica o tamanho da {} peça especial: ".format(i + 1)))
 
-                        special_pieces.append(special_piece_size)
+                        peca_especiais.append(tamanho_pecas_especiais)
                     except ValueError:
                         print("Dimensões de peças especiais invalidas.")
 
 
 
-                # Generate board with the specified width and height
-                board = [[" " for _ in range(width)] for _ in range(height)]
+                # Generate tabela with the specified largura and altura
+                tabela = [[" " for _ in range(largura)] for _ in range(altura)]
 
                 # Initialize separate lists for each player's special pieces
-                player_X_special_pieces = special_pieces.copy()
-                player_O_special_pieces = special_pieces.copy()
+                player_X_peca_especiais = peca_especiais.copy()
+                player_O_peca_especiais = peca_especiais.copy()
 
-                # Update player_SpecialPiecesDictionary with the separate lists
-                player_SpecialPiecesDictionary.update(
-                    {"X": player_X_special_pieces, "O": player_O_special_pieces}
+                # Update dicionario_pecas_especiais_jogadores with the separate lists
+                dicionario_pecas_especiais_jogadores.update(
+                    {"X": player_X_peca_especiais, "O": player_O_peca_especiais}
                 )
 
-                player = "X"
+                jogador = "X"
                 jogador_atual = nome_jogador1
 
                 decorrer_jogo = 1
@@ -594,41 +594,41 @@ def main():
 
                 while True:
 
-                    # Print the board
-                    print(" ".join([str(i + 1) for i in range(width)]))
-                    for row in board:
+                    # Print the tabela
+                    print(" ".join([str(i + 1) for i in range(largura)]))
+                    for row in tabela:
                         print("|".join(row))
 
-                    column = int(
+                    coluna = int(
                         input(
-                            f"{jogador_atual} ({player}), escolhe uma coluna ou '0' para jogar uma peça especial: "
+                            f"{jogador_atual} ({jogador}), escolhe uma coluna ou '0' para jogar uma peça especial: "
                         )
                     )
-                    use_special_piece = False
-                    special_piece_index = None
+                    usar_pecas_especiais = False
+                    index_pecas_especiais = None
 
-                    if column == 0:
-                        if len(player_SpecialPiecesDictionary[player]) > 0:
+                    if coluna == 0:
+                        if len(dicionario_pecas_especiais_jogadores[jogador]) > 0:
                             print("Escolhe qual peça especial queres usar:")
-                            for i, special_piece in enumerate(
-                                player_SpecialPiecesDictionary[player]
+                            for i, peca_especial in enumerate(
+                                dicionario_pecas_especiais_jogadores[jogador]
                             ):
-                                print("{}: {} sequencias".format(i + 1, special_piece))
-                            special_piece_index = int(input("Peça especial: ")) - 1
-                            use_special_piece = True
+                                print("{}: {} sequencias".format(i + 1, peca_especial))
+                            index_pecas_especiais = int(input("Peça especial: ")) - 1
+                            usar_pecas_especiais = True
                             while True:
-                                orientation = input("Em que sentido queres jogar a peça especial (E ou D): ")
-                                if orientation.upper() in ['E','D']:
+                                orientacao = input("Em que sentido queres jogar a peça especial (E ou D): ")
+                                if orientacao.upper() in ['E','D']:
                                     break
                                 else:
                                     print("Input inválido. Por favor insira 'E' ou 'D'.")
 
                             while True:
-                                column = input("Em que coluna queres jogar a peça especial: ")
-                                if column.isnumeric():
-                                    column = int(column)
+                                coluna = input("Em que coluna queres jogar a peça especial: ")
+                                if coluna.isnumeric():
+                                    coluna = int(coluna)
                                     break
-                                elif column == "":
+                                elif coluna == "":
                                     print("Input não pode ser vazio.")
                                 else:
                                     print("Input inválido. Por favor insira um número.")
@@ -637,22 +637,22 @@ def main():
                         else:
                             print("Não existem peças especiais.")
                             continue
-                    elif column < 0 or column > width:
+                    elif coluna < 0 or coluna > largura:
                         print("Coluna inválida, escolhe outra coluna.")
                         continue
 
-                    if use_special_piece == True:
-                        if orientation == "E":
-                            make_move_left(
-                                player,
-                                player_SpecialPiecesDictionary,
-                                height,
-                                board,
-                                column,
-                                use_special_piece=use_special_piece,
-                                special_piece_index=special_piece_index,
+                    if usar_pecas_especiais == True:
+                        if orientacao == "E":
+                            movimento_esquerda(
+                                jogador,
+                                dicionario_pecas_especiais_jogadores,
+                                altura,
+                                tabela,
+                                coluna,
+                                usar_pecas_especiais=usar_pecas_especiais,
+                                index_pecas_especiais=index_pecas_especiais,
                             )
-                            if make_move_left == True:
+                            if movimento_esquerda == True:
                                 print(
                                     "A coluna encontra-se completa, escolhe outra coluna."
                                 )
@@ -697,18 +697,18 @@ def main():
                                     op1 = input("Digite uma opção: ")  # Opção 1
                                 break
 
-                        elif orientation == "D":
-                            make_move_right(
-                                player,
-                                column,
-                                player_SpecialPiecesDictionary,
-                                height,
-                                width,
-                                board,
-                                use_special_piece=use_special_piece,
-                                special_piece_index=special_piece_index,
+                        elif orientacao == "D":
+                            movimento_direita(
+                                jogador,
+                                coluna,
+                                dicionario_pecas_especiais_jogadores,
+                                altura,
+                                largura,
+                                tabela,
+                                usar_pecas_especiais=usar_pecas_especiais,
+                                index_pecas_especiais=index_pecas_especiais,
                             )
-                            if make_move_right == True:
+                            if movimento_direita == True:
                                 print(
                                     "A coluna encontra-se completa, escolhe outra coluna."
                                 )
@@ -758,15 +758,15 @@ def main():
                             print("Orientação inválida, escolhe outra coluna.")
                             continue
                     else:
-                        make_move_right(
-                            player,
-                            column,
-                            player_SpecialPiecesDictionary,
-                            height,
-                            width,
-                            board,
-                            use_special_piece=use_special_piece,
-                            special_piece_index=special_piece_index,
+                        movimento_direita(
+                            jogador,
+                            coluna,
+                            dicionario_pecas_especiais_jogadores,
+                            altura,
+                            largura,
+                            tabela,
+                            usar_pecas_especiais=usar_pecas_especiais,
+                            index_pecas_especiais=index_pecas_especiais,
                         )
 
                         print('''
@@ -809,19 +809,19 @@ def main():
                             op1 = input("Digite uma opção: ")  # Opção 1
                         break
 
-                    if use_special_piece:
-                        special_piece = player_SpecialPiecesDictionary[player][
-                            special_piece_index
+                    if usar_pecas_especiais:
+                        peca_especial = dicionario_pecas_especiais_jogadores[jogador][
+                            index_pecas_especiais
                         ]
-                        player_SpecialPiecesDictionary[player].remove(special_piece)
-                    if has_won(player, height, width, board, sequenced_pieces):
+                        dicionario_pecas_especiais_jogadores[jogador].remove(peca_especial)
+                    if ganhou(jogador, altura, largura, tabela, sequencia_pecas):
 
-                        # Print the board
-                        print(" ".join([str(i + 1) for i in range(width)]))
-                        for row in board:
+                        # Print the tabela
+                        print(" ".join([str(i + 1) for i in range(largura)]))
+                        for row in tabela:
                             print("|".join(row))
 
-                        print(f"{jogador_atual} ({player}) Venceu!")
+                        print(f"{jogador_atual} ({jogador}) Venceu!")
 
                         decorrer_jogo = 0
 
@@ -840,7 +840,7 @@ def main():
                         print(dicionario_Jogos)
                         break
 
-                    player = "O" if player == "X" else "X"
+                    jogador = "O" if jogador == "X" else "X"
                     jogador_atual = (
                         nome_jogador2
                         if jogador_atual == nome_jogador1
@@ -933,23 +933,23 @@ def main():
 
             else:
                 temp_var1 = ''
-                for i in range(len(player_X_special_pieces)):
-                    temp_var1 += str(i + 1) + "º peça - Tamanho " + str(player_X_special_pieces[i]) + "\n"
+                for i in range(len(player_X_peca_especiais)):
+                    temp_var1 += str(i + 1) + "º peça - Tamanho " + str(player_X_peca_especiais[i]) + "\n"
                 
                 temp_var2 = ''
-                for i in range(len(player_O_special_pieces)):
-                    temp_var2 += str(i + 1) + "º peça - Tamanho " + str(player_X_special_pieces[i]) + "\n"
+                for i in range(len(player_O_peca_especiais)):
+                    temp_var2 += str(i + 1) + "º peça - Tamanho " + str(player_X_peca_especiais[i]) + "\n"
 
                 temp_var3 = [nome_jogador1, nome_jogador2]
                 temp_var3.sort()
 
-                print(f"Comprimento grelha - {width}\n"  
-                        f"Altura grelha - {height}\n\n"  
+                print(f"Comprimento grelha - {largura}\n"  
+                        f"Altura grelha - {altura}\n\n"  
                         f"1º Jogador - {temp_var3[0]}\n"
-                        f"Quantidade de peças especiais disponiveis de {temp_var3[0]} - {len(player_X_special_pieces)}\n"
+                        f"Quantidade de peças especiais disponiveis de {temp_var3[0]} - {len(player_X_peca_especiais)}\n"
                         f"{temp_var1}\n"
                         f"2º Jogador - {temp_var3[1]}\n"
-                        f"Quantidade de peças especiais disponiveis de {temp_var3[1]} - {len(player_O_special_pieces)}\n"
+                        f"Quantidade de peças especiais disponiveis de {temp_var3[1]} - {len(player_O_peca_especiais)}\n"
                         f"{temp_var2}" 
                 )
 
@@ -1062,7 +1062,7 @@ def main():
 
         # G - Gravar
         elif op1.split(" ")[0].upper() == "G":
-            gravar_jogo(lista_jogadores, decorrer_jogo, board, temp_var)
+            gravar_jogo(lista_jogadores, decorrer_jogo, tabela, temp_var)
             if gravar_jogo == True:
                 # os.system("cls")
                 print("Jogo gravado.")

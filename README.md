@@ -2,7 +2,7 @@
 
 - [x] Split nos inputs
 - [x] Peças especiais
-- [ ] Prints no controller
+- [x] Prints no controller
 - [ ] Readicionar limpezas da consola
 - [x] Adicionar `tamanho_Sequencia` ás variáveis de jogo
 - [x] Adicionar `tamanho_PecasEspeciais` ás variaveis de jogo
