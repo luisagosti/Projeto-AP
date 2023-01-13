@@ -8,13 +8,13 @@ def registar_jogadores(op1, lista_jogadores, dicionario_Jogos, decorrer_jogo):
         # Adiciona a 'dicionario_Jogos' as situações necessárias
         dicionario_Jogos.update({op1.split(" ")[1]: {'Jogos': 0, 'Vitorias': 0, 'em_Jogo': decorrer_jogo}})
 
-        # Variavel 'sorted_keys' é as chaves de 'dicionario_Jogos' ordenadas alfabéticamente
-        sorted_keys = sorted(dicionario_Jogos.keys())
-        sorted_dictionary = {k: dicionario_Jogos[k] for k in sorted_keys}
+        # Variavel 'chaves_organizadas' é as chaves de 'dicionario_Jogos' ordenadas alfabéticamente
+        chaves_organizadas = sorted(dicionario_Jogos.keys())
+        dicionario_organizado = {k: dicionario_Jogos[k] for k in chaves_organizadas}
 
         # Limpa o dicionário antigo e coloca o novo dicionário com as chaves ordenadas 
         dicionario_Jogos.clear()
-        dicionario_Jogos.update(sorted_dictionary)
+        dicionario_Jogos.update(dicionario_organizado)
 
         return True
 
@@ -28,11 +28,11 @@ def remover_jogadores(lista_jogadores, op1, dicionario_Jogos):
 
         dicionario_Jogos.pop(op1.split(" ")[1])
 
-        sorted_keys = sorted(dicionario_Jogos.keys())
-        sorted_dictionary = {k: dicionario_Jogos[k] for k in sorted_keys}
+        chaves_organizadas = sorted(dicionario_Jogos.keys())
+        dicionario_organizado = {k: dicionario_Jogos[k] for k in chaves_organizadas}
 
         dicionario_Jogos.clear()
-        dicionario_Jogos.update(sorted_dictionary)
+        dicionario_Jogos.update(dicionario_organizado)
     
         return 1
 
@@ -72,97 +72,97 @@ def desistir_Jogo():
 
 ################ JOGO ###################
 
-def make_move_right(player, column, player_SpecialPiecesDictionary, height, width, board, use_special_piece, special_piece_index):
-    column -= 1
-    if use_special_piece:
-        # Add the special piece
-        special_piece_size = player_SpecialPiecesDictionary[player][special_piece_index]
-        for i in range(column, column+special_piece_size):
-            for j in range(height-1, -1, -1):
-                if i < width and board[j][i] == ' ':
-                    board[j][i] = player
+def make_move_right(jogador, coluna, dicionario_pecas_especiais, altura, largura, tabela, usar_peca_especial, index_pecas_especiais):
+    coluna -= 1
+    if usar_peca_especial:
+        # Adicionar peca especial
+        special_piece_size = dicionario_pecas_especiais[jogador][index_pecas_especiais]
+        for i in range(coluna, coluna+special_piece_size):
+            for j in range(altura-1, -1, -1):
+                if i < largura and tabela[j][i] == ' ':
+                    tabela[j][i] = jogador
                     break
         else:
             return True
     else:
-        for i in range(height-1, -1, -1):
-            if board[i][column] == ' ':
-                board[i][column] = player
+        for i in range(altura-1, -1, -1):
+            if tabela[i][coluna] == ' ':
+                tabela[i][coluna] = jogador
                 return
         return True
 
 
 
-def make_move_left(player, player_SpecialPiecesDictionary, height, board, column, use_special_piece, special_piece_index):
-    column -= 1
-    if use_special_piece:
-        # Add the special piece
-        special_piece_size = player_SpecialPiecesDictionary[player][special_piece_index]
-        for i in range(column, column-special_piece_size, -1):
-            for j in range(height-1, -1, -1):
-                if i >= 0 and board[j][i] == ' ':
-                    board[j][i] = player
+def make_move_left(jogador, dicionario_pecas_especiais, altura, tabela, coluna, usar_peca_especial, index_pecas_especiais):
+    coluna -= 1
+    if usar_peca_especial:
+        # Adicionar peca especial
+        special_piece_size = dicionario_pecas_especiais[jogador][index_pecas_especiais]
+        for i in range(coluna, coluna-special_piece_size, -1):
+            for j in range(altura-1, -1, -1):
+                if i >= 0 and tabela[j][i] == ' ':
+                    tabela[j][i] = jogador
                     break
         else:
             return True
     else:
-        for i in range(height-1, -1, -1):
-            if board[i][column] == ' ':
-                board[i][column] = player
+        for i in range(altura-1, -1, -1):
+            if tabela[i][coluna] == ' ':
+                tabela[i][coluna] = jogador
                 return
         return True
 
-def has_won(player, height, width, board, sequenced_pieces):
-    # Check for win using special pieces
-    for row in range(height):
-        for col in range(width):
-            # Check if the current position is a special piece
-            if board[row][col] == player:
-                # Check if the special piece is long enough to win
+def has_won(jogador, altura, largura, tabela, peca_sequenciais):
+    # Verifica vitoria usando pecas especiais
+    for row in range(altura):
+        for col in range(largura):
+            # Verifica se a posicao atual e uma peca especial
+            if tabela[row][col] == jogador:
+                # Verifica se a peca especial e longa o sufeciente para vencer
                 special_piece_size = 0
-                while col+special_piece_size < width and board[row][col+special_piece_size] == player:
+                while col+special_piece_size < largura and tabela[row][col+special_piece_size] == jogador:
                     special_piece_size += 1
-                if special_piece_size >= sequenced_pieces:
+                if special_piece_size >= peca_sequenciais:
                     return True
                 
-                # Check if the special piece is tall enough to win
+                # Verifica se a peca especial e alta o sufeciente para vencer
                 special_piece_size = 0
-                while row+special_piece_size < height and board[row+special_piece_size][col] == player:
+                while row+special_piece_size < altura and tabela[row+special_piece_size][col] == jogador:
                     special_piece_size += 1
-                if special_piece_size >= sequenced_pieces:
+                if special_piece_size >= peca_sequenciais:
                     return True
     
-    # Check for horizontal win
-    for row in board:
-        for i in range(width - sequenced_pieces + 1):
-            if all(row[i+j] == player for j in range(sequenced_pieces)):
+    # Verifica vitoria na horizontal
+    for row in tabela:
+        for i in range(largura - peca_sequenciais + 1):
+            if all(row[i+j] == jogador for j in range(peca_sequenciais)):
                 return True
     
-    # Check for vertical win
-    for col in range(width):
-        if all(board[row][col] == player for row in range(height)):
+    # Verifica vitoria na vertical
+    for col in range(largura):
+        if all(tabela[row][col] == jogador for row in range(altura)):
             return True
     
-    # Check for diagonal win (top-left to bottom-right)
-    for row in range(height - sequenced_pieces + 1):
-        for col in range(width - sequenced_pieces + 1):
-            if all(board[row+i][col+i] == player for i in range(sequenced_pieces)):
+    # Verifica vitoria na diagonal(cimo-esquerda para baixo-direita)
+    for row in range(altura - peca_sequenciais + 1):
+        for col in range(largura - peca_sequenciais + 1):
+            if all(tabela[row+i][col+i] == jogador for i in range(peca_sequenciais)):
                 return True
     
-    # Check for diagonal win (top-right to bottom-left)
-    for row in range(height - sequenced_pieces + 1):
-        for col in range(width - 1, sequenced_pieces - 2, -1):
-            if all(board[row+i][col-i] == player for i in range(sequenced_pieces)):
+    # Verifica vitoria na diagonal(baixo direita para cimo-esquerda)
+    for row in range(altura - peca_sequenciais + 1):
+        for col in range(largura - 1, peca_sequenciais - 2, -1):
+            if all(tabela[row+i][col-i] == jogador for i in range(peca_sequenciais)):
                 return True
     
-    # Check for win in all other directions
-    for row in range(height - sequenced_pieces + 1):
-        for col in range(width):
-            # Check for win in top-bottom direction
-            if all(board[row+i][col] == player for i in range(sequenced_pieces)):
+    # Verifica vitoria em todas as outras direcoes
+    for row in range(altura - peca_sequenciais + 1):
+        for col in range(largura):
+            # Verifica vitoria cima-baixo
+            if all(tabela[row+i][col] == jogador for i in range(peca_sequenciais)):
                 return True
-            # Check for win in left-right direction
-            if all(board[row][col+i] == player for i in range(sequenced_pieces)):
+            # Verifica vitoria esquerda-direita
+            if all(tabela[row][col+i] == jogador for i in range(peca_sequenciais)):
                 return True
     
     return False
