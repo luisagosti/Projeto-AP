@@ -179,22 +179,82 @@
 
 # main()
 
-decorrer_jogo = 0
+# decorrer_jogo = 0
+
+# op1 = 'RJ Pedro'
 
 dicionario_Jogos = {
-    "Pedro": {"Jogos": 0, "Vitorias": 0, "em_Jogo": decorrer_jogo},
-    "João": {"Jogos": 1, "Vitorias": 1, "em_Jogo": decorrer_jogo},
-    "Ana": {"Jogos": 2, "Vitorias": 2, "em_Jogo": decorrer_jogo},
+    "Pedro": {"Jogos": 0, "Vitorias": 0, "em_Jogo": 1},
+    "João": {"Jogos": 1, "Vitorias": 1, "em_Jogo": 1},
+    "Ana": {"Jogos": 2, "Vitorias": 2, "em_Jogo": 0},
 }
 
-sorted_keys = sorted(dicionario_Jogos.keys())
-sorted_dictionary = {k: dicionario_Jogos[k] for k in sorted_keys}
+# sorted_keys = sorted(dicionario_Jogos.keys())
+# sorted_dictionary = {k: dicionario_Jogos[k] for k in sorted_keys}
 
-dicionario_Jogos.clear()
-dicionario_Jogos.update(sorted_dictionary)
+# dicionario_Jogos.clear()
+# dicionario_Jogos.update(sorted_dictionary)
 
-for jogador, jogos in dicionario_Jogos.items():
-    print(str(jogador) + " - " + str(jogos["Jogos"]) + " jogos,", str(jogos["Vitorias"]) + " vitórias.")
+# f = open("dict.txt","a")
+
+# # write file
+# f.write("============= Informacao de jogos =============")
+# f.write("\n")
+
+# for jogador, jogos in dicionario_Jogos.items():
+#     f.write(str(jogador) + "\n" + str(jogos["Jogos"]) + " jogos\n" + str(jogos["Vitorias"]) + " vitorias \nEm jogo (1 - Sim | 0 - Nao) - " + str(jogos["em_Jogo"]) + "\n")
+#     f.write("\n")
+
+# # close file
+# f.close()
+
+
+try:
+    f = open('dict.txt', 'r')
+    file_contents = f.read()
+    print (file_contents)
+    f.close()
+
+except FileNotFoundError:
+    print('File does not exist')
+
+print(
+    """
+RJ + Nome - Registar jogador
+EJ + Nome - Remover jogador
+LJ - Listar jogadores
+IJ + 2 Nomes - Iniciar jogo
+DJ - Detalhes do jogo
+D + 1/2 Nomes - Desistir
+CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
+V - Visualizar resultado
+G - Gravar
+L - Ler
+X - Sair """
+)
+op1 = input("Digite uma opção: ")  # Opção 1
+
+
+
+
+
+# Visto que op1 só vai levar 1 jogador, ele terá de ir checkar qual é o outro que também está em jogo.
+# Visto que só pode haver 2 players em jogo ao mesmo tempo we fine
+# print(keys)
+
+# if op1.split(' ')[1] in keyss:
+#     keys.remove(op1.split(' ')[1])
+
+# print(keys)
+
+# sorted_keys = sorted(dicionario_Jogos.keys())
+# sorted_dictionary = {k: dicionario_Jogos[k] for k in sorted_keys}
+
+# dicionario_Jogos.clear()
+# dicionario_Jogos.update(sorted_dictionary)
+
+# for jogador, jogos in dicionario_Jogos.items():
+#     print(str(jogador) + " - " + str(jogos["Jogos"]) + " jogos,", str(jogos["Vitorias"]) + " vitórias.")
 
 
 
@@ -218,4 +278,48 @@ for jogador, jogos in dicionario_Jogos.items():
 # dicionario_Jogos.update(sorted_dictionary)
 
 # print(dicionario_Jogos)
+
+
+
+# print('''
+#     RJ + Nome - Registar jogador
+#     EJ + Nome - Remover jogador
+#     LJ - Listar jogadores
+#     IJ + 2 Nomes - Iniciar jogo
+#     DJ - Detalhes do jogo
+#     D + 1/2 Nomes - Desistir
+#     CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
+#     V - Visualizar resultado
+#     G - Gravar
+#     L - Ler
+#     X - Sair ''')
+# op1 = input("Digite uma opção: ")  # Opção 1
+
+# # Enquanto a "Opção 1" não igualar nenhuma das opções do array, o programa irá continuar a perguntar por uma opção.
+# # Ele passa quando a "Opção 1" for equivalente a alguma das opções dentro do array
+# while (op1.split(" ")[0].upper() not in ["RJ", "EJ", "LJ", "IJ", "DJ", "D", "CP", "V", "G", "L", "X"]
+#     or op1.split(" ")[0].upper() in ["V", "G", "L", "X"] and len(op1) > 1
+#     or len(op1.split(" ")) > 5
+#     or op1.split(" ")[0].upper() in ["RJ", "EJ"] and len(op1.split(" ")) != 2
+#     or op1.split(" ")[0].upper() in ["LJ", "DJ", "CP"] and len(op1.split(" ")) >= 2
+#     or op1.split(" ")[0].upper() in ["CP"] and len(op1.split(" ")) > 5
+#     or op1.split(" ")[0].upper() in ["IJ"] and len(op1.split(" ")) != 3
+#     or op1.split(" ")[0].upper() in ["D"] and (len(op1.split(" ")) > 3 or len(op1.split(" ")) < 2)):
+#     # os.system("cls")
+
+#     print("Instrução inválida.")
+#     print('''
+#     RJ + Nome - Registar jogador
+#     EJ + Nome - Remover jogador
+#     LJ - Listar jogadores
+#     IJ + 2 Nomes - Iniciar jogo
+#     DJ - Detalhes do jogo
+#     D + 1/2 Nomes - Desistir
+#     CP + Nome + TamanhoPeça + Posição + (Sentido) - Colocar peça
+#     V - Visualizar resultado
+#     G - Gravar
+#     L - Ler
+#     X - Sair ''')
+#     op1 = input("Digite uma opção: ")  # Opção 1
+
 

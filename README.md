@@ -3,7 +3,7 @@
 - [x] Split nos inputs
 - [x] Peças especiais
 - [ ] Prints no controller
-- [ ] Readicionar limpezas da consola
+- [ ] Readicionar limpezas da consola `(os.system("cls")`
 - [x] Adicionar `tamanho_Sequencia` ás variáveis de jogo
 - [x] Adicionar `tamanho_PecasEspeciais` ás variaveis de jogo
 - [x] Criar dicionário com nome jogadores, jogos jogados e vitórias
@@ -12,23 +12,23 @@
 - [x] Verificações de `Opção 1`
 
 - [x] `RJ - Registar jogador`
-    - [x] Verificações de inputs
-        - [x] Verificar se `op1` leva mais do que o requisitado
+    - [ ] Verificações de inputs
+        - [ ] Verificar se `op1` leva mais do que o requisitado
     - [x] Nome unico
 
 - [x] `EJ - Remover jogador`
-    - [x] Verificações de inputs
-        - [x] Verificar se `op1` leva mais do que o requisitado
+    - [ ] Verificações de inputs
+        - [ ] Verificar se `op1` leva mais do que o requisitado
 
 - [x] `LJ - Listar jogadores`
-    - [x] Verificações de inputs
-        - [x] Verificar se `op1` leva mais do que o requisitado
+    - [ ] Verificações de inputs
+        - [ ] Verificar se `op1` leva mais do que o requisitado
     - [x] Indicar número de jogos jogados e vitórias
 
 - [x] `IJ - Iniciar jogo`
     - [x] Jogo funcional
-    - [x] Verificações de inputs
-        - [x] Verificar se `op1` leva mais do que o requisitado
+    - [ ] Verificações de inputs
+        - [ ] Verificar se `op1` leva mais do que o requisitado
         - [x] `heigth` - Altura da grelha (`width/2` ≤ `heigth` ≤ `width`)
         - [x] `sequenced_pieces` - Número de peças em linha para determinar a vitória (`sequenced_pieces` ≤ `width`)
         - [x] `special_pieces` - Conjunto de tamanhos de peças especiais disponível para cada jogador (`special_pieces` < `sequenced_pieces`)
@@ -38,33 +38,33 @@
     - [x] Dar update a `dicionario_Jogos` para mudar `decorrer_jogo`
 
 - [x] `DJ - Detalhes do jogo`
-    - [x] Verificações de inputs
-        - [x] Verificar se `op1` leva mais do que o requisitado
+    - [ ] Verificações de inputs
+        - [ ] Verificar se `op1` leva mais do que o requisitado
     - [x] Informações do jogo em curso
         - [x] Tamanho da grelha
         - [x] Nomes jogadores
             - [x] Alfabéticamente
         - [x] Quantidade de peças especiais disponíveis para cada jogador
 
-- [ ] `D - Desistir`
-    - [x] Verificações de inputs
-        - [x] Verificar se `op1` leva mais do que o requisitado
-    - [+-] Criar função desistir_Jogo
-        - [ ] Editar dicionário jogos jogados e vitórias
+- [x] `D - Desistir`
+    - [ ] Verificações de inputs
+        - [ ] Verificar se `op1` leva mais do que o requisitado
+    - [x] Criar função desistir_Jogo
+        - [x] Editar dicionário jogos jogados e vitórias
 
-- [ ] `CP - Colocar peça`
+- [x] `CP - Colocar peça`
     - [ ] Verificações de inputs
         - [ ] Verificar se `op1` leva mais do que o requisitado
 
-- [ ] `V - Visualizar resultado`
+- [x] `V - Visualizar resultado`
     - [ ] Verificações de inputs
         - [ ] Verificar se `op1` leva mais do que o requisitado
 
-- [ ] `G - Gravar`
+- [x] `G - Gravar`
     - [ ] Verificações de inputs
         - [ ] Verificar se `op1` leva mais do que o requisitado
 
-- [ ] `L - Ler`
+- [x] `L - Ler`
     - [ ] Verificações de inputs
         - [ ] Verificar se `op1` leva mais do que o requisitado
 
@@ -98,12 +98,3 @@
 - V     —   3 valores
 - G     —   1 valor
 - L     —   1 valor
-
-
-
-Notas joao:
-    No Desistir Jogo não faz sentido estar assim, tipo como tá, o jogador 1 pode fazer o jogador 2 desistir invuluntáriamnete
-    Nem pode ser como está😭, vou mexer no meu ficheiro para ver se consigo meter como é suposto
-    
-    
-Falta "dar função" aos parametros no desistir, inputs e outputs feitos no ficheiro desistit.py no meu folder
