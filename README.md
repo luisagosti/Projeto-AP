@@ -3,57 +3,70 @@
 - [x] Split nos inputs
 - [x] Peças especiais
 - [ ] Prints no controller
+- [ ] Readicionar limpezas da consola
 - [x] Adicionar `tamanho_Sequencia` ás variáveis de jogo
 - [x] Adicionar `tamanho_PecasEspeciais` ás variaveis de jogo
-- [ ] Criar dicionário com nome jogadores, jogos jogados e vitórias
-    - [ ] Ordenar alfabéticamente
+- [x] Criar dicionário com nome jogadores, jogos jogados e vitórias
+    - [x] Ordenar alfabéticamente
 
 - [x] Verificações de `Opção 1`
 
 - [x] `RJ - Registar jogador`
     - [x] Verificações de inputs
+        - [x] Verificar se `op1` leva mais do que o requisitado
     - [x] Nome unico
 
 - [x] `EJ - Remover jogador`
     - [x] Verificações de inputs
+        - [x] Verificar se `op1` leva mais do que o requisitado
 
-- [ ] `LJ - Listar jogadores`
+- [x] `LJ - Listar jogadores`
     - [x] Verificações de inputs
-    - [ ] Indicar número de jogos jogados e vitórias
+        - [x] Verificar se `op1` leva mais do que o requisitado
+    - [x] Indicar número de jogos jogados e vitórias
 
-- [ ] `LJ - Listar jogadores`
+- [x] `IJ - Iniciar jogo`
     - [x] Jogo funcional
-    - [ ] Verificações de inputs
-        - [ ] `heigth` - Altura da grelha (`width/2` ≤ `heigth` ≤ `width`)
-        - [ ] `sequenced_pieces` - Número de peças em linha para determinar a vitória (`sequenced_pieces` ≤ `width`)
-        - [ ] `special_pieces` - Conjunto de tamanhos de peças especiais disponível para cada jogador (`special_pieces` < `sequenced_pieces`)
-    - [ ] Verificar se já se encontra jogo em curso
-    - [ ] Verificar se jogador indicado se encontra registado
-
-- [ ] `DJ - Detalhes do jogo`
     - [x] Verificações de inputs
-    - [ ] Informações do jogo em curso
+        - [x] Verificar se `op1` leva mais do que o requisitado
+        - [x] `heigth` - Altura da grelha (`width/2` ≤ `heigth` ≤ `width`)
+        - [x] `sequenced_pieces` - Número de peças em linha para determinar a vitória (`sequenced_pieces` ≤ `width`)
+        - [x] `special_pieces` - Conjunto de tamanhos de peças especiais disponível para cada jogador (`special_pieces` < `sequenced_pieces`)
+    - [x] Verificar se já se encontra jogo em curso
+    - [x] Verificar se jogador indicado se encontra registado
+    - [x] Adicionar menu depois de o jogador fazer a jogada
+    - [x] Dar update a `dicionario_Jogos` para mudar `decorrer_jogo`
+
+- [x] `DJ - Detalhes do jogo`
+    - [x] Verificações de inputs
+        - [x] Verificar se `op1` leva mais do que o requisitado
+    - [x] Informações do jogo em curso
         - [x] Tamanho da grelha
         - [x] Nomes jogadores
-            - [ ] Alfabéticamente
+            - [x] Alfabéticamente
         - [x] Quantidade de peças especiais disponíveis para cada jogador
 
 - [ ] `D - Desistir`
     - [x] Verificações de inputs
+        - [x] Verificar se `op1` leva mais do que o requisitado
     - [+-] Criar função desistir_Jogo
         - [ ] Editar dicionário jogos jogados e vitórias
 
 - [ ] `CP - Colocar peça`
     - [ ] Verificações de inputs
+        - [ ] Verificar se `op1` leva mais do que o requisitado
 
 - [ ] `V - Visualizar resultado`
     - [ ] Verificações de inputs
+        - [ ] Verificar se `op1` leva mais do que o requisitado
 
 - [ ] `G - Gravar`
     - [ ] Verificações de inputs
+        - [ ] Verificar se `op1` leva mais do que o requisitado
 
 - [ ] `L - Ler`
     - [ ] Verificações de inputs
+        - [ ] Verificar se `op1` leva mais do que o requisitado
 
 
 

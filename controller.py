@@ -1,28 +1,46 @@
-def registar_jogadores(op1, lista_jogadores,x):
-    if op1 not in lista_jogadores:
-        lista_jogadores.append(op1)
-        p = ((op1),'Vitoria')               #O p e o o sao variaveis que iram armazenar a string vitoria e a string jogos_jogados
-        o = ((op1),'jogos_jogados')
-        y = {(p):0,(o):0}       # Dicionario y atribui valores a p e o 
-        x.update(y)             #Dicionario final de modo a não repetir nomes de variaveis
-        print(x)
+def registar_jogadores(op1, lista_jogadores, dicionario_Jogos, decorrer_jogo):
+    if op1.split(" ")[1] not in lista_jogadores:
+        lista_jogadores.append(op1.split(" ")[1])
+
+        # Organiza a 'lista_jogadores' alfabéticamente sempre que é adicionado um jogador novo
+        lista_jogadores.sort()
+
+        # Adiciona a 'dicionario_Jogos' as situações necessárias
+        dicionario_Jogos.update({op1.split(" ")[1]: {'Jogos': 0, 'Vitorias': 0, 'em_Jogo': decorrer_jogo}})
+
+        # Variavel 'sorted_keys' é as chaves de 'dicionario_Jogos' ordenadas alfabéticamente
+        sorted_keys = sorted(dicionario_Jogos.keys())
+        sorted_dictionary = {k: dicionario_Jogos[k] for k in sorted_keys}
+
+        # Limpa o dicionário antigo e coloca o novo dicionário com as chaves ordenadas 
+        dicionario_Jogos.clear()
+        dicionario_Jogos.update(sorted_dictionary)
+
         return True
 
     else:
         return False
 
-def remover_jogadores(lista_jogadores, op1, decorrer_jogo,x):
+def remover_jogadores(lista_jogadores, op1, dicionario_Jogos):
     
-    if op1[1] in lista_jogadores:
-        lista_jogadores.remove(op1[1])
-    
-        return True
+    if op1.split(" ")[1] in lista_jogadores:
+        lista_jogadores.remove(op1.split(" ")[1])
 
-    elif decorrer_jogo == 1 and op1[1] in lista_jogadores:
-        return False
+        dicionario_Jogos.pop(op1.split(" ")[1])
+
+        sorted_keys = sorted(dicionario_Jogos.keys())
+        sorted_dictionary = {k: dicionario_Jogos[k] for k in sorted_keys}
+
+        dicionario_Jogos.clear()
+        dicionario_Jogos.update(sorted_dictionary)
+    
+        return 1
+
+    elif dicionario_Jogos[op1.split(" ")[1]]["em_Jogo"] == 1 and op1.split(" ")[1] in lista_jogadores:
+        return 2
         
     else:
-        return
+        return 3
 
 def listar_jogadores(lista,z):
     for i in range(0,z):
